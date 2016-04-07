@@ -10,19 +10,32 @@
 	</head>
 	
 	<body>
-		<img src="imgs/menu-burger%20copy.png" height="30" width="30">
-		<span>Feed</span>
-		<a href="search.html"><img src="imgs/search%20copy.png" height="30" width="30"></a>
-		<a href="notifications.html"><img src="imgs/24628-200.png" height="30" width="30"></a>
-		<ul data-role=listview>
-			<li><a href="goal.html"><!--<img src="imgs/user-icon.png" height="25" width="25" margin="5px">--><h3>Bobby D.</h3>Train my puppy</a></li>
-			<li><a href="goal.html"><h3>Roger S.</h3>Teach my daughter to ride a bike</a></li>
-			<li><a href="goal.html"><h3>Joan H.</h3>Save for retirement</a></li>
-			<li><a href="goal.html"><h3>Pete C.</h3>Go paperless in my company</a></li>
-			<li><a href="goal.html"><h3>Anna D.</h3>Renovate the bathroom</a></li>
-			<li><a href="goal.html"><h3>Betty F.</h3>Start a PTA at the kids' school</a></li>
-			<li><a href="goal.html"><h3>Sally D.</h3>Find a new psychiatrist</a></li>
-			<li><a href="goal.html"><h3>Bert C.</h3>Redecorate my office</a></li>
-		</ul>
+		<div data-role="page" id="feed">
+			<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+				<script>$( "#sidenav" ).panel( "close" );</script>
+				<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+				<ul data-role="listview">
+					<li><a href="feed.html">Feed</a></li>
+					<li><a href="dashboard.html">Dashboard</a></li>
+					<li><a href="notifications.html">Notifications</a></li>
+				</ul>
+    		</div><!-- /sidebar navigation -->
+			<script>$( "#sidenav" ).panel( "open" );</script>
+			<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			
+			<span>Feed</span>
+			<a href="search.html"><img src="imgs/search%20copy.png" height="30" width="30"></a>
+			<a href="notifications.html"><img src="imgs/24628-200.png" height="30" width="30"></a>
+			<ul data-role="listview">
+				<li><a href="goal.html"><!--<img src="imgs/user-icon.png" height="25" width="25" margin="5px">--><h3>Bobby D.</h3>Train my puppy</a></li>
+				<li><a href="goal.html"><h3>Roger S.</h3>Teach my daughter to ride a bike</a></li>
+				<li><a href="goal.html"><h3>Joan H.</h3>Save for retirement</a></li>
+				<li><a href="goal.html"><h3>Pete C.</h3>Go paperless in my company</a></li>
+				<li><a href="goal.html"><h3>Anna D.</h3>Renovate the bathroom</a></li>
+				<li><a href="goal.html"><h3>Betty F.</h3>Start a PTA at the kids' school</a></li>
+				<li><a href="goal.html"><h3>Sally D.</h3>Find a new psychiatrist</a></li>
+				<li><a href="goal.html"><h3>Bert C.</h3>Redecorate my office</a></li>
+			</ul>
+		</div>
 	</body>
 </html>
