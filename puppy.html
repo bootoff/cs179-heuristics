@@ -10,13 +10,26 @@
 	</head>
 	
 	<body>
-		<img src="imgs/menu-burger%20copy.png" height="30" width="30">
-		<div>Train my puppy</div>
-		<img src="imgs/search%20copy.png" height="30" width="30">
-		<ol data-role=listview>
-			<li><a href="train1.html">Leash training</a>
-			<li><a href="train2.html">House training</a>
-			<li><a href="tricks.html">Teach 3 tricks</a>
-		</ol>
+		<div data-role="page" id="puppy">
+			<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+				<script>$( "#sidenav" ).panel( "close" );</script>
+				<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+				<ul data-role="listview">
+					<li><a href="feed.html">Feed</a></li>
+					<li><a href="dashboard.html">Dashboard</a></li>
+					<li><a href="notifications.html">Notifications</a></li>
+				</ul>
+    		</div><!-- /sidebar navigation -->
+			<script>$( "#sidenav" ).panel( "open" );</script>
+			<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			
+			<div>Train my puppy</div>
+			<img src="imgs/search%20copy.png" height="30" width="30">
+			<ol data-role=listview>
+				<li><a href="train1.html">Leash training</a>
+				<li><a href="train2.html">House training</a>
+				<li><a href="tricks.html">Teach 3 tricks</a>
+			</ol>
+		</div>
 	</body>
 </html>
