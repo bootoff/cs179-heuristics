@@ -10,14 +10,26 @@
 	</head>
 	
 	<body>
-		<img src="imgs/menu-burger%20copy.png" height="30" width="30">
-		<div>Dashboard</div>
-		<img src="imgs/search%20copy.png" height="30" width="30">
-		<ul data-role=listview>
-			<li><label><input type="checkbox" name="checkbox-0" /><a href="goal.html">Quit smoking</a></label>
-			<li><label><input type="checkbox" name="checkbox-1" /><a href="goal.html">Build wall around patio</a></label>
-			<li><label><input type="checkbox" name="checkbox-2" /><a href="goal.html">Find Mom home care</a></label>
-		</ul>
-		<a href="goal.html" class="ui-btn">New Goal</a>	
+		<div data-role="page" id="dashboard">
+			<div data-role="panel" id="sidenav" data-display="overlay">
+				<script>$( "#sidenav" ).panel( "close" );</script>
+				<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+				<ul data-role="listview">
+					<li><a href="feed.html">Feed</a></li>
+					<li><a href="dashboard.html">Dashboard</a></li>
+					<li><a href="notifications.html">Notifications</a></li>
+				</ul>
+    		</div><!-- /sidebar navigation -->
+			<script>$( "#sidenav" ).panel( "open" , optionsHash );</script>
+			<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			
+			<span>Dashboard</span>
+			<ul data-role="listview">
+				<li><label><input type="checkbox" name="checkbox-0" /><a href="goal.html">Quit smoking</a></label>
+				<li><label><input type="checkbox" name="checkbox-1" /><a href="goal.html">Build wall around patio</a></label>
+				<li><label><input type="checkbox" name="checkbox-2" /><a href="goal.html">Find Mom home care</a></label>
+			</ul>
+			<a href="goal.html" class="ui-btn">New Goal</a>
+		</div>
 	</body>
 </html>
