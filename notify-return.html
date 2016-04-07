@@ -10,7 +10,21 @@
 	</head>
 	
 	<body>
-		<div>Temporary page</div>
-		<a href="notifications.html">Return to notifications</a>
+		<div data-role="page" id="notify-return">
+			<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+				<script>$( "#sidenav" ).panel( "close" );</script>
+				<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+				<ul data-role="listview">
+					<li><a href="feed.html">Feed</a></li>
+					<li><a href="dashboard.html">Dashboard</a></li>
+					<li><a href="notifications.html">Notifications</a></li>
+				</ul>
+    		</div><!-- /sidebar navigation -->
+			<script>$( "#sidenav" ).panel( "open" );</script>
+			<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			
+			<div>Temporary page</div>
+			<a href="notifications.html">Return to notifications</a>
+		</div>
 	</body>
 </html>
