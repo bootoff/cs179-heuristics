@@ -1,22 +1,38 @@
 <!DOCTYPE html PUBLIC>
 <html>
 <head>
-	<title>Feed</title>
+	<title>Goallective</title>
 		
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
+	<!--Log In-->
+	<div data-role="page" id="login">
+		<center>
+			<h1>Goallective</h1>
+			<h2>Log In</h2>
+			<form method="post" action="index.html">
+        	<input type="text" name="login" placeholder="username">
+        	<input type="password" name="password" placeholder="password">
+        	<a href="#feed" class="ui-btn">Log in.</a>		
+			<a href="#feed" class="ui-btn">Or, go to your feed without logging in.</a>
+			</form>		
+		</center>
+	</div>
+	
+	<!--Feed-->
 	<div data-role="page" id="feed">
 		
 		<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
 			<script>$( "#sidenav" ).panel( "close" );</script>
 			<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
 			<ul data-role="listview">
-				<li><a href="feed.html">Feed</a></li>
-				<li><a href="dashboard.html">Dashboard</a></li>
-				<li><a href="notifications.html">Notifications</a></li>
+				<li><a href="#feed">Feed</a></li>
+				<li><a href="#dashboard">Dashboard</a></li>
+				<li><a href="#notifications">Notifications</a></li>
+				<li><a href="#login">Log Out</a></li>
 			</ul>
     	</div><!-- /sidebar navigation -->
     	
@@ -24,19 +40,82 @@
 		<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
 		
 		<span>Feed</span>
-		<a href="search.html"><img src="imgs/search.png" height="30" width="30"></a>
-		<a href="notifications.html"><img src="imgs/24628-200.png" height="30" width="30"></a>
+		<a href="#search"><img src="imgs/search.png" height="30" width="30"></a>
+		<a href="#notifications"><img src="imgs/24628-200.png" height="30" width="30"></a>
 		<ul data-role="listview">
-			<li><a href="puppy.html"><!--<img src="imgs/user-icon.png" height="25" width="25" margin="5px">--><h3>Bobby D.</h3>Train my puppy</a></li>
-			<li><a href="goal.html"><h3>Roger S.</h3>Teach my daughter to ride a bike</a></li>
-			<li><a href="goal.html"><h3>Joan H.</h3>Save for retirement</a></li>
-			<li><a href="goal.html"><h3>Pete C.</h3>Go paperless in my company</a></li>
-			<li><a href="goal.html"><h3>Anna D.</h3>Renovate the bathroom</a></li>
-			<li><a href="goal.html"><h3>Betty F.</h3>Start a PTA at the kids' school</a></li>
-			<li><a href="goal.html"><h3>Sally D.</h3>Find a new psychiatrist</a></li>
-			<li><a href="goal.html"><h3>Bert C.</h3>Redecorate my office</a></li>
+			<li><a href="#puppy"><!--<img src="imgs/user-icon.png" height="25" width="25" margin="5px">--><h3>Bobby D.</h3>Train my puppy</a></li>
+			<li><a href="#goal"><h3>Roger S.</h3>Teach my daughter to ride a bike</a></li>
+			<li><a href="#goal"><h3>Joan H.</h3>Save for retirement</a></li>
+			<li><a href="#goal"><h3>Pete C.</h3>Go paperless in my company</a></li>
+			<li><a href="#goal"><h3>Anna D.</h3>Renovate the bathroom</a></li>
+			<li><a href="#goal"><h3>Betty F.</h3>Start a PTA at the kids' school</a></li>
+			<li><a href="#goal"><h3>Sally D.</h3>Find a new psychiatrist</a></li>
+			<li><a href="#goal"><h3>Bert C.</h3>Redecorate my office</a></li>
 		</ul>
 	</div>
 	
+	<!--Dashboard-->
+	<div data-role="page" id="dashboard">
+		
+		<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+			<script>$( "#sidenav" ).panel( "close" );</script>
+			<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			<ul data-role="listview">
+				<li><a href="#feed">Feed</a></li>
+				<li><a href="#dashboard">Dashboard</a></li>
+				<li><a href="#notifications">Notifications</a></li>
+				<li><a href="#login">Log Out</a></li>
+			</ul>
+    	</div><!-- /sidebar navigation -->
+
+		<script>$( "#sidenav" ).panel( "open" , optionsHash );</script>
+		<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+		
+		<span>Dashboard</span>
+		<ul data-role="listview">
+			<li><label><input type="checkbox" name="checkbox-0" /><a href="#goal">Quit smoking</a></label>
+			<li><label><input type="checkbox" name="checkbox-1" /><a href="#goal">Build wall around patio</a></label>
+			<li><label><input type="checkbox" name="checkbox-2" /><a href="#goal">Find Mom home care</a></label>
+		</ul>
+		<a href="#goal" class="ui-btn">New Goal</a>
+	</div>
+	
+	<!--Goal-->
+	<div data-role="page" id="goal">
+		
+		<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+			<script>$( "#sidenav" ).panel( "close" );</script>
+			<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			<ul data-role="listview">
+				<li><a href="#feed">Feed</a></li>
+				<li><a href="#dashboard">Dashboard</a></li>
+				<li><a href="#notifications">Notifications</a></li>
+				<li><a href="#login">Log Out</a></li>
+			</ul>
+    	</div><!-- /sidebar navigation -->
+
+		<script>$( "#sidenav" ).panel( "open" );</script>
+		<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+		
+		<span>Goal (tmp)</span>
+		<div>Temporary page</div>
+		<a href="feed.html">Return to feed</a>
+		
+		<div data-role="navbar">
+			<ul>
+				<li><a href="login.html" class="ui-btn">Back</a></li>
+				<li><a href="#" class="ui-btn">Save</a></li>
+				<li><a href="dashboard.html" class="ui-btn">Dashboard</a></li>
+			</ul>
+		</div>
+		<center><h2><div>What kind of goal?</div></h2></center>
+			<ul>
+				<li><a href="goal2.html" class="ui-btn">Professional</a></li>
+				<li><a href="goal2.html" class="ui-btn">Health</a></li>
+				<li><a href="goal2.html" class="ui-btn">Interpersonal</a></li>
+				<li><a href="goal2.html" class="ui-btn">Other</a></li>
+			</ul>
+	</div>
+
 </body>
 </html>
