@@ -21,7 +21,8 @@
 			</form>		
 		</center>
 	</div>
-	
+
+
 	<!--Feed-->
 	<div data-role="page" id="feed">
 		
@@ -53,7 +54,8 @@
 			<li><a href="#goal"><h3>Bert C.</h3>Redecorate my office</a></li>
 		</ul>
 	</div>
-	
+
+
 	<!--Dashboard-->
 	<div data-role="page" id="dashboard">
 		
@@ -79,7 +81,8 @@
 		</ul>
 		<a href="#goal" class="ui-btn">New Goal</a>
 	</div>
-	
+
+
 	<!--Goal-->
 	<div data-role="page" id="goal">
 		
@@ -99,22 +102,156 @@
 		
 		<span>Goal (tmp)</span>
 		<div>Temporary page</div>
-		<a href="feed.html">Return to feed</a>
+		<a href="#feed">Return to feed</a>
 		
 		<div data-role="navbar">
 			<ul>
-				<li><a href="login.html" class="ui-btn">Back</a></li>
+				<li><a href="#login" class="ui-btn">Back</a></li>
 				<li><a href="#" class="ui-btn">Save</a></li>
-				<li><a href="dashboard.html" class="ui-btn">Dashboard</a></li>
+				<li><a href="#dashboard" class="ui-btn">Dashboard</a></li>
 			</ul>
 		</div>
 		<center><h2><div>What kind of goal?</div></h2></center>
 			<ul>
-				<li><a href="goal2.html" class="ui-btn">Professional</a></li>
-				<li><a href="goal2.html" class="ui-btn">Health</a></li>
-				<li><a href="goal2.html" class="ui-btn">Interpersonal</a></li>
-				<li><a href="goal2.html" class="ui-btn">Other</a></li>
+				<li><a href="#goal2" class="ui-btn">Professional</a></li>
+				<li><a href="#goal2" class="ui-btn">Health</a></li>
+				<li><a href="#goal2" class="ui-btn">Interpersonal</a></li>
+				<li><a href="#goal2" class="ui-btn">Other</a></li>
 			</ul>
+	</div>
+
+
+	<!--(Goal) Train My Puppy-->
+	<div data-role="page" id="puppy">
+		
+		<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+			<script>$( "#sidenav" ).panel( "close" );</script>
+			<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			<ul data-role="listview">
+				<li><a href="#feed">Feed</a></li>
+				<li><a href="#dashboard">Dashboard</a></li>
+				<li><a href="#notifications">Notifications</a></li>
+				<li><a href="#login">Log Out</a></li>
+			</ul>
+    	</div><!-- /sidebar navigation -->
+
+		<script>$( "#sidenav" ).panel( "open" );</script>
+		<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			
+		<span>Train my puppy</span>
+		<img src="imgs/search.png" height="30" width="30">
+		<ol data-role=listview>
+			<li><a href="#train1">Leash training</a>
+			<li><a href="#train2">House training</a>
+			<li><a href="#tricks">Teach 3 tricks</a>
+		</ol>
+	</div>
+
+
+	<!--(Sub-Goal) Train My Puppy/Train 1-->
+	<div data-role="page" id="train1">
+		
+		<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+			<script>$( "#sidenav" ).panel( "close" );</script>
+			<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			<ul data-role="listview">
+				<li><a href="#feed">Feed</a></li>
+				<li><a href="#dashboard">Dashboard</a></li>
+				<li><a href="#notifications">Notifications</a></li>
+				<li><a href="#login">Log Out</a></li>
+			</ul>
+    	</div><!-- /sidebar navigation -->
+
+		<script>$( "#sidenav" ).panel( "open" );</script>
+		<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+		
+		<span>Train my puppy</span>
+		<img src="imgs/search.png" height="30" width="30">
+		
+		<div style="text-align: center" data-role="header">1. Leash training</div>
+		<div data-role="collapsible" data-content-theme="c">
+			<h3>Hire weekday dog-walker</h3>
+			<p>Mel H.: My grandson is available!</p>
+			<p>Cindy S.: Try looking on petcare.com.  That's where I went to get a sitter for Fluffy.</p>
+			<input type="text" class="newnote" value="Add a suggestion for Bobby"><button type="button" class="button">Post!</button>
+		</div>
+		<div data-role="collapsible" data-content-theme="c">
+			<h3>Buy small harness and leash</h3>
+			<input type="text" class="newnote" value="Add a suggestion for Bobby"><button type="button" class="button">Post!</button>
+		</div>
+	</div>
+
+
+	<!--Search-->
+	<div data-role="page" id="search">
+		
+		<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+			<script>$( "#sidenav" ).panel( "close" );</script>
+			<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			<ul data-role="listview">
+				<li><a href="#feed">Feed</a></li>
+				<li><a href="#dashboard">Dashboard</a></li>
+				<li><a href="#notifications">Notifications</a></li>
+				<li><a href="#login">Log Out</a></li>
+			</ul>
+    	</div><!-- /sidebar navigation -->
+    	
+		<script>$( "#sidenav" ).panel( "open" , optionsHash );</script>
+		<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+		
+		<span>Search</span>
+		<input type="search" name="search" id="search-basic" value="" />
+		<div><a href="#feed">Return to Feed</a></div>
+	</div>
+
+
+	<!--Notifications-->
+	<div data-role="page" id="notifications">
+		
+		<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+			<script>$( "#sidenav" ).panel( "close" );</script>
+			<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			<ul data-role="listview">
+				<li><a href="#feed">Feed</a></li>
+				<li><a href="#dashboard">Dashboard</a></li>
+				<li><a href="#notifications">Notifications</a></li>
+				<li><a href="#login">Log Out</a></li>
+			</ul>
+    	</div><!-- /sidebar navigation -->
+    	
+		<script>$( "#sidenav" ).panel( "open" , optionsHash );</script>
+		<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+		
+		<span>Notifications</span>
+		
+		<ul data-role="listview">
+			<li><a href="#notify-return"><img src="imgs/24628-200.png" height="70" width="70">Joe G. commented on "Learn to ride a horse"</a></li>
+			<li><a href="#notify-return"><img src="imgs/question-mark-icon-8235.png" height="60" width="60">Virginia S. requested your help on "Do my family's taxes!"</a></li>
+			<li><a href="#notify-return"><img src="imgs/24628-200.png" height="60" width="60">Bobby D. commented on "Quit smoking"</a></li>
+			<li><a href="#notify-return"><img src="imgs/person-icon.png" height="60" width="60">You and Greg J. are now friends. Yay!</a></li>
+		</ul><!-- /content -->
+	</div>
+
+	<!--Notify Return (temp)-->
+	<div data-role="page" id="notify-return">
+		
+		<div data-role="panel" id="sidenav" data-display="push" data-dismissible="true">
+			<script>$( "#sidenav" ).panel( "close" );</script>
+			<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+			<ul data-role="listview">
+				<li><a href="#feed">Feed</a></li>
+				<li><a href="#dashboard">Dashboard</a></li>
+				<li><a href="#notifications">Notifications</a></li>
+				<li><a href="#login">Log Out</a></li>
+			</ul>
+    	</div><!-- /sidebar navigation -->
+    	
+
+		<script>$( "#sidenav" ).panel( "open" );</script>
+		<a href="#sidenav"><img src="imgs/menu-burger%20copy.png" height="30" width="30"></a>
+		
+		<div>Temporary page</div>
+		<a href="#notifications">Return to notifications</a>
 	</div>
 
 </body>
