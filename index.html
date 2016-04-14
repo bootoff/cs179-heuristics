@@ -28,7 +28,7 @@
 <div data-role="page" id="feed">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -67,7 +67,7 @@
 <div data-role="page" id="search">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -96,7 +96,7 @@
 <div data-role="page" id="dashboard">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -130,7 +130,7 @@
 <div data-role="page" id="notifications">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -164,7 +164,7 @@
 <div data-role="page" id="notify-return">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -193,7 +193,7 @@
 <div data-role="page" id="settings">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -221,11 +221,11 @@
 </div>
 
 
-<!--New Goal 1: Goal Type-->
+<!--New Goal 1: Category-->
 <div data-role="page" id="newgoal1">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -241,7 +241,7 @@
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="30" width="30"></a>
-		<h1>New Goal (1/7)</h1>
+		<h1>New Goal (1/5)</h1>
 	</div>
 
 	<div data-role="navbar">
@@ -252,22 +252,27 @@
 	</div>
 
 	<div data-role="content">
-		<center><h2><div>What kind of goal?</div></h2></center>
-		<ul>
-			<li><a href="#newgoal2" class="ui-btn">Professional</a></li>
-			<li><a href="#newgoal2" class="ui-btn">Health</a></li>
-			<li><a href="#newgoal2" class="ui-btn">Interpersonal</a></li>
-			<li><a href="#newgoal2" class="ui-btn">Other</a></li>
-		</ul>
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>What kind of goal?</legend>
+				<input type="radio" name="radio-choice" id="category-1" value="category-1" checked="checked" />
+				<label for="category-1">Professional</label>
+				<input type="radio" name="radio-choice" id="category-2" value="category-2"  />
+				<label for="category-2">Health</label>
+				<input type="radio" name="radio-choice" id="category-3" value="category-3"  />
+				<label for="category-3">Interpersonal</label>
+			</fieldset>
+		</form>
+		<a href="#newgoal2" class="ui-btn">Next</a>
 	</div>
 </div>
 	
 	
-<!--New Goal 2: Category-->
+<!--New Goal 2: Tags-->
 <div data-role="page" id="newgoal2">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -283,7 +288,7 @@
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="30" width="30"></a>
-		<h1>New Goal (2/7)</h1>
+		<h1>New Goal (2/5)</h1>
 	</div>
 
 	<div data-role="navbar">
@@ -294,16 +299,26 @@
 	</div>
 
 	<div data-role="content">
-		<center><h2><div>Pick a category</div></h2></center>
-		<ul>
-			<li><a href="#newgoal3" class="ui-btn">Diet</a></li>
-			<li><a href="#newgoal3" class="ui-btn">Vegan</a></li>
-			<li><a href="#newgoal3" class="ui-btn">Running</a></li>
-			<li><a href="#newgoal3" class="ui-btn">Weight Loss</a></li>
-			<li><a href="#newgoal3" class="ui-btn">Body-building</a></li>
-			<br>
-			<li><a href="#newgoal1" class="ui-btn">Back</a></li>
-		</ul>
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>Pick a tag, or enter your own:</legend>
+				<input type="radio" name="radio-choice" id="tag-1" value="tag-1" checked="checked" />
+				<label for="tag-1">Diet</label>
+				<input type="radio" name="radio-choice" id="tag-2" value="tag-2"  />
+				<label for="tag-2">Vegan</label>
+				<input type="radio" name="radio-choice" id="tag-3" value="tag-3"  />
+				<label for="tag-3">Running</label>
+				<input type="radio" name="radio-choice" id="tag-4" value="tag-4"  />
+				<label for="tag-4">Weight Loss</label>
+				<input type="radio" name="radio-choice" id="tag-5" value="tag-5"  />
+				<label for="tag-5">Body-building</label>
+				<input type="radio" name="radio-choice" id="tag-6" value="tag-6"  />
+				<input type="text" name="Create a new goal" id="tag-6-text" value=""  />
+				<label for="tag-6">Other:</label>
+			</fieldset>
+		</form>
+		<a href="#newgoal3" class="ui-btn">Next</a>
+		<a href="#newgoal1" class="ui-btn">Back</a>
 	</div>
 </div>
 
@@ -312,7 +327,7 @@
 <div data-role="page" id="newgoal3">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -328,7 +343,7 @@
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="30" width="30"></a>
-		<h1>New Goal (3/7)</h1>
+		<h1>New Goal (3/5)</h1>
 	</div>
 
 	<div data-role="navbar">
@@ -339,25 +354,29 @@
 	</div>
 
 	<div data-role="content">
-		<center><h2><div>Suggested goals based on category:</div></h2>
-		<form>
-			<input type="radio" name="goaltext" value="cook">"I want to cook delicious vegan food."<br>
-			<input type="radio" name="goaltext" value="commit">"I need help commiting to veganism"<br>
-			<input type="radio" name="goaltext" value="other">Other:<input type="text" name="Create a new goal">
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>Pick a suggested goal, or enter your own:</legend>
+				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
+				<label for="suggest-1">I want to learn to cook delicious vegan food.</label>
+				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
+				<label for="suggest-2">"I need help committing to veganism."</label>
+				<input type="radio" name="radio-choice" id="suggest-3" value="suggest-3"  />
+				<label for="suggest-3">Other:</label>
+				<input type="text" name="Create a new goal">
+			</fieldset>
 		</form>
 		<a href="#newgoal4" class="ui-btn">Next</a>
-		<br>
 		<a href="#newgoal2" class="ui-btn">Back</a>
-		</center>
 	</div>
 </div>
 
 
-<!--New Goal 4: Deadline-->
+<!--New Goal 4: Deadline & Priority-->
 <div data-role="page" id="newgoal4">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -373,7 +392,7 @@
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="30" width="30"></a>
-		<h1>New Goal (4/7)</h1>
+		<h1>New Goal (4/5)</h1>
 	</div>
 
 	<div data-role="navbar">
@@ -384,25 +403,39 @@
 	</div>
 
 	<div data-role="content">
-		<center><h2><div>When do you want this done?</div></h2>
-			<form>
-				<input type="radio" name="when" value="week">1 week<br>
-				<input type="radio" name="when" value="month">1 month<br>
-				<input type="radio" name="when" value="year">1 year<br>  
-			</form>
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>When do you want to have this done?</legend>
+				<input type="radio" name="radio-choice" id="deadline-1" value="deadline-1" checked="checked" />
+				<label for="deadline-1">1 week</label>
+				<input type="radio" name="radio-choice" id="deadline-2" value="deadline-2"  />
+				<label for="deadline-2">1 month</label>
+				<input type="radio" name="radio-choice" id="deadline-3" value="deadline-3"  />
+				<label for="deadline-3">1 year</label>
+			</fieldset>
+		</form>
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>How important is this?</legend>
+				<input type="radio" name="radio-choice" id="priority-1" value="priority-1" checked="checked" />
+				<label for="priority-1">Urgent</label>
+				<input type="radio" name="radio-choice" id="priority-2" value="priority-2"  />
+				<label for="priority-2">Medium</label>
+				<input type="radio" name="radio-choice" id="priority-3" value="priority-3"  />
+				<label for="priority-3">Low</label>
+			</fieldset>
+		</form>
 		<a href="#newgoal5" class="ui-btn">Next</a>
-		<br>
 		<a href="#newgoal3" class="ui-btn">Back</a>
-		</center>
 	</div>
 </div>
 
 
-<!--New Goal 5: Priority-->
+<!--New Goal 5: Sharing-->
 <div data-role="page" id="newgoal5">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -418,7 +451,7 @@
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="30" width="30"></a>
-		<h1>New Goal (5/7)</h1>
+		<h1>New Goal (5/5)</h1>
 	</div>
 
 	<div data-role="navbar">
@@ -429,112 +462,22 @@
 	</div>
 
 	<div data-role="content">
-		<center><h2><div>How important is this?</div></h2>
-			<form>
-				<input type="radio" name="important" value="urgent">Urgent<br>
-				<input type="radio" name="important" value="medium">Medium<br>
-				<input type="radio" name="important" value="low">Low<br>  
-			</form>
-		<a href="#newgoal6" class="ui-btn">Next</a>
-		<br>
-		<a href="#newgoal4" class="ui-btn">Back</a>
-		</center>
-	</div>
-</div>
-
-
-<!--New Goal 6: Visibility-->
-<div data-role="page" id="newgoal6">
-	
-	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
-		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">Dashboard</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav" ).panel( "toggle" );</script>
-
-	<div data-role="header">
-		<a href="#sidenav"><img src="imgs/menu-burger.png" height="30" width="30"></a>
-		<h1>New Goal (6/7)</h1>
-	</div>
-
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#" class="ui-btn">Save</a></li>
-			<li><a href="#dashboard" class="ui-btn">Dashboard</a></li>
-		</ul>
-	</div>
-
-	<div data-role="content">
-		<center><h2><div>Who should see your goal?</div></h2>
-			<form>
-				<input type="radio" name="who-sees" value="me">Just me<br>
-				<input type="radio" name="who-sees" value="some-friends">Some friends<br>
-				<input type="radio" name="who-sees" value="all-friends">Friends<br>  
-				<input type="radio" name="who-sees" value="everyone">Everyone<br> 
-			</form>
-		<a href="#newgoal7" class="ui-btn">Next</a>
-		<br>
-		<a href="#newgoal5" class="ui-btn">Back</a>
-		</center>
-	</div>
-</div>
-
-
-<!--New Goal 7: Sharing-->
-<div data-role="page" id="newgoal7">
-	
-	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
-		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">Dashboard</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav" ).panel( "toggle" );</script>
-
-	<div data-role="header">
-		<a href="#sidenav"><img src="imgs/menu-burger.png" height="30" width="30"></a>
-		<h1>New Goal (7/7)</h1>
-	</div>
-
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#" class="ui-btn">Save</a></li>
-			<li><a href="#dashboard" class="ui-btn">Dashboard</a></li>
-		</ul>
-	</div>
-
-	<div data-role="content">
-		<fieldset data-role="controlgroup">
-			<legend>Show my goal to...</legend>
-			<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
-			<label for="radio-choice-1">Just me</label>
-	
-			<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
-			<label for="radio-choice-2">Friends</label>
-	
-			<input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3"  />
-			<label for="radio-choice-3">Everyone</label>
-		</fieldset>
-			
-		<label><input type="checkbox" name="checkbox-0" />I'm open to feedback</label>
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>Show my goal to...</legend>
+				<input type="radio" name="radio-choice" id="sharing-1" value="sharing-1" checked="checked" />
+				<label for="sharing-1">Just me</label>
 		
+				<input type="radio" name="radio-choice" id="sharing-2" value="sharing-2"  />
+				<label for="sharing-2">Friends</label>
+		
+				<input type="radio" name="radio-choice" id="sharing-3" value="sharing-3"  />
+				<label for="sharing-3">Everyone</label>
+			</fieldset>
+		</form>
+		<label><input type="checkbox" name="checkbox-0" />I'm open to feedback</label>
 		<a href="#dashboard" class="ui-btn">Let's go!</a>
+		<a href="#newgoal4" class="ui-btn">Back</a>
 	</div>
 </div>
 
@@ -543,7 +486,7 @@
 <div data-role="page" id="puppy0">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
@@ -577,7 +520,7 @@
 <div data-role="page" id="puppy1">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav" ).panel( "toggle" );</script>
+		<script>$( "#sidenav" ).panel( "close" );</script>
 		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="30" width="30"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
