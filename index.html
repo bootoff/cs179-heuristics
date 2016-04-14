@@ -296,12 +296,13 @@
 	<div data-role="content">
 		<center><h2><div>Pick a category</div></h2></center>
 		<ul>
-			<li><a href="#" class="ui-btn">Diet</a></li>
-			<li><a href="#" class="ui-btn">Vegan</a></li>
-			<li><a href="#" class="ui-btn">Running</a></li>
-			<li><a href="#" class="ui-btn">Weight Loss</a></li>
-			<li><a href="#" class="ui-btn">Body-building</a></li>
-			<li><a href="#newgoal3" class="ui-btn">NEXT</a></li>
+			<li><a href="#newgoal3" class="ui-btn">Diet</a></li>
+			<li><a href="#newgoal3" class="ui-btn">Vegan</a></li>
+			<li><a href="#newgoal3" class="ui-btn">Running</a></li>
+			<li><a href="#newgoal3" class="ui-btn">Weight Loss</a></li>
+			<li><a href="#newgoal3" class="ui-btn">Body-building</a></li>
+			<br>
+			<li><a href="#newgoal1" class="ui-btn">Back</a></li>
 		</ul>
 	</div>
 </div>
@@ -339,11 +340,14 @@
 
 	<div data-role="content">
 		<center><h2><div>Suggested goals based on category:</div></h2>
-		<ul>
-			<li>"I want to cook delicious vegan food."</li>
-			<li>"I need help commiting to veganism"</li>
-			<li><a href="#newgoal4" class="ui-btn">NEXT</a></li>
-		</ul>
+		<form>
+			<input type="radio" name="goaltext" value="cook">"I want to cook delicious vegan food."<br>
+			<input type="radio" name="goaltext" value="commit">"I need help commiting to veganism"<br>
+			<input type="radio" name="goaltext" value="other">Other:<input type="text" name="Create a new goal">
+		</form>
+		<a href="#newgoal4" class="ui-btn">Next</a>
+		<br>
+		<a href="#newgoal2" class="ui-btn">Back</a>
 		</center>
 	</div>
 </div>
@@ -382,14 +386,14 @@
 	<div data-role="content">
 		<center><h2><div>When do you want this done?</div></h2>
 			<form>
-				<input type="radio" name="when" value="day">1 day<br>
+				<input type="radio" name="when" value="week">1 week<br>
 				<input type="radio" name="when" value="month">1 month<br>
 				<input type="radio" name="when" value="year">1 year<br>  
 			</form>
+		<a href="#newgoal5" class="ui-btn">Next</a>
+		<br>
+		<a href="#newgoal3" class="ui-btn">Back</a>
 		</center>
-		<ul>
-			<li><a href="#newgoal5" class="ui-btn">NEXT</a></li>
-		</ul>
 	</div>
 </div>
 
@@ -431,10 +435,10 @@
 				<input type="radio" name="important" value="medium">Medium<br>
 				<input type="radio" name="important" value="low">Low<br>  
 			</form>
+		<a href="#newgoal6" class="ui-btn">Next</a>
+		<br>
+		<a href="#newgoal4" class="ui-btn">Back</a>
 		</center>
-		<ul>
-			<li><a href="#newgoal6" class="ui-btn">NEXT</a></li>
-		</ul>
 	</div>
 </div>
 
@@ -477,10 +481,10 @@
 				<input type="radio" name="who-sees" value="all-friends">Friends<br>  
 				<input type="radio" name="who-sees" value="everyone">Everyone<br> 
 			</form>
+		<a href="#newgoal7" class="ui-btn">Next</a>
+		<br>
+		<a href="#newgoal5" class="ui-btn">Back</a>
 		</center>
-		<ul>
-			<li><a href="#newgoal7" class="ui-btn">NEXT</a></li>
-		</ul>
 	</div>
 </div>
 
@@ -530,7 +534,7 @@
 			
 		<label><input type="checkbox" name="checkbox-0" />I'm open to feedback</label>
 		
-		<a href="#goal" class="ui-btn">Let's go!</a>
+		<a href="#dashboard" class="ui-btn">Let's go!</a>
 	</div>
 </div>
 
