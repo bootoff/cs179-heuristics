@@ -1,37 +1,27 @@
+//Adding new comments
 var text;
 var posts = {val: 0, postList: []};
 
 $( document ).ready(function() {
-
-	$(document).on('click', '.postbutton', function() {
-	    text = $(".newpost").val();
-	    console.log(text);
-	    posts.postList.push({ind: posts.val, content: text});
-	    var posttext = "<li class='post' data-index='" + posts.val + "'>" + text + "</li>";
-	    $("ul").append(posttext);
-	    posts.val++;
-  	});	
-};
-
-var text;
-var posts = {val: 0, postList: []};
-
-$( document ).ready(function() {
-  posts = JSON.parse(localStorage.getItem("savedPosts"));
-
-  for (var j=0;j<posts.postList.length; j++){
-    sticky= "<li class='note' data-index='" + posts.postList[j].ind + "> <p>" + posts.postList[j].content + "</p> </li>";
-    $("ul").append(sticky);
+  if (localStorage.getItem("savedComments")) {
+    posts = JSON.parse(localStorage.getItem("savedComments"));
   }
+    for (var j=0;j<posts.postList.length; j++){
+      comment= "<li class='note' data-index='" + posts.postList[j].ind + "'> <p>" + posts.postList[j].content + "</p> </li>";
+      $("ul").append(comment);
+    }
   posts.val = posts.postList.length
 
-  $(document).on('click', '.button', function() {
+  $(document).on('click', '.postbutton', function() {
     text = $(".newpost").val();
-    posts.postList.push({ind: posts.val, ident: notetype, content: text});
-    var posttext = "<li class='post' data-index='" + posts.val + "> <p>" + text + "</p> </li>";
-    $("ul").append(posttext);
+    posts.postList.push({ind: posts.val, content: text});
+    var posttext = "<li class='post' data-index='" + posts.val + "'> <p>" + text + "</p> </li>";
+    $("#postList").append(posttext);
+    //$("#postList").append("<li>test 1</li>");
+    console.log($("#postList"))
     posts.val++;
-    localStorage.setItem("savedPosts", JSON.stringify(posts));
+    console.log(posts);
+    localStorage.setItem("savedComments", JSON.stringify(posts));
 
   });
 
@@ -46,10 +36,10 @@ $( document ).ready(function() {
   //     if ($(this).attr("data-index") == posts.postList[k].ind){
   //       console.log("hello");
   //       posts.postList.splice(k,1);
-  //       localStorage.setItem("savedPosts", JSON.stringify(posts));
+  //       localStorage.setItem("savedComments", JSON.stringify(posts));
   //     }
   //   }
-  //   localStorage.setItem("savedPosts", JSON.stringify(posts));
+  //   localStorage.setItem("savedComments", JSON.stringify(posts));
   // });
 
 });
