@@ -9,7 +9,7 @@ username = "Curren"
 var text;
 var posts = {val: 0, postList: []};
 
-var mygoals = []
+var mygoals = {val: 0, goalList: []};
 
 $( document ).ready(function() {
   if (localStorage.getItem("oldPosts")) {
@@ -36,6 +36,16 @@ $( document ).ready(function() {
   });
 
   // MANAGING MY GOALS
+
+  //Retrieval
+  if (localStorage.getItem("oldGoals")) {
+    mygoals = JSON.parse(localStorage.getItem("oldGoals"));
+  }
+    for (var j=0;j<mygoals.goalList.length; j++){
+      goal= "<li class='goal' data-index='" + mygoals.goalList[j].ind + "'>" + mygoals.goalList[j].text + "</li>";
+      $("#MyGoals").append(goal);
+    }
+  mygoals.val = mygoals.goalList.length
 
   //Category
   var cat;
@@ -137,8 +147,12 @@ $(document).on('click', '#gb5', function() {
       fdbk=1;
     }
     console.log(fdbk);
-    mygoals.push({category: cat, tag: gtag, text: gtext, time: tline, prior: urg, view: aud, fb: fdbk})
+    mygoals.goalList.push({category: cat, tag: gtag, text: gtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val})
+    var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'>" + gtext + "</li>";
+    $("#MyGoals").append(gdescrip);
     console.log(mygoals)
+    mygoals.val++;
+    localStorage.setItem("oldGoals", JSON.stringify(mygoals));
   });
 
 
