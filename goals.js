@@ -33,18 +33,6 @@ var myGoals = {
 				}
 			]
 		},
-		{
-			"name"	: "Find a dentist",
-			"count"	: 2,
-			"steps"	: [
-				{
-					"name"	: "research"
-				},
-				{
-					"name"	: "call"
-				}
-			]
-		}
 	]
 };
 
