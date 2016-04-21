@@ -38,7 +38,7 @@ var myGoals = {
 			"count"	: 2,
 			"steps"	: [
 				{
-					"name"	: "research",
+					"name"	: "research"
 				},
 				{
 					"name"	: "call"
