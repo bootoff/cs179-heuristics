@@ -265,15 +265,15 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup">
 				<legend>What kind of goal?</legend>
-				<input type="radio" name="radio-choice" id="category-1" value="category-1" checked="checked" />
-				<label for="category-1">Professional</label>
-				<input type="radio" name="radio-choice" id="category-2" value="category-2"  />
-				<label for="category-2">Health</label>
-				<input type="radio" name="radio-choice" id="category-3" value="category-3"  />
-				<label for="category-3">Interpersonal</label>
+				<input type="radio" name="radio-choice" id="cat_1" value="Professional" checked="checked"/>
+				<label for="cat_1">Professional</label>
+				<input type="radio" name="radio-choice" id="cat_2" value="Health"  />
+				<label for="cat_2">Health</label>
+				<input type="radio" name="radio-choice" id="cat_3" value="Interpersonal"  />
+				<label for="cat_3">Interpersonal</label>
 			</fieldset>
 		</form>
-		<a href="#newgoal2" class="ui-btn">Next</a>
+		<a href="#newgoal2" class="ui-btn" id="gb1">Next</a>
 	</div>
 </div>
 	
@@ -312,22 +312,22 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup">
 				<legend>Pick a tag, or enter your own:</legend>
-				<input type="radio" name="radio-choice" id="tag-1" value="tag-1" checked="checked" />
+				<input type="radio" name="radio-choice" id="tag-1" value="Diet" checked="checked" />
 				<label for="tag-1">Diet</label>
-				<input type="radio" name="radio-choice" id="tag-2" value="tag-2"  />
+				<input type="radio" name="radio-choice" id="tag-2" value="Vegan"  />
 				<label for="tag-2">Vegan</label>
-				<input type="radio" name="radio-choice" id="tag-3" value="tag-3"  />
+				<input type="radio" name="radio-choice" id="tag-3" value="Running"  />
 				<label for="tag-3">Running</label>
-				<input type="radio" name="radio-choice" id="tag-4" value="tag-4"  />
+				<input type="radio" name="radio-choice" id="tag-4" value="Weight Loss"  />
 				<label for="tag-4">Weight Loss</label>
-				<input type="radio" name="radio-choice" id="tag-5" value="tag-5"  />
+				<input type="radio" name="radio-choice" id="tag-5" value="Body-Building"  />
 				<label for="tag-5">Body-building</label>
-				<input type="radio" name="radio-choice" id="tag-6" value="tag-6"  />
+				<input type="radio" name="radio-choice" id="tag-6" value=""  />
 				<input type="text" name="Create a new goal" id="tag-6-text" value=""  />
 				<label for="tag-6">Other:</label>
 			</fieldset>
 		</form>
-		<a href="#newgoal3" class="ui-btn">Next</a>
+		<a href="#newgoal3" class="ui-btn" id="gb2">Next</a>
 		<a href="#newgoal1" class="ui-btn">Back</a>
 	</div>
 </div>
@@ -370,13 +370,13 @@
 				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
 				<label for="suggest-1">I want to learn to cook delicious vegan food.</label>
 				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
-				<label for="suggest-2">"I need help committing to veganism."</label>
-				<input type="radio" name="radio-choice" id="suggest-3" value="suggest-3"  />
+				<label for="suggest-2">I need help committing to veganism.</label>
+				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
+				<input type="text" name="Create a new goal" id="suggest-3-text" value="">
 				<label for="suggest-3">Other:</label>
-				<input type="text" name="Create a new goal">
 			</fieldset>
 		</form>
-		<a href="#newgoal4" class="ui-btn">Next</a>
+		<a href="#newgoal4" class="ui-btn" id="gb3">Next</a>
 		<a href="#newgoal2" class="ui-btn">Back</a>
 	</div>
 </div>
@@ -416,26 +416,26 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup">
 				<legend>When do you want to have this done?</legend>
-				<input type="radio" name="radio-choice" id="deadline-1" value="deadline-1" checked="checked" />
+				<input type="radio" name="radio-choice" id="deadline-1" value="1 week" checked="checked" />
 				<label for="deadline-1">1 week</label>
-				<input type="radio" name="radio-choice" id="deadline-2" value="deadline-2"  />
+				<input type="radio" name="radio-choice" id="deadline-2" value="1 month"  />
 				<label for="deadline-2">1 month</label>
-				<input type="radio" name="radio-choice" id="deadline-3" value="deadline-3"  />
+				<input type="radio" name="radio-choice" id="deadline-3" value="1 year"  />
 				<label for="deadline-3">1 year</label>
 			</fieldset>
 		</form>
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup">
 				<legend>How important is this?</legend>
-				<input type="radio" name="radio-choice" id="priority-1" value="priority-1" checked="checked" />
+				<input type="radio" name="radio-choice" id="priority-1" value="Urgent" checked="checked" />
 				<label for="priority-1">Urgent</label>
-				<input type="radio" name="radio-choice" id="priority-2" value="priority-2"  />
+				<input type="radio" name="radio-choice" id="priority-2" value="Medium"  />
 				<label for="priority-2">Medium</label>
-				<input type="radio" name="radio-choice" id="priority-3" value="priority-3"  />
+				<input type="radio" name="radio-choice" id="priority-3" value="Low"  />
 				<label for="priority-3">Low</label>
 			</fieldset>
 		</form>
-		<a href="#newgoal5" class="ui-btn">Next</a>
+		<a href="#newgoal5" class="ui-btn" id="gb4">Next</a>
 		<a href="#newgoal3" class="ui-btn">Back</a>
 	</div>
 </div>
@@ -485,12 +485,11 @@
 				<label for="sharing-3">Everyone</label>
 			</fieldset>
 		</form>
-		<label><input type="checkbox" name="checkbox-0" />I'm open to feedback</label>
-		<a href="#dashboard" class="ui-btn">Let's go!</a>
+		<label><input type="checkbox" id="fdbk-box" />I'm open to feedback</label>
+		<a href="#dashboard" class="ui-btn" id="gb5">Let's go!</a>
 		<a href="#newgoal4" class="ui-btn">Back</a>
 	</div>
 </div>
-
 
 <!--(My Goal) Train My Puppy-->
 <div data-role="page" id="puppy0">
@@ -566,7 +565,7 @@
 			<h3>Buy small harness and leash</h3>
 			<form id = "creator">
 				<input type="text" class="newpost" value="Add a comment">
-				<button type="button" class="postbutton">Post!</button>
+				<button type="button" class="postbutton">Comment!</button>
 			</form>
 			<ul id="postList">
 			</ul>
