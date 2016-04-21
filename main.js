@@ -9,12 +9,12 @@ var text;
 var posts = {val: 0, postList: []};
 
 $( document ).ready(function() {
-  if (localStorage.getItem("oldCom")) {
-    posts = JSON.parse(localStorage.getItem("oldCom"));
+  if (localStorage.getItem("postHist")) {
+    posts = JSON.parse(localStorage.getItem("postHist"));
   }
     for (var j=0;j<posts.postList.length; j++){
-      comment= "<li class='note' data-index='" + posts.postList[j].ind + "'> <p>" + posts.postList[j].user + ": " + posts.postList[j].content + "</p> </li>";
-      $("ul").append(comment);
+      comment= "<li class='post' data-index='" + posts.postList[j].ind + "'> <p>" + posts.postList[j].user + ": " + posts.postList[j].content + "</p> </li>";
+      $("#postList").append(comment);
     }
   posts.val = posts.postList.length
 
@@ -28,7 +28,7 @@ $( document ).ready(function() {
     console.log($("#postList"))
     posts.val++;
     console.log(posts);
-    localStorage.setItem("oldCom", JSON.stringify(posts));
+    localStorage.setItem("postHist", JSON.stringify(posts));
 
   });
 
@@ -43,10 +43,10 @@ $( document ).ready(function() {
   //     if ($(this).attr("data-index") == posts.postList[k].ind){
   //       console.log("hello");
   //       posts.postList.splice(k,1);
-  //       localStorage.setItem("oldCom", JSON.stringify(posts));
+  //       localStorage.setItem("postHist", JSON.stringify(posts));
   //     }
   //   }
-  //   localStorage.setItem("oldCom", JSON.stringify(posts));
+  //   localStorage.setItem("postHist", JSON.stringify(posts));
   // });
 
 });
