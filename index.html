@@ -12,13 +12,13 @@
 </head>
 
 <body>
-<!--Log In-->
+<!--LOG-IN-->
 <div data-role="page" id="login">
 	<center>
 		<h1>Goallective</h1>
 		<h2>Log In</h2>
 		<form method="post" action="index.html">
-    	<input type="text" name="login" placeholder="username">
+    	<input type="text" name="username" placeholder="username">
     	<input type="password" name="password" placeholder="password">
     	<a href="#feed" class="ui-btn">Log in</a>		
 		<a href="#newgoal1" class="ui-btn">Or, create a goal without logging in</a>
@@ -48,6 +48,14 @@
 		<a href="#sidenav"><img src="imgs/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
 		<a href="#search"><img src="imgs/search.png" height="16" width="16"></a>
+	</div>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#" class="ui-btn">All</a></li>
+			<li><a href="#dashboard" class="ui-btn">Health</a></li>
+			<li><a href="#dashboard" class="ui-btn">Professional</a></li>
+		</ul>
 	</div>
 	
 	<div data-role="content">
@@ -545,9 +553,9 @@
 			<h3>Hire weekday dog-walker</h3>
 			<form id="creator">
 				<input type="text" class="newpost" value="Add a comment">
-				<button type="button" class="postbutton">Post!</button>
+				<button type="button" class="postbutton">Comment!</button>
 			</form>
-			<ul id="postList">
+			<ul id="postList" data-role="listview">
 			</ul>
 			<!-- <p>Mel H.: My grandson is available!</p>
 			<p>Cindy S.: Try looking on petcare.com.  That's where I went to get a sitter for Fluffy.</p> -->
