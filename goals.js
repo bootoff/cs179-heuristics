@@ -44,3 +44,4 @@ var myGoals = {
 myGoals.list = function(line) {
 	$("#stuff").html(stuff);
 };
+

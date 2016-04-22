@@ -89,7 +89,7 @@
 		</ul>
 	</div><!-- /sidebar navigation -->
 	
-	<script>$( "#sidenav" ).panel( "toggle" , optionsHash );</script>
+	<script>$( "#sidenav" ).panel( "toggle" );</script>
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="16" width="16"></a>
@@ -118,7 +118,7 @@
 		</ul>
 	</div><!-- /sidebar navigation -->
 
-	<script>$( "#sidenav" ).panel( "toggle" , optionsHash );</script>
+	<script>$( "#sidenav" ).panel( "toggle" );</script>
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="16" width="16"></a>
@@ -128,9 +128,9 @@
 	<div data-role="content">
 		<fieldset>
 		<ul data-role="listview" id="goalList">
-			<li class='goal'><a href="#mygoals-quit">Quit smoking</a></li>
-			<li class='goal'><a href="#goal">Build wall around patio</a></li>
-			<li class='goal'><a href="#goal">Find Mom home care</a></li>
+			<li class='goal' data-index='1'><a href="#mygoals-quit">Quit smoking</a></li>
+			<li class='goal' data-index='2'><a href="#">Build wall around patio</a></li>
+			<li class='goal' data-index='3'><a href="#">Find Mom home care</a></li>
 		</ul>
 		</fieldset>
 		<a href="#newgoal1" class="ui-btn">New Goal</a></li>
@@ -154,7 +154,7 @@
 		</ul>
 	</div><!-- /sidebar navigation -->
 
-	<script>$( "#sidenav" ).panel( "toggle" , optionsHash );</script>
+	<script>$( "#sidenav" ).panel( "toggle" );</script>
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="16" width="16"></a>
@@ -218,7 +218,7 @@
 		</ul>
 	</div><!-- /sidebar navigation -->
 	
-	<script>$( "#sidenav" ).panel( "toggle" , optionsHash );</script>
+	<script>$( "#sidenav" ).panel( "toggle" );</script>
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="16" width="16"></a>
@@ -281,7 +281,7 @@
 		</ul>
 	</div><!-- /sidebar navigation -->
 	
-	<script>$( "#sidenav" ).panel( "toggle" , optionsHash );</script>
+	<script>$( "#sidenav" ).panel( "toggle" );</script>
 
 	<div data-role="header">
 		<a href="#sidenav"><img src="imgs/menu-burger.png" height="16" width="16"></a>
@@ -434,9 +434,9 @@
 			<fieldset data-role="controlgroup">
 				<legend>Pick a suggested goal, or enter your own:</legend>
 				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
-				<label for="suggest-1">I want to learn to cook delicious vegan food.</label>
+				<label for="suggest-1">Learn to cook delicious vegan food.</label>
 				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
-				<label for="suggest-2">I need help committing to veganism.</label>
+				<label for="suggest-2">Get help committing to veganism.</label>
 				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
 				<input type="text" name="Create a new goal" id="suggest-3-text" value="">
 				<label for="suggest-3">Other:</label>
