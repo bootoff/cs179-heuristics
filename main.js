@@ -156,33 +156,3 @@ $(document).on('click', '#gb5', function() {
 
 
 });
-
-
-//EDITING GOALS
-
-// Adding New Subgoal
-
-var text;
-var subgoals = {val: 0, subgoalList: []};
-
-$( document ).ready(function() {
-	if (localStorage.getItem("oldSubgoals")) {
-		subgoals = JSON.parse(localStorage.getItem("oldSubgoals"));
-	}
-    for (var j=0;j<subgoals.subgoalList.length; j++){
-    	var entry= "<div class='subgoal' data-index='" + subgoals.subgoalList[j].ind + "'> <p>" + subgoals.subgoalList[j].user + ": " + subgoals.subgoalList[j].content + "</p> </li>";
-		$("#subgoalList").append(entry);
-    }
-  subgoals.val = subgoals.subgoalList.length
-
-  $(document).on('click', '.postbutton', function() {
-    text = $(".newpost").val();
-    subgoals.subgoalList.push({ind: subgoals.val, user: author, content: text});
-    var subgoaltext = "<label class='subgoals' data-index='" + subgoals.val + "'>" + text + "</p> </li>";
-    $("#subgoalList").append(subgoaltext);
-    console.log($("#subgoalList"))
-    subgoals.val++;
-    console.log(subgoals);
-    localStorage.setItem("oldSubgoals", JSON.stringify(subgoals));
-
-  });

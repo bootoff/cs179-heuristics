@@ -12,7 +12,8 @@
 </head>
 
 <body>
-<!--LOG-IN-->
+
+<!--LOG IN-->
 <div data-role="page" id="login">
 	<center>
 		<h1>Goallective</h1>
@@ -162,9 +163,8 @@
 	</div>
 	
 	<div data-role="content">
-		<a href="#mygoals" class="ui-btn">Back</a>
-		<fieldset>
-			<div data-role="collapsible" data-collapsed="false"><h3>Medical consultation</h3>
+		<fieldset id="subgoalList">
+			<div class='subgoal' data-index='1' data-role="collapsible" data-collapsed="false"><h3>Medical consultation</h3>
 				<fieldset data-role="controlgroup" id='subgoal1'>
 					<label class='step'><input type="checkbox" checked="true">Set up appt. with my doctor</label>
 					<label class='step'><input type="checkbox">Go to lab for stress tests</label>
@@ -175,7 +175,7 @@
 					<button type="button" class="subgoal2button">Add</button>
 				</form>
 			</div>
-			<div data-role="collapsible"><h3>Get materials</h3>
+			<div class='subgoal' data-index='2' data-role="collapsible"><h3>Get materials</h3>
 				<fieldset data-role="controlgroup" id='subgoal2'>
 					<label class='step'><input type="checkbox" checked="true">Patches</label>
 					<label class='step'><input type="checkbox">E cig?</label>
@@ -185,7 +185,7 @@
 					<button type="button" class="subgoal2button">Add</button>
 				</form>
 			</div>
-			<div data-role="collapsible"><h3>Find good support group</h3>
+			<div class='subgoal' data-index='3' data-role="collapsible"><h3>Find good support group</h3>
 				<fieldset data-role="controlgroup" id='subgoal3'>
 				</fieldset>
 				<form id="">
@@ -198,6 +198,7 @@
 				<button type="button" class="subgoal1button">Add</button>
 			</form>
 		</fieldset>
+		<a href="#mygoals" class="ui-btn">Back to My Goals</a>
 	</div>
 </div>
 
@@ -227,10 +228,10 @@
 	
 	<div data-role="content">
 		<ul data-role="listview">
-			<li><a href="#notify-return"><img src="imgs/24628-200.png" height="70" width="70">Joe G. commented on "Learn to ride a horse"</a></li>
-			<li><a href="#notify-return"><img src="imgs/question-mark-icon-8235.png" height="60" width="60">Virginia S. requested your help on "Do my family's taxes!"</a></li>
-			<li><a href="#notify-return"><img src="imgs/24628-200.png" height="60" width="60">Bobby D. commented on "Quit smoking"</a></li>
-			<li><a href="#notify-return"><img src="imgs/person.png" height="60" width="60">You and Greg J. are now friends. Yay!</a></li>
+			<li><a href="#mygoals-quit"><img src="imgs/24628-200.png" height="70" width="70">Roger S. commented on "Quit smoking"</a></li>
+			<li><a href="#puppy0"><img src="imgs/question-mark-icon-8235.png" height="60" width="60">Bobby D. requested your help on "Train my puppy"</a></li>
+			<li><a href="#mygoals-quit"><img src="imgs/24628-200.png" height="60" width="60">Betty F. commented on "Quit smoking"</a></li>
+			<li><a href="#feed"><img src="imgs/person.png" height="60" width="60">You and Anna D. are now friends. Yay!</a></li>
 		</ul>
 	</div>
 </div>
@@ -434,9 +435,9 @@
 			<fieldset data-role="controlgroup">
 				<legend>Pick a suggested goal, or enter your own:</legend>
 				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
-				<label for="suggest-1">Learn to cook delicious vegan food.</label>
+				<label for="suggest-1">Learn to cook delicious vegan food</label>
 				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
-				<label for="suggest-2">Get help committing to veganism.</label>
+				<label for="suggest-2">Get help committing to veganism</label>
 				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
 				<input type="text" name="Create a new goal" id="suggest-3-text" value="">
 				<label for="suggest-3">Other:</label>
@@ -586,7 +587,7 @@
 			<li><a href="#puppy2">House training</a>
 			<li><a href="#puppy3">Teach 3 tricks</a>
 		</ol>
-		<a href="#feed" class="ui-btn">Back</a>
+		<a href="#feed" class="ui-btn">Back to Bobby D.'s goals</a>
 	</div>
 </div>
 
@@ -614,27 +615,27 @@
 		<h1>Train My Puppy: Leash Train</h1>
 	</div>
 	<div data-role="content">
-		<div data-role="collapsible">
+		<div data-role="collapsible" data-collapsed="false">
 			<h3>Hire weekday dog-walker</h3>
-			<form id="creator">
-				<input type="text" class="newpost" value="Add a comment">
-				<button type="button" class="postbutton">Comment!</button>
-			</form>
 			<ul id="postList" data-role="listview">
 				<li class='post'><p>Mel H.: My grandson is available!</p></li>
 				<li class='post'><p>Cindy S.: Try looking on petcare.com.  That's where I went to get a sitter for Fluffy.</p></li>
 			</ul>
+			<form id="creator">
+				<input type="text" class="newpost" value="Add a comment">
+				<button type="button" class="postbutton">Comment!</button>
+			</form>
 		</div>
 		<div data-role="collapsible">
 			<h3>Buy small harness and leash</h3>
+			<ul id="postList">
+			</ul>
 			<form id = "creator">
 				<input type="text" class="newpost" value="Add a comment">
 				<button type="button" class="postbutton">Comment!</button>
 			</form>
-			<ul id="postList">
-			</ul>
 		</div>
-		<a href="#puppy0" class="ui-btn">Back</a>
+		<a href="#puppy0" class="ui-btn">Back to "Train my puppy"</a>
 	</div>
 </div>
 </body>
