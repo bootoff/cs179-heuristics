@@ -34,6 +34,11 @@ var myGoals = {
 			]
 		},
 	]
+	"notifications"	: [
+		{
+			""
+		}
+	]
 };
 
 myGoals.list = function(line) {

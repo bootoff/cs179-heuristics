@@ -35,7 +35,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -53,8 +53,8 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">All</a></li>
-			<li><a href="#dashboard" class="ui-btn">Health</a></li>
-			<li><a href="#dashboard" class="ui-btn">Professional</a></li>
+			<li><a href="#feed" class="ui-btn">Health</a></li>
+			<li><a href="#feed" class="ui-btn">Professional</a></li>
 		</ul>
 	</div>
 	
@@ -82,7 +82,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -102,8 +102,8 @@
 	</div>
 </div>
 
-<!--DASHBOARD-->
-<div data-role="page" id="dashboard">
+<!--MY GOALS-->
+<div data-role="page" id="mygoals">
 	
 	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav" ).panel( "close" );</script>
@@ -111,7 +111,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -126,13 +126,78 @@
 	</div>
 	
 	<div data-role="content">
-		<ul data-role="listview" id="MyGoals">
-			<li><a href="#goal">Hello world</a></li>
-			<li><a href="#goal"><label><input type="checkbox" name="checkbox-0" />Quit smoking</a></label></li>
-			<li><a href="#goal"><label><input type="checkbox" name="checkbox-1" />Build wall around patio</a></label></li>
-			<li><a href="#goal"><label><input type="checkbox" name="checkbox-2" />Find Mom home care</a></label></li>
+		<fieldset>
+		<ul data-role="listview" id="goalList">
+			<li class='goal'><a href="#mygoals-quit">Quit smoking</a></li>
+			<li class='goal'><a href="#goal">Build wall around patio</a></li>
+			<li class='goal'><a href="#goal">Find Mom home care</a></li>
 		</ul>
-		<a href="#newgoal1" class="ui-btn">New Goal</a>
+		</fieldset>
+		<a href="#newgoal1" class="ui-btn">New Goal</a></li>
+	</div>
+</div>
+
+
+<!--My goal: Quit Smoking-->
+<div data-role="page" id="mygoals-quit">
+	
+	<div data-role="panel" id="sidenav" data-display="overlay" data-dismissible="true">
+		<script>$( "#sidenav" ).panel( "close" );</script>
+		<a href="#sidenav" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<ul data-role="listview">
+			<li><a href="#newgoal1">New Goal</a></li>
+			<li><a href="#feed">Feed</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
+			<li><a href="#notifications">Notifications</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#login">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
+
+	<script>$( "#sidenav" ).panel( "toggle" , optionsHash );</script>
+
+	<div data-role="header">
+		<a href="#sidenav"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<h1>Goal: Quit Smoking</h1>
+	</div>
+	
+	<div data-role="content">
+		<a href="#mygoals" class="ui-btn">Back</a>
+		<fieldset>
+			<div data-role="collapsible" data-collapsed="false"><h3>Medical consultation</h3>
+				<fieldset data-role="controlgroup" id='subgoal1'>
+					<label class='step'><input type="checkbox" checked="true">Set up appt. with my doctor</label>
+					<label class='step'><input type="checkbox">Go to lab for stress tests</label>
+					<label class='step'><input type="checkbox">Lung screening</label>
+				</fieldset>
+				<form id="">
+					<input type="text" class="newsubgoal2" value="Add a new step!">
+					<button type="button" class="subgoal2button">Add</button>
+				</form>
+			</div>
+			<div data-role="collapsible"><h3>Get materials</h3>
+				<fieldset data-role="controlgroup" id='subgoal2'>
+					<label class='step'><input type="checkbox" checked="true">Patches</label>
+					<label class='step'><input type="checkbox">E cig?</label>
+				</fieldset>
+				<form id="">
+					<input type="text" class="newsubgoal2" value="Add a new step!">
+					<button type="button" class="subgoal2button">Add</button>
+				</form>
+			</div>
+			<div data-role="collapsible"><h3>Find good support group</h3>
+				<fieldset data-role="controlgroup" id='subgoal3'>
+				</fieldset>
+				<form id="">
+					<input type="text" class="newsubgoal2" value="Add a new step!">
+					<button type="button" class="subgoal2button">Add</button>
+				</form>
+			</div>
+			<form id="">
+				<input type="text" class="newsubgoal1" value="Add a new subgoal!">
+				<button type="button" class="subgoal1button">Add</button>
+			</form>
+		</fieldset>
 	</div>
 </div>
 
@@ -146,7 +211,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -180,7 +245,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -209,7 +274,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -241,7 +306,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -258,7 +323,7 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#dashboard" class="ui-btn">My Goals</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
@@ -288,7 +353,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -305,7 +370,7 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#dashboard" class="ui-btn">My Goals</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
@@ -313,19 +378,19 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup">
 				<legend>Pick a tag, or enter your own:</legend>
-				<input type="radio" name="radio-choice" id="tag-1" value="Diet" checked="checked" />
 				<label for="tag-1">Diet</label>
-				<input type="radio" name="radio-choice" id="tag-2" value="Vegan"  />
+				<input type="radio" name="radio-choice" id="tag-1" value="Diet" checked="checked" />
 				<label for="tag-2">Vegan</label>
-				<input type="radio" name="radio-choice" id="tag-3" value="Running"  />
+				<input type="radio" name="radio-choice" id="tag-2" value="Vegan"  />
 				<label for="tag-3">Running</label>
-				<input type="radio" name="radio-choice" id="tag-4" value="Weight Loss"  />
+				<input type="radio" name="radio-choice" id="tag-3" value="Running"  />
 				<label for="tag-4">Weight Loss</label>
-				<input type="radio" name="radio-choice" id="tag-5" value="Body-Building"  />
+				<input type="radio" name="radio-choice" id="tag-4" value="Weight Loss"  />
 				<label for="tag-5">Body-building</label>
+				<input type="radio" name="radio-choice" id="tag-5" value="Body-Building"  />
+				<label for="tag-6">Other:</label>
 				<input type="radio" name="radio-choice" id="tag-6" value=""  />
 				<input type="text" name="Create a new goal" id="tag-6-text" value=""  />
-				<label for="tag-6">Other:</label>
 			</fieldset>
 		</form>
 		<a href="#newgoal3" class="ui-btn" id="gb2">Next</a>
@@ -343,7 +408,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -360,7 +425,7 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#dashboard" class="ui-btn">My Goals</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
@@ -392,7 +457,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -409,7 +474,7 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#dashboard" class="ui-btn">My Goals</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
@@ -451,7 +516,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -468,7 +533,7 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#dashboard" class="ui-btn">My Goals</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
@@ -487,7 +552,7 @@
 			</fieldset>
 		</form>
 		<label><input type="checkbox" id="fdbk-box" />I'm open to feedback</label>
-		<a href="#dashboard" class="ui-btn" id="gb5">Let's go!</a>
+		<a href="#mygoals" class="ui-btn" id="gb5">Let's go!</a>
 		<a href="#newgoal4" class="ui-btn">Back</a>
 	</div>
 </div>
@@ -501,7 +566,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -535,7 +600,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed">Feed</a></li>
-			<li><a href="#dashboard">My Goals</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
 			<li><a href="#notifications">Notifications</a></li>
 			<li><a href="#settings">Settings</a></li>
 			<li><a href="#login">Log Out</a></li>
@@ -549,7 +614,7 @@
 		<h1>Train My Puppy: Leash Train</h1>
 	</div>
 	<div data-role="content">
-		<div data-role="collapsible" data-content-theme="c">
+		<div data-role="collapsible">
 			<h3>Hire weekday dog-walker</h3>
 			<form id="creator">
 				<input type="text" class="newpost" value="Add a comment">
@@ -560,7 +625,7 @@
 				<li class='post'><p>Cindy S.: Try looking on petcare.com.  That's where I went to get a sitter for Fluffy.</p></li>
 			</ul>
 		</div>
-		<div data-role="collapsible" data-content-theme="c">
+		<div data-role="collapsible">
 			<h3>Buy small harness and leash</h3>
 			<form id = "creator">
 				<input type="text" class="newpost" value="Add a comment">
