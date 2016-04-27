@@ -5,7 +5,7 @@ function validate(){
   var pwArray = ["gajos", "bernd", "cs179"];
 
   for (var i=0;i<unArray.length;i++){
-    if((un==unArray[i]) && (pw=pwArray[i])){
+    if((pw==pwArray[i]) && (un==unArray[i])){
       alert("Login successful");
       window.location = "main.html"
       return false;
