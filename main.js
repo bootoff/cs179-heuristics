@@ -4,6 +4,25 @@ var password;
 
 username = "Curren I."
 
+var un;
+var pw;
+function validate(){
+  un = document.getElementById("username").value;
+  pw = document.getElementById("password").value;
+  var unArray = ["ciyer", "alafler", "cbousquet"];
+  var pwArray = ["gajos", "bernd", "cs179"];
+
+  for var(i=0;i<unArray.length;i++){
+    if((un==unArray[i]) && (pw=pwArray[i])){
+      console.log(un);
+      console.log(pw);
+      alert ("Login successful");
+      window.location = "index.html/#feed";
+      return false;
+    }
+  }
+};
+
 //ADDING NEW COMMENTS
 
 var text;
@@ -87,6 +106,7 @@ var mygoals = {val: 0, goalList: []};
 
   //Text
   var gtext;
+  var subtext;
   $(document).on('click', '#gb3', function() {
     if ($("#suggest-1").is(":checked")){
       gtext = $("label[for='suggest-1']").text();
@@ -98,6 +118,9 @@ var mygoals = {val: 0, goalList: []};
       gtext = $("#suggest-3-text").val();
     }
     console.log(gtext);
+    
+    subtext = $("#subgoal-text").val();
+    console.log(subtext);
   });
 
 //Timeline & Priority
@@ -146,7 +169,7 @@ $(document).on('click', '#gb5', function() {
       fdbk=1;
     }
     console.log(fdbk);
-    mygoals.goalList.push({category: cat, tag: gtag, text: gtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
+    mygoals.goalList.push({category: cat, tag: gtag, text: gtext, subgoal: subtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
     var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'><a href='#'>" + gtext + "</a></li>";
     $("#goalList2").append(gdescrip);
     console.log(mygoals);

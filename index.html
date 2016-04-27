@@ -8,7 +8,6 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
-	<script src="goals.js"></script>
 </head>
 
 <body>
@@ -18,12 +17,12 @@
 	<center>
 		<h1>Goallective</h1>
 		<h2>Log In</h2>
-		<form method="post" action="index.html">
-    	<input type="text" name="username" placeholder="username">
-    	<input type="password" name="password" placeholder="password">
-    	<a href="#feed" class="ui-btn">Log in</a>		
-		<a href="#newgoal1" class="ui-btn">Or, create a goal without logging in</a>
-		</form>		
+		<form method="post" action="index.html" name="login">
+	    	<input type="text" name="username" placeholder="username"/>
+	    	<input type="password" name="password" placeholder="password"/>
+	    	<input type="button" value="Login" id="submit" onclick="validate()"/>		
+			<a href="#newgoal1" class="ui-btn">Or, create a goal without logging in</a>
+		</form>
 	</center>
 </div>
 
@@ -384,19 +383,18 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup">
 				<legend>You chose "Health." Here are some topic suggestions:</legend>
-				<label for="tag-1">Diet</label>
 				<input type="radio" name="radio-choice" id="tag-1" value="Diet" checked="checked" />
-				<label for="tag-2">Vegan</label>
+				<label for="tag-1">Diet</label>
 				<input type="radio" name="radio-choice" id="tag-2" value="Vegan"  />
-				<label for="tag-3">Running</label>
+				<label for="tag-2">Vegan</label>
 				<input type="radio" name="radio-choice" id="tag-3" value="Running"  />
-				<label for="tag-4">Weight Loss</label>
+				<label for="tag-3">Running</label>
 				<input type="radio" name="radio-choice" id="tag-4" value="Weight Loss"  />
-				<label for="tag-5">Body-building</label>
+				<label for="tag-4">Weight Loss</label>
 				<input type="radio" name="radio-choice" id="tag-5" value="Body-Building"  />
-				<label for="tag-6">Other:</label>
+				<label for="tag-5">Body-building</label>
 				<input type="radio" name="radio-choice" id="tag-6" value=""  />
-				<input type="text" name="text" id="tag-6-text" value=""  />
+				<label for="tag-6"><input type="text" name="text" id="tag-6-text" value="" style="position:relative" placeholder="Other..." /></label>
 			</fieldset>
 		</form>
 		<a href="#newgoal3" class="ui-btn" id="gb2">Next</a>
@@ -436,19 +434,16 @@
 
 	<div data-role="content">
 		<form action="form.php" method="post">
-			<fieldset data-role="controlgroup">
+			<fieldset data-role="controlgroup" id="suggest">
 				<legend>Pick a suggested goal, or enter your own:</legend>
 				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
 				<label for="suggest-1">Learn to cook delicious vegan food</label>
 				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
 				<label for="suggest-2">Get help committing to veganism</label>
 				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
-				<label for="suggest-3"><input type="text" name="text" id="suggest-3-text" value=""></label>
+				<label for="suggest-3"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."></label>
 			</fieldset>
-		</form>
-		
-		<form action="form.php" method="post">
-			<fieldset data-role="controlgroup">
+			<fieldset data-role="controlgroup" id="subgoal">
 				<legend>What is the first thing you need to do?</legend>
 				<input type="text" name="text" id="subgoal-text" value="">
 			</fieldset>
@@ -595,7 +590,7 @@
 			<li><a href="#puppy2">House training</a>
 			<li><a href="#puppy3">Teach 3 tricks</a>
 		</ol>
-		<a href="#feed" class="ui-btn">Back to Bobby D.'s goals</a>
+		<a href="#feed" class="ui-btn">Back to Feed</a>
 	</div>
 </div>
 
