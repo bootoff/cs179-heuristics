@@ -7,22 +7,21 @@ username = "Curren I."
 var un;
 var pw;
 function validate(){
-  un = document.login.username.value;
-  pw = document.login.password.value;
+  un = document.getElementById("username").value;
+  pw = document.getElementById("password").value;
   var unArray = ["ciyer", "alafler", "cbousquet"];
   var pwArray = ["gajos", "bernd", "cs179"];
-  var valid=false;
 
   for var(i=0;i<unArray.length;i++){
     if((un==unArray[i]) && (pw=pwArray[i])){
-      valid=true;
-      break;
+      console.log(un);
+      console.log(pw);
+      alert ("Login successful");
+      window.location = "index.html/#feed";
+      return false;
     }
   }
-  if (valid){
-    alert ("Login was successful");
-  }
-}
+};
 
 //ADDING NEW COMMENTS
 
