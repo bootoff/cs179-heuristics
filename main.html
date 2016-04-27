@@ -12,19 +12,6 @@
 
 <body>
 
-<!--LOG IN-->
-<div data-role="page" id="login">
-	<center>
-		<h1>Goallective</h1>
-		<h2>Log In</h2>
-		<form method="post" action="index.html" name="login">
-	    	<input type="text" name="username" placeholder="username"/>
-	    	<input type="password" name="password" placeholder="password"/>
-	    	<input type="button" value="Login" id="submit" onclick="validate()"/>		
-			<a href="#newgoal1" class="ui-btn">Or, create a goal without logging in</a>
-		</form>
-	</center>
-</div>
 
 <!--FEED-->
 <div data-role="page" id="feed">
@@ -382,7 +369,7 @@
 	<div data-role="content">
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup">
-				<legend>You chose "Health." Here are some topic suggestions:</legend>
+				<legend>Pick a tag, or enter your own:</legend>
 				<input type="radio" name="radio-choice" id="tag-1" value="Diet" checked="checked" />
 				<label for="tag-1">Diet</label>
 				<input type="radio" name="radio-choice" id="tag-2" value="Vegan"  />
