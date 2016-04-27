@@ -383,7 +383,7 @@
 	<div data-role="content">
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup">
-				<legend>Pick a tag, or enter your own:</legend>
+				<legend>You chose "Health." Here are some topic suggestions:</legend>
 				<label for="tag-1">Diet</label>
 				<input type="radio" name="radio-choice" id="tag-1" value="Diet" checked="checked" />
 				<label for="tag-2">Vegan</label>
@@ -396,7 +396,7 @@
 				<input type="radio" name="radio-choice" id="tag-5" value="Body-Building"  />
 				<label for="tag-6">Other:</label>
 				<input type="radio" name="radio-choice" id="tag-6" value=""  />
-				<input type="text" name="Create a new goal" id="tag-6-text" value=""  />
+				<input type="text" name="text" id="tag-6-text" value=""  />
 			</fieldset>
 		</form>
 		<a href="#newgoal3" class="ui-btn" id="gb2">Next</a>
@@ -443,8 +443,14 @@
 				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
 				<label for="suggest-2">Get help committing to veganism</label>
 				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
-				<input type="text" name="Create a new goal" id="suggest-3-text" value="">
-				<label for="suggest-3">Other:</label>
+				<label for="suggest-3"><input type="text" name="text" id="suggest-3-text" value=""></label>
+			</fieldset>
+		</form>
+		
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>What is the first thing you need to do?</legend>
+				<input type="text" name="text" id="subgoal-text" value="">
 			</fieldset>
 		</form>
 		<a href="#newgoal4" class="ui-btn" id="gb3">Next</a>
