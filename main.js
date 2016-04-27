@@ -6,22 +6,6 @@ username = "Curren I."
 
 var un;
 var pw;
-function validate(){
-  un = document.getElementById("username").value;
-  pw = document.getElementById("password").value;
-  var unArray = ["ciyer", "alafler", "cbousquet"];
-  var pwArray = ["gajos", "bernd", "cs179"];
-
-  for var(i=0;i<unArray.length;i++){
-    if((un==unArray[i]) && (pw=pwArray[i])){
-      console.log(un);
-      console.log(pw);
-      alert ("Login successful");
-      window.location = "index.html/#feed";
-      return false;
-    }
-  }
-};
 
 //ADDING NEW COMMENTS
 
@@ -53,7 +37,7 @@ $( document ).ready(function() {
   });
 
   // MANAGING MY GOALS
-var mygoals = {val: 0, goalList: []};
+  var mygoals = {val: 0, goalList: []};
 
   //Retrieval
   if (localStorage.getItem("oldGoals")) {
@@ -119,7 +103,7 @@ var mygoals = {val: 0, goalList: []};
     console.log(gtext);
   });
 
-//Timeline & Priority
+  //Timeline & Priority
   var tline;
   var urg;
   $(document).on('click', '#gb4', function() {
@@ -147,9 +131,9 @@ var mygoals = {val: 0, goalList: []};
   });
 
 //Audience & Compiling
-var aud;
-var fdbk;
-$(document).on('click', '#gb5', function() {
+  var aud;
+  var fdbk;
+  $(document).on('click', '#gb5', function() {
     fdbk=0;
     if ($("#sharing-1").is(":checked")){
       aud = $("label[for='sharing-1']").text();
@@ -173,5 +157,5 @@ $(document).on('click', '#gb5', function() {
     localStorage.setItem("oldGoals", JSON.stringify(mygoals));
   });
 
-
 });
+
