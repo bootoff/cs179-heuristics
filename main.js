@@ -54,12 +54,15 @@ $( document ).ready(function() {
   $(document).on('click', '#gb1', function() {
     if ($("#cat_1").is(":checked")){
       cat = $("#cat_1").val();
+      window.location.href="#newgoal2-professional";
     }
     else if ($("#cat_2").is(":checked")){
       cat = $("#cat_2").val();
+      window.location.href="#newgoal2-health";
     }
     else if ($("#cat_3").is(":checked")){
       cat = $("#cat_3").val();
+      window.location.href="#newgoal2-interpersonal";
     }
     console.log(cat);
   });

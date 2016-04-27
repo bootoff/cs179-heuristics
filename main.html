@@ -337,21 +337,75 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup">
 				<legend>What kind of goal?</legend>
-					<input type="radio" name="radio-choice" id="cat_1" value="Professional" checked="checked"/>
+					<input type="radio" name="radio-choice" id="cat_1" value="newgoal2-professional" checked="checked"/>
 					<label for="cat_1">Professional</label>
-					<input type="radio" name="radio-choice" id="cat_2" value="Health"  />
+					<input type="radio" name="radio-choice" id="cat_2" value="newgoal2-health"  />
 					<label for="cat_2">Health</label>
-					<input type="radio" name="radio-choice" id="cat_3" value="Interpersonal"  />
+					<input type="radio" name="radio-choice" id="cat_3" value="newgoal2-interpersonal"  />
 					<label for="cat_3">Interpersonal</label>
 			</fieldset>
+			<input type="submit" id="gb1" value="Next"/>
 		</form>
-		<a href="#newgoal2" class="ui-btn" id="gb1">Next</a>
+		<!-- <a href="#newgoal2" class="ui-btn" id="gb1">Next</a> -->
 	</div>
 </div>
 	
 	
-<!--New Goal 2: Tags-->
-<div data-role="page" id="newgoal2">
+<!--New Goal 2: Tags: Professional-->
+<div data-role="page" id="newgoal2-professional">
+	
+	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
+		<script>$( "#sidenav9" ).panel( "close" );</script>
+		<a href="#sidenav9" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<ul data-role="listview">
+			<li><a href="#feed">Feed</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
+			<li><a href="#notifications">Notifications</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#login">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
+
+	<script>$( "#sidenav9" ).panel( "toggle" );</script>
+
+	<div data-role="header">
+		<a href="#sidenav9"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<h1>New Goal (2/5)</h1>
+	</div>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#" class="ui-btn">Save Draft</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+
+	<div data-role="content">
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>Pick a tag, or enter your own:</legend>
+				<label for="tag-1">Job search</label>
+				<input type="radio" name="radio-choice" id="tag-1" value="Job search" checked="checked" />
+				<label for="tag-2">Promotion</label>
+				<input type="radio" name="radio-choice" id="tag-2" value="Promotion"  />
+				<label for="tag-3">Maternity leave</label>
+				<input type="radio" name="radio-choice" id="tag-3" value="Maternity leave"  />
+				<label for="tag-4">Salary negotiation</label>
+				<input type="radio" name="radio-choice" id="tag-4" value="Salary negotiation"  />
+				<label for="tag-5">Burnout</label>
+				<input type="radio" name="radio-choice" id="tag-5" value="Burnout"  />
+				<label for="tag-6">Other:</label>
+				<input type="radio" name="radio-choice" id="tag-6" value=""  />
+				<input type="text" name="Create a new goal" id="tag-6-text" value=""  />
+			</fieldset>
+		</form>
+		<a href="#newgoal3" class="ui-btn" id="gb2">Next</a>
+		<a href="#newgoal1" class="ui-btn">Back</a>
+	</div>
+</div>
+
+<!--New Goal 2: Tags: Health-->
+<div data-role="page" id="newgoal2-health">
 	
 	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav9" ).panel( "close" );</script>
@@ -403,6 +457,58 @@
 	</div>
 </div>
 
+<!--New Goal 2: Tags: Interpersonal-->
+<div data-role="page" id="newgoal2-interpersonal">
+	
+	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
+		<script>$( "#sidenav9" ).panel( "close" );</script>
+		<a href="#sidenav9" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<ul data-role="listview">
+			<li><a href="#feed">Feed</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
+			<li><a href="#notifications">Notifications</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#login">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
+
+	<script>$( "#sidenav9" ).panel( "toggle" );</script>
+
+	<div data-role="header">
+		<a href="#sidenav9"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<h1>New Goal (2/5)</h1>
+	</div>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#" class="ui-btn">Save Draft</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+
+	<div data-role="content">
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>Pick a tag, or enter your own:</legend>
+				<label for="tag-1">Dating</label>
+				<input type="radio" name="radio-choice" id="tag-1" value="Dating" checked="checked" />
+				<label for="tag-2">Making new friends</label>
+				<input type="radio" name="radio-choice" id="tag-2" value="Making new friends"  />
+				<label for="tag-3">Staying in touch</label>
+				<input type="radio" name="radio-choice" id="tag-3" value="Staying in touch"  />
+				<label for="tag-4">Improving a romantic relationship</label>
+				<input type="radio" name="radio-choice" id="tag-4" value="Improving a romantic relationship"  />
+				<label for="tag-5">Divorce and breakups</label>
+				<input type="radio" name="radio-choice" id="tag-5" value="Divorce and breakups"  />
+				<label for="tag-6">Other:</label>
+				<input type="radio" name="radio-choice" id="tag-6" value=""  />
+				<input type="text" name="Create a new goal" id="tag-6-text" value=""  />
+			</fieldset>
+		</form>
+		<a href="#newgoal3" class="ui-btn" id="gb2">Next</a>
+		<a href="#newgoal1" class="ui-btn">Back</a>
+	</div>
+</div>
 
 <!--New Goal 3: Suggested Goals-->
 <div data-role="page" id="newgoal3">
@@ -588,7 +694,7 @@
 			<li><a href="#puppy2">House training</a>
 			<li><a href="#puppy3">Teach 3 tricks</a>
 		</ol>
-		<a href="#feed" class="ui-btn">Back to Feed</a>
+		<a href="#feed" class="ui-btn">Back to Bobby D.'s goals</a>
 	</div>
 </div>
 
