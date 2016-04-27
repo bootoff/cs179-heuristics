@@ -169,7 +169,7 @@ $(document).on('click', '#gb5', function() {
     mygoals.goalList.push({category: cat, tag: gtag, text: gtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
     var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'><a href='#'>" + gtext + "</a></li>";
     $("#goalList2").append(gdescrip);
-    console.log(mygoals)
+    console.log(mygoals);
     mygoals.val++;
     localStorage.setItem("oldGoals", JSON.stringify(mygoals));
   });
