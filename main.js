@@ -54,41 +54,89 @@ $( document ).ready(function() {
   $(document).on('click', '#gb1', function() {
     if ($("#cat_1").is(":checked")){
       cat = $("#cat_1").val();
-      window.location.href="#newgoal2-professional";
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-professional", {} );
     }
     else if ($("#cat_2").is(":checked")){
       cat = $("#cat_2").val();
-      window.location.href="#newgoal2-health";
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-health", {} );
     }
     else if ($("#cat_3").is(":checked")){
       cat = $("#cat_3").val();
-      window.location.href="#newgoal2-interpersonal";
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-interpersonal", {} );
     }
     console.log(cat);
   });
 
-  //Tag
-  var gtag;
+  //Tag: Professional
+  var ptag;
   $(document).on('click', '#gb2', function() {
-    if ($("#tag-1").is(":checked")){
-      gtag = $("#tag-1").val();
+    if ($("#ptag-1").is(":checked")){
+      ptag = $("#ptag-1").val();
     }
-    else if ($("#tag-2").is(":checked")){
-      gtag = $("#tag-2").val();
+    else if ($("#ptag-2").is(":checked")){
+      ptag = $("#ptag-2").val();
     }
-    else if ($("#tag-3").is(":checked")){
-      gtag = $("#tag-3").val();
+    else if ($("#ptag-3").is(":checked")){
+      ptag = $("#ptag-3").val();
     }
-    else if ($("#tag-4").is(":checked")){
-      gtag = $("#tag-4").val();
+    else if ($("#ptag-4").is(":checked")){
+      ptag = $("#ptag-4").val();
     }
-    else if ($("#tag-5").is(":checked")){
-      gtag = $("#tag-5").val();
+    else if ($("#ptag-5").is(":checked")){
+      ptag = $("#ptag-5").val();
     }
-    else if ($("#tag-6").is(":checked")){
-      gtag = $("#tag-6-text").val();
+    else if ($("#ptag-6").is(":checked")){
+      ptag = $("#ptag-6-text").val();
     }
-    console.log(gtag);
+    console.log(ptag);
+  });
+
+  //Tag: Health
+  var htag;
+  $(document).on('click', '#gb2', function() {
+    if ($("#htag-1").is(":checked")){
+      htag = $("#htag-1").val();
+    }
+    else if ($("#htag-2").is(":checked")){
+      htag = $("#htag-2").val();
+    }
+    else if ($("#htag-3").is(":checked")){
+      htag = $("#htag-3").val();
+    }
+    else if ($("#htag-4").is(":checked")){
+      htag = $("#htag-4").val();
+    }
+    else if ($("#htag-5").is(":checked")){
+      htag = $("#htag-5").val();
+    }
+    else if ($("#htag-6").is(":checked")){
+      htag = $("#htag-6-text").val();
+    }
+    console.log(htag);
+  });
+
+  //Tag: itagersonal
+  var itag;
+  $(document).on('click', '#gb2', function() {
+    if ($("#itag-1").is(":checked")){
+      itag = $("#itag-1").val();
+    }
+    else if ($("#itag-2").is(":checked")){
+      itag = $("#itag-2").val();
+    }
+    else if ($("#itag-3").is(":checked")){
+      itag = $("#itag-3").val();
+    }
+    else if ($("#itag-4").is(":checked")){
+      itag = $("#itag-4").val();
+    }
+    else if ($("#itag-5").is(":checked")){
+      itag = $("#itag-5").val();
+    }
+    else if ($("#itag-6").is(":checked")){
+      itag = $("#itag-6-text").val();
+    }
+    console.log(itag);
   });
 
   //Text
@@ -156,7 +204,7 @@ $( document ).ready(function() {
       fdbk=1;
     }
     console.log(fdbk);
-    mygoals.goalList.push({category: cat, tag: gtag, text: gtext, subgoal: subtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
+    mygoals.goalList.push({category: cat, tag: ptag, text: gtext, subgoal: subtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
     var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'><a href='#'>" + gtext + "</a></li>";
     $("#goalList2").append(gdescrip);
     console.log(mygoals);
