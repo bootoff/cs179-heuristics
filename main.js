@@ -224,5 +224,8 @@ $( document ).ready(function() {
     localStorage.setItem("oldGoals", JSON.stringify(mygoals));
   });
 
+  $(document).on('click', '#sdraft1', function() {
+    console.log(ngoal);
+  });
 });
 
