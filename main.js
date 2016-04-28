@@ -54,15 +54,15 @@ $( document ).ready(function() {
   $(document).on('click', '#gb1', function() {
     if ($("#cat_1").is(":checked")){
       cat = $("#cat_1").val();
-      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-professional", {} );
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-professional" );
     }
     else if ($("#cat_2").is(":checked")){
       cat = $("#cat_2").val();
-      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-health", {} );
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-health" );
     }
     else if ($("#cat_3").is(":checked")){
       cat = $("#cat_3").val();
-      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-interpersonal", {} );
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-interpersonal" );
     }
     console.log(cat);
   });
@@ -115,7 +115,7 @@ $( document ).ready(function() {
     console.log(htag);
   });
 
-  //Tag: itagersonal
+  //Tag: Interpersonal
   var itag;
   $(document).on('click', '#gb2', function() {
     if ($("#itag-1").is(":checked")){
