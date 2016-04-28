@@ -51,44 +51,99 @@ $( document ).ready(function() {
 
   //Category
   var cat;
+  var ngoal = {};
   $(document).on('click', '#gb1', function() {
     if ($("#cat_1").is(":checked")){
       cat = $("#cat_1").val();
-      window.location.href="#newgoal2-professional";
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-professional" );
     }
     else if ($("#cat_2").is(":checked")){
       cat = $("#cat_2").val();
-      window.location.href="#newgoal2-health";
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-health" );
     }
     else if ($("#cat_3").is(":checked")){
       cat = $("#cat_3").val();
-      window.location.href="#newgoal2-interpersonal";
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-interpersonal" );
     }
-    console.log(cat);
+    ngoal.category = cat;
+    //console.log(cat);
+    console.log(ngoal);
   });
 
   //Tag
-  var gtag;
-  $(document).on('click', '#gb2', function() {
-    if ($("#tag-1").is(":checked")){
-      gtag = $("#tag-1").val();
+  var ptag;
+  $(document).on('click', '#gb2p', function() {
+    if ($("#ptag-1").is(":checked")){
+      ptag = $("#ptag-1").val();
     }
-    else if ($("#tag-2").is(":checked")){
-      gtag = $("#tag-2").val();
+    else if ($("#ptag-2").is(":checked")){
+      ptag = $("#ptag-2").val();
     }
-    else if ($("#tag-3").is(":checked")){
-      gtag = $("#tag-3").val();
+    else if ($("#ptag-3").is(":checked")){
+      ptag = $("#ptag-3").val();
     }
-    else if ($("#tag-4").is(":checked")){
-      gtag = $("#tag-4").val();
+    else if ($("#ptag-4").is(":checked")){
+      ptag = $("#ptag-4").val();
     }
-    else if ($("#tag-5").is(":checked")){
-      gtag = $("#tag-5").val();
+    else if ($("#ptag-5").is(":checked")){
+      ptag = $("#ptag-5").val();
     }
-    else if ($("#tag-6").is(":checked")){
-      gtag = $("#tag-6-text").val();
+    else if ($("#ptag-6").is(":checked")){
+      ptag = $("#ptag-6-text").val();
     }
-    console.log(gtag);
+    //console.log(gtag);
+    ngoal.tag = ptag;
+    console.log(ngoal);
+  });
+
+  var htag;
+  $(document).on('click', '#gb2h', function() {
+    if ($("#htag-1").is(":checked")){
+      htag = $("#htag-1").val();
+    }
+    else if ($("#htag-2").is(":checked")){
+      htag = $("#htag-2").val();
+    }
+    else if ($("#htag-3").is(":checked")){
+      htag = $("#htag-3").val();
+    }
+    else if ($("#htag-4").is(":checked")){
+      htag = $("#htag-4").val();
+    }
+    else if ($("#htag-5").is(":checked")){
+      htag = $("#htag-5").val();
+    }
+    else if ($("#htag-6").is(":checked")){
+      htag = $("#htag-6-text").val();
+    }
+    //console.log(gtag);
+    ngoal.tag = htag;
+    console.log(ngoal);
+  });
+
+  var itag;
+  $(document).on('click', '#gb2i', function() {
+    if ($("#itag-1").is(":checked")){
+      itag = $("#itag-1").val();
+    }
+    else if ($("#itag-2").is(":checked")){
+      itag = $("#itag-2").val();
+    }
+    else if ($("#itag-3").is(":checked")){
+      itag = $("#itag-3").val();
+    }
+    else if ($("#itag-4").is(":checked")){
+      itag = $("#itag-4").val();
+    }
+    else if ($("#itag-5").is(":checked")){
+      itag = $("#itag-5").val();
+    }
+    else if ($("#itag-6").is(":checked")){
+      itag = $("#itag-6-text").val();
+    }
+    //console.log(gtag);
+    ngoal.tag = itag;
+    console.log(ngoal);
   });
 
   //Text
@@ -104,10 +159,12 @@ $( document ).ready(function() {
     else if ($("#suggest-3").is(":checked")){
       gtext = $("#suggest-3-text").val();
     }
-    console.log(gtext);
-    
+    //console.log(gtext);
+    ngoal.text=gtext;
     subtext = $("#subgoal-text").val();
-    console.log(subtext);
+    ngoal.subtext=subtext;
+    //console.log(subtext);
+    console.log(ngoal);
   });
 
   //Timeline & Priority
@@ -123,7 +180,8 @@ $( document ).ready(function() {
     else if ($("#deadline-3").is(":checked")){
       tline = $("#deadline-3").val();
     }
-    console.log(tline);
+    ngoal.time=tline;
+    //console.log(tline);
 
     if ($("#priority-1").is(":checked")){
       urg = $("#priority-1").val();
@@ -134,7 +192,9 @@ $( document ).ready(function() {
     else if ($("#priority-3").is(":checked")){
       urg = $("#priority-3").val();
     }
-    console.log(urg);
+    ngoal.prior = urg;
+    //console.log(urg);
+    console.log(ngoal);
   });
 
 //Audience & Compiling
@@ -151,12 +211,17 @@ $( document ).ready(function() {
     else if ($("#sharing-3").is(":checked")){
       aud = $("label[for='sharing-3']").text();
     }
-    console.log(aud);
+    //console.log(aud);
     if ($("#fdbk-box").is(":checked")){
       fdbk=1;
     }
-    console.log(fdbk);
-    mygoals.goalList.push({category: cat, tag: gtag, text: gtext, subgoal: subtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
+    ngoal.view = aud;
+    ngoal.fb = fdbk;
+    ngoal.ind = mygoals.val;
+
+    //console.log(fdbk);
+    console.log(ngoal);
+    mygoals.goalList.push(ngoal);
     var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'><a href='#'>" + gtext + "</a></li>";
     $("#goalList2").append(gdescrip);
     console.log(mygoals);

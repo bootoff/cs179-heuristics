@@ -10,5 +10,9 @@ function validate(){
       window.location = "main.html"
       return false;
     }
+    else{
+      alert("Please try again");
+      return false;
+    }
   }
 }
