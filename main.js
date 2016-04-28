@@ -13,6 +13,7 @@ var text;
 var posts = {val: 0, postList: []};
 
 $( document ).ready(function() {
+  // localStorage.clear();
   if (localStorage.getItem("oldPosts")) {
     posts = JSON.parse(localStorage.getItem("oldPosts"));
   }
@@ -28,11 +29,13 @@ $( document ).ready(function() {
     posts.postList.push({ind: posts.val, user: author, content: text});
     var posttext = "<li class='post' data-index='" + posts.val + "'> <p>" + author + ": " + text + "</p> </li>";
     $("#postList").append(posttext);
+    $("#postList").listview('refresh');
     //$("#postList").append("<li>test 1</li>");
     console.log($("#postList"))
     posts.val++;
     console.log(posts);
     localStorage.setItem("oldPosts", JSON.stringify(posts));
+    location.reload();
 
   });
 
@@ -40,8 +43,8 @@ $( document ).ready(function() {
   var mygoals = {val: 0, goalList: []};
 
   //Retrieval
-  if (localStorage.getItem("oldGoals")) {
-    mygoals = JSON.parse(localStorage.getItem("oldGoals"));
+  if (localStorage.getItem("savedGoals")) {
+    mygoals = JSON.parse(localStorage.getItem("savedGoals"));
   }
     for (var j=0;j<mygoals.goalList.length; j++){
       goal= "<li class='goal' data-index='" + mygoals.goalList[j].ind + "'>" + mygoals.goalList[j].text + "</li>";
@@ -217,15 +220,19 @@ $( document ).ready(function() {
     console.log(ngoal);
     mygoals.goalList.push(ngoal);
     // mygoals.goalList.push({category: cat, tag: ptag, text: gtext, subgoal: subtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
-    var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'><a href='#'>" + gtext + "</a></li>";
-    $("#goalList2").append(gdescrip);
+    var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'><a href='#feed'>" + gtext + "</a></li>";
+    $("#goalList").append(gdescrip);
+    //$('#goalList').trigger('create');
+    $('#goalList').listview('refresh');
     console.log(mygoals);
     mygoals.val++;
-    localStorage.setItem("oldGoals", JSON.stringify(mygoals));
+    localStorage.setItem("savedGoals", JSON.stringify(mygoals));
+
   });
 
-  $(document).on('click', '#sdraft1', function() {
-    console.log(ngoal);
+  //SAVE DRAFT
+  $(document).on('click', '#sdraft2', function() {
+    console.log("You have saved your draft");
   });
 });
 
