@@ -70,7 +70,8 @@ $( document ).ready(function() {
     console.log(ngoal);
   });
 
-  //Tag
+
+  //Tag: Professional
   var ptag;
   $(document).on('click', '#gb2p', function() {
     if ($("#ptag-1").is(":checked")){
@@ -96,6 +97,7 @@ $( document ).ready(function() {
     console.log(ngoal);
   });
 
+  //Tag: Health
   var htag;
   $(document).on('click', '#gb2h', function() {
     if ($("#htag-1").is(":checked")){
@@ -121,8 +123,10 @@ $( document ).ready(function() {
     console.log(ngoal);
   });
 
+  //Tag: Interpersonal
   var itag;
   $(document).on('click', '#gb2i', function() {
+
     if ($("#itag-1").is(":checked")){
       itag = $("#itag-1").val();
     }
@@ -144,6 +148,7 @@ $( document ).ready(function() {
     //console.log(gtag);
     ngoal.tag = itag;
     console.log(ngoal);
+    //console.log(itag);
   });
 
   //Text
@@ -222,6 +227,8 @@ $( document ).ready(function() {
     //console.log(fdbk);
     console.log(ngoal);
     mygoals.goalList.push(ngoal);
+    // console.log(fdbk);
+    // mygoals.goalList.push({category: cat, tag: ptag, text: gtext, subgoal: subtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
     var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'><a href='#'>" + gtext + "</a></li>";
     $("#goalList2").append(gdescrip);
     console.log(mygoals);
