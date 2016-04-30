@@ -13,6 +13,7 @@ var text;
 var posts = {val: 0, postList: []};
 
 $( document ).ready(function() {
+  // localStorage.clear();
   if (localStorage.getItem("oldPosts")) {
     posts = JSON.parse(localStorage.getItem("oldPosts"));
   }
@@ -28,11 +29,13 @@ $( document ).ready(function() {
     posts.postList.push({ind: posts.val, user: author, content: text});
     var posttext = "<li class='post' data-index='" + posts.val + "'> <p>" + author + ": " + text + "</p> </li>";
     $("#postList").append(posttext);
+    $("#postList").listview('refresh');
     //$("#postList").append("<li>test 1</li>");
     console.log($("#postList"))
     posts.val++;
     console.log(posts);
     localStorage.setItem("oldPosts", JSON.stringify(posts));
+    location.reload();
 
   });
 
@@ -40,8 +43,8 @@ $( document ).ready(function() {
   var mygoals = {val: 0, goalList: []};
 
   //Retrieval
-  if (localStorage.getItem("oldGoals")) {
-    mygoals = JSON.parse(localStorage.getItem("oldGoals"));
+  if (localStorage.getItem("savedGoals")) {
+    mygoals = JSON.parse(localStorage.getItem("savedGoals"));
   }
     for (var j=0;j<mygoals.goalList.length; j++){
       goal= "<li class='goal' data-index='" + mygoals.goalList[j].ind + "'>" + mygoals.goalList[j].text + "</li>";
@@ -51,6 +54,7 @@ $( document ).ready(function() {
 
   //Category
   var cat;
+  var ngoal = {};
   $(document).on('click', '#gb1', function() {
     if ($("#cat_1").is(":checked")){
       cat = $("#cat_1").val();
@@ -64,12 +68,14 @@ $( document ).ready(function() {
       cat = $("#cat_3").val();
       $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-interpersonal" );
     }
-    console.log(cat);
+    ngoal.category = cat;
+    console.log(ngoal);
   });
+
 
   //Tag: Professional
   var ptag;
-  $(document).on('click', '#gb2', function() {
+  $(document).on('click', '#gb2p', function() {
     if ($("#ptag-1").is(":checked")){
       ptag = $("#ptag-1").val();
     }
@@ -88,12 +94,13 @@ $( document ).ready(function() {
     else if ($("#ptag-6").is(":checked")){
       ptag = $("#ptag-6-text").val();
     }
-    console.log(ptag);
+    ngoal.tag = ptag;
+    console.log(ngoal);
   });
 
   //Tag: Health
   var htag;
-  $(document).on('click', '#gb2', function() {
+  $(document).on('click', '#gb2h', function() {
     if ($("#htag-1").is(":checked")){
       htag = $("#htag-1").val();
     }
@@ -112,12 +119,14 @@ $( document ).ready(function() {
     else if ($("#htag-6").is(":checked")){
       htag = $("#htag-6-text").val();
     }
-    console.log(htag);
+    ngoal.tag = htag;
+    console.log(ngoal);
   });
 
   //Tag: Interpersonal
   var itag;
-  $(document).on('click', '#gb2', function() {
+  $(document).on('click', '#gb2i', function() {
+
     if ($("#itag-1").is(":checked")){
       itag = $("#itag-1").val();
     }
@@ -136,7 +145,8 @@ $( document ).ready(function() {
     else if ($("#itag-6").is(":checked")){
       itag = $("#itag-6-text").val();
     }
-    console.log(itag);
+    ngoal.tag = itag;
+    console.log(ngoal);
   });
 
   //Text
@@ -152,10 +162,10 @@ $( document ).ready(function() {
     else if ($("#suggest-3").is(":checked")){
       gtext = $("#suggest-3-text").val();
     }
-    console.log(gtext);
-    
+    ngoal.text=gtext;
     subtext = $("#subgoal-text").val();
-    console.log(subtext);
+    ngoal.subtext=subtext;
+    console.log(ngoal);
   });
 
   //Timeline & Priority
@@ -171,7 +181,7 @@ $( document ).ready(function() {
     else if ($("#deadline-3").is(":checked")){
       tline = $("#deadline-3").val();
     }
-    console.log(tline);
+    ngoal.time=tline;
 
     if ($("#priority-1").is(":checked")){
       urg = $("#priority-1").val();
@@ -182,7 +192,8 @@ $( document ).ready(function() {
     else if ($("#priority-3").is(":checked")){
       urg = $("#priority-3").val();
     }
-    console.log(urg);
+    ngoal.prior = urg;
+    console.log(ngoal);
   });
 
 //Audience & Compiling
@@ -199,18 +210,29 @@ $( document ).ready(function() {
     else if ($("#sharing-3").is(":checked")){
       aud = $("label[for='sharing-3']").text();
     }
-    console.log(aud);
     if ($("#fdbk-box").is(":checked")){
       fdbk=1;
     }
-    console.log(fdbk);
-    mygoals.goalList.push({category: cat, tag: ptag, text: gtext, subgoal: subtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
-    var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'><a href='#'>" + gtext + "</a></li>";
-    $("#goalList2").append(gdescrip);
+    ngoal.view = aud;
+    ngoal.fb = fdbk;
+    ngoal.ind = mygoals.val;
+
+    console.log(ngoal);
+    mygoals.goalList.push(ngoal);
+    // mygoals.goalList.push({category: cat, tag: ptag, text: gtext, subgoal: subtext, time: tline, prior: urg, view: aud, fb: fdbk, ind: mygoals.val});
+    var gdescrip = "<li class='goal' data-index='" + mygoals.val + "'><a href='#feed'>" + gtext + "</a></li>";
+    $("#goalList").append(gdescrip);
+    //$('#goalList').trigger('create');
+    $('#goalList').listview('refresh');
     console.log(mygoals);
     mygoals.val++;
-    localStorage.setItem("oldGoals", JSON.stringify(mygoals));
+    localStorage.setItem("savedGoals", JSON.stringify(mygoals));
+
   });
 
+  //SAVE DRAFT
+  $(document).on('click', '#sdraft2', function() {
+    console.log("You have saved your draft");
+  });
 });
 
