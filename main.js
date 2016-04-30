@@ -236,3 +236,34 @@ $( document ).ready(function() {
   });
 });
 
+// Progress bar for new goal page
+  $(function() {
+      $("#progressbar1").progressbar({
+        value: 17
+      });
+    });
+
+  $(function() {
+    $("#progressbar2").progressbar({
+      value: 34
+    });
+  });
+
+  $(function() {
+    $("#progressbar3").progressbar({
+      value: 51
+    });
+  });
+
+  $(function() {
+    $("#progressbar4").progressbar({
+      value: 68
+    });
+  });
+
+  $(function() {
+    $("#progressbar5").progressbar({
+      value: 85
+    });
+  });
+
