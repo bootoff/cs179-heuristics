@@ -236,7 +236,7 @@ $( document ).ready(function() {
   });
 });
 
-// Progress bar for new goal page
+// Progress bar for new goal pages
   $(function() {
       $("#progressbar1").progressbar({
         value: 17
