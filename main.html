@@ -397,7 +397,6 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
@@ -443,22 +442,21 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
 	<div data-role="content">
 		<form action="form.php" method="post">
-			<fieldset data-role="controlgroup">
+			<fieldset data-role="controlgroup" id="prof-tag">
 				<legend>Pick a tag, or enter your own:</legend>
 				<input type="radio" name="radio-choice" id="ptag-1" value="Job search" checked="checked" />
-				<label for="ptag-1">Job search</label>
+				<label for="ptag-1">Job Search</label>
 				<input type="radio" name="radio-choice" id="ptag-2" value="Promotion"  />
 				<label for="ptag-2">Promotion</label>
-				<input type="radio" name="radio-choice" id="ptag-3" value="Maternity leave"  />
+				<!--<input type="radio" name="radio-choice" id="ptag-3" value="Maternity leave"  />
 				<label for="ptag-3">Maternity leave</label>
 				<input type="radio" name="radio-choice" id="ptag-4" value="Salary negotiation"  />
-				<label for="ptag-4">Salary negotiation</label>
+				<label for="ptag-4">Salary negotiation</label>-->
 				<input type="radio" name="radio-choice" id="ptag-5" value="Burnout"  />
 				<label for="ptag-5">Burnout</label>
 				<input type="radio" name="radio-choice" id="ptag-6" value=""  />
@@ -495,24 +493,23 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
 	<div data-role="content">
 		<form action="form.php" method="post">
-			<fieldset data-role="controlgroup">
+			<fieldset data-role="controlgroup" id="health-tag">
 				<legend>Pick a tag, or enter your own:</legend>
 				<input type="radio" name="radio-choice" id="htag-1" value="Diet" checked="checked" />
 				<label for="htag-1">Diet</label>
 				<input type="radio" name="radio-choice" id="htag-2" value="Vegan"  />
-				<label for="htag-2">Vegan</label>
+				<label for="htag-2">Exercise</label>
 				<input type="radio" name="radio-choice" id="htag-3" value="Running"  />
-				<label for="htag-3">Running</label>
-				<input type="radio" name="radio-choice" id="htag-4" value="Weight Loss"  />
+				<label for="htag-3">Mental Health</label>
+				<!--<input type="radio" name="radio-choice" id="htag-4" value="Weight Loss"  />
 				<label for="htag-4">Weight Loss</label>
 				<input type="radio" name="radio-choice" id="htag-5" value="Body-Building"  />
-				<label for="htag-5">Body-building</label>
+				<label for="htag-5">Body-building</label>-->
 				<input type="radio" name="radio-choice" id="htag-6" value=""  />
 				<label for="htag-6"><input type="text" name="text" id="htag-6-text" value="" style="position:relative" placeholder="Other..." /></label>
 			</fieldset>
@@ -547,24 +544,23 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
 	<div data-role="content">
 		<form action="form.php" method="post">
-			<fieldset data-role="controlgroup">
+			<fieldset data-role="controlgroup" id="interp-tag">
 				<legend>Pick a tag, or enter your own:</legend>
 				<input type="radio" name="radio-choice" id="itag-1" value="Dating" checked="checked" />
-				<label for="itag-1">Dating</label>
+				<label for="itag-1">Friends</label>
 				<input type="radio" name="radio-choice" id="itag-2" value="Making new friends"  />
-				<label for="itag-2">Making new friends</label>
+				<label for="itag-2">Family</label>
 				<input type="radio" name="radio-choice" id="itag-3" value="Staying in touch"  />
-				<label for="itag-3">Staying in touch</label>
-				<input type="radio" name="radio-choice" id="itag-4" value="Improving a romantic relationship"  />
+				<label for="itag-3">Dating/Relationships</label>
+				<!--<input type="radio" name="radio-choice" id="itag-4" value="Improving a romantic relationship"  />
 				<label for="itag-4">Improving a romantic relationship</label>
 				<input type="radio" name="radio-choice" id="itag-5" value="Divorce and breakups"  />
-				<label for="itag-5">Divorce and breakups</label>
+				<label for="itag-5">Divorce and breakups</label>-->
 				<input type="radio" name="radio-choice" id="itag-6" value=""  />
 				<label for="itag-6"><input type="text" name="text" id="itag-6-text" value="" style="position:relative" placeholder="Other..." /></label>
 			</fieldset>
@@ -574,8 +570,60 @@
 	</div>
 </div>
 
-<!--New Goal 3: Suggested Goals-->
-<div data-role="page" id="newgoal3">
+
+<!--New Goal 3: Suggested Goals 1a / Professional / Job Search-->
+<div data-role="page" id="newgoal3-prof1">
+	
+	<div data-role="panel" id="sidenav10a" data-display="overlay" data-dismissible="true">
+		<script>$( "#sidenav10a" ).panel( "close" );</script>
+		<a href="#sidenav10a" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<ul data-role="listview">
+			<li><a href="#feed-all">Feed</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
+			<li><a href="#notifications">Notifications</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#login">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
+
+	<script>$( "#sidenav10a" ).panel( "toggle" );</script>
+
+	<div data-role="header">
+		<a href="#sidenav10"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<h1>New Goal (3/5)</h1>
+	</div>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#" class="ui-btn">Save Draft</a></li>
+		</ul>
+	</div>
+
+	<div data-role="content">
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup" id="suggest">
+				<legend>Pick a suggested goal for Professional / Job Search, or enter your own:</legend>
+				<input type="text" name="text" id="goal-text" value="">
+				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
+				<label for="suggest-1">Update my resume, cover letter, and portfolio</label>
+				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
+				<label for="suggest-2">Change industries</label>
+				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
+				<label for="suggest-3"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."></label>
+			</fieldset>
+			<fieldset data-role="controlgroup" id="subgoal">
+				<legend>What is the first thing you need to do?</legend>
+				<input type="text" name="text" id="subgoal-text" value="">
+			</fieldset>
+		</form>
+		<a href="#newgoal4" class="ui-btn" id="gb3">Next</a>
+		<a href="#newgoal1" class="ui-btn">Back to categories</a>
+	</div>
+</div>
+
+
+<!--New Goal 3: Suggested Goals / Professional / Promotion-->
+<div data-role="page" id="newgoal3-prof1">
 	
 	<div data-role="panel" id="sidenav10" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav10" ).panel( "close" );</script>
@@ -599,7 +647,57 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+
+	<div data-role="content">
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup" id="suggest">
+				<legend>Pick a suggested goal for Professional / Promotion, or enter your own:</legend>
+				<input type="text" name="text" id="goal-text" value="">
+				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
+				<label for="suggest-1">Improve my sales record</label>
+				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
+				<label for="suggest-2">Learn to negotiate pay increase</label>
+				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
+				<label for="suggest-3"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."></label>
+			</fieldset>
+			<fieldset data-role="controlgroup" id="subgoal">
+				<legend>What is the first thing you need to do?</legend>
+				<input type="text" name="text" id="subgoal-text" value="">
+			</fieldset>
+		</form>
+		<a href="#newgoal4" class="ui-btn" id="gb3">Next</a>
+		<a href="#newgoal1" class="ui-btn">Back to categories</a>
+	</div>
+</div>
+
+
+<!--New Goal 3: Suggested Goals / Health / Diet-->
+<div data-role="page" id="newgoal3-health1">
+	
+	<div data-role="panel" id="sidenav10" data-display="overlay" data-dismissible="true">
+		<script>$( "#sidenav10" ).panel( "close" );</script>
+		<a href="#sidenav10" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<ul data-role="listview">
+			<li><a href="#feed-all">Feed</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
+			<li><a href="#notifications">Notifications</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#login">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
+
+	<script>$( "#sidenav10" ).panel( "toggle" );</script>
+
+	<div data-role="header">
+		<a href="#sidenav10"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<h1>New Goal (3/5)</h1>
+	</div>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#" class="ui-btn">Save Draft</a></li>
 		</ul>
 	</div>
 
@@ -607,8 +705,9 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup" id="suggest">
 				<legend>Pick a suggested goal, or enter your own:</legend>
+				<input type="text" name="text" id="goal-text" value="">
 				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
-				<label for="suggest-1">Learn to cook delicious vegan food</label>
+				<label for="suggest-1">Learn to cook</label>
 				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
 				<label for="suggest-2">Get help committing to veganism</label>
 				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
@@ -620,7 +719,7 @@
 			</fieldset>
 		</form>
 		<a href="#newgoal4" class="ui-btn" id="gb3">Next</a>
-		<a href="#newgoal2" class="ui-btn">Back</a>
+		<a href="#newgoal1" class="ui-btn">Back to categories</a>
 	</div>
 </div>
 
@@ -650,7 +749,6 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 
