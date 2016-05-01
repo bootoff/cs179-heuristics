@@ -367,10 +367,10 @@
 	
 	<div data-role="content">
 		<ul data-role="listview">
-			<li><a href="#mygoals-quit"><img src="imgs/24628-200.png" height="70" width="70">Roger S. commented on "Quit smoking"</a></li>
-			<li><a href="#puppy0"><img src="imgs/question-mark-icon-8235.png" height="60" width="60">Bobby D. requested your help on "Train my puppy"</a></li>
-			<li><a href="#mygoals-quit"><img src="imgs/24628-200.png" height="60" width="60">Betty F. commented on "Quit smoking"</a></li>
-			<li><a href="#feed-all"><img src="imgs/person.png" height="60" width="60">You and Anna D. are now friends. Yay!</a></li>
+			<li><a href="#mygoals-quit"><img src="imgs/comment.png" style="width:100px;height:100px;">Roger S. commented on "Quit smoking"</a></li>
+			<li><a href="#puppy0"><img src="imgs/help.png" style="width:100px;height:100px;">Bobby D. requested your help on "Train my puppy"</a></li>
+			<li><a href="#mygoals-quit"><img src="imgs/comment.png" style="width:100px;height:100px;">Betty F. commented on "Quit smoking"</a></li>
+			<li><a href="#feed-all"><img src="imgs/friends.png" style="width:100px;height:100px;">You and Anna D. are now friends. Yay!</a></li>
 		</ul>
 	</div>
 </div>
@@ -426,15 +426,95 @@
 		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
 		<h1>Settings</h1>
 	</div>
-	
+
 	<div data-role="content">
-		<ul data-role="listview">
-			<li>Receive email updates</li>
-			<li>Notification frequency</li>
+		<a href="#email-updates" data-role="button" data-inline="true">Receive email updates</a>
+		<br>
+		<a href="#notification-frequency" data-role="button" data-inline="true">Notification frequency</a>
 		</ul>
 	</div>
 </div>
 
+<!--Email updates-->
+<div data-role="page" id="email-updates">
+	
+	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
+		<script>$( "#sidenav7" ).panel( "close" );</script>
+		<a href="#sidenav7" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<ul data-role="listview">
+			<li><a href="#newgoal1">New Goal</a></li>
+			<li><a href="#feed-all">Feed</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
+			<li><a href="#notifications">Notifications</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#login">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
+	
+	<script>$( "#sidenav7" ).panel( "toggle" );</script>
+
+	<div data-role="header">
+		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<h1>Settings</h1>
+	</div>
+	<div data-role="content">
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>Receive email updates when you receive certain notifications.</legend>
+				Update your email address: 
+				<br>
+				<input type="text" name="email">
+		  		<br>
+		  		When would you like to receive email notifications?
+		  		<br><br>
+		  		<input type="checkbox" id="friend-comment" />
+		  		<label for="friend-comment"> When a friend comments on one of my goals </label>
+		  		<br><br>
+		  		<input type="checkbox" id="anyone-comment" />
+		  		<label for="anyone-comment"> When anyone comments on one of my goals </label>
+		  		<br><br>
+		  		<input type="checkbox" id="help" />
+		  		<label for="help"> When a friend asks for help on one of their goals </label>
+		  		<br><br>
+		  		<input type="checkbox" id="new-friend" />
+		  		<label for="new-friend"> When I have a new friend </label>
+				<br><br>
+				<input type="checkbox" id="friend-new-goal" />
+				<label for="friend-new-goal"> When a friend creates a new goal </label>
+		  		<br><br>
+		  		<a href="#settings" class="ui-btn" id="gb1">Update</a>
+			</fieldset>
+		</form>
+	</div>	
+</div>
+
+<!--Notification frequency-->
+<div data-role="page" id="notification-frequency">
+	
+	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
+		<script>$( "#sidenav7" ).panel( "close" );</script>
+		<a href="#sidenav7" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<ul data-role="listview">
+			<li><a href="#newgoal1">New Goal</a></li>
+			<li><a href="#feed-all">Feed</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
+			<li><a href="#notifications">Notifications</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#login">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
+	
+	<script>$( "#sidenav7" ).panel( "toggle" );</script>
+
+	<div data-role="header">
+		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<h1>Settings</h1>
+	</div>
+
+	<div data-role="content">
+		<!-- stuff -->
+	</div>
+</div>
 
 <!--New Goal 1: Category-->
 <div data-role="page" id="newgoal1">
