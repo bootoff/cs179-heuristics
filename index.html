@@ -460,14 +460,35 @@
 		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
 		<h1>Settings</h1>
 	</div>
-
 	<div data-role="content">
-		Enter your email address to receive an email when you receive a notification.
-		<form>
-  			<br>
-  		<input type="text" name="email">
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup">
+				<legend>Receive email updates when you receive certain notifications.</legend>
+				Update your email address: 
+				<br>
+				<input type="text" name="email">
+		  		<br>
+		  		When would you like to receive email notifications?
+		  		<br><br>
+		  		<input type="checkbox" id="friend-comment" />
+		  		<label for="friend-comment"> When a friend comments on one of my goals </label>
+		  		<br><br>
+		  		<input type="checkbox" id="anyone-comment" />
+		  		<label for="anyone-comment"> When anyone comments on one of my goals </label>
+		  		<br><br>
+		  		<input type="checkbox" id="help" />
+		  		<label for="help"> When a friend asks for help on one of their goals </label>
+		  		<br><br>
+		  		<input type="checkbox" id="new-friend" />
+		  		<label for="new-friend"> When I have a new friend </label>
+				<br><br>
+				<input type="checkbox" id="friend-new-goal" />
+				<label for="friend-new-goal"> When a friend creates a new goal </label>
+		  		<br><br>
+		  		<a href="#settings" class="ui-btn" id="gb1">Update</a>
+			</fieldset>
 		</form>
-	</div>
+	</div>	
 </div>
 
 <!--Notification frequency-->
