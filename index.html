@@ -429,15 +429,70 @@
 		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
 		<h1>Settings</h1>
 	</div>
-	
+
 	<div data-role="content">
-		<ul data-role="listview">
-			<li>Receive email updates</li>
-			<li>Notification frequency</li>
+		<a href="#email-updates" data-role="button" data-inline="true">Receive email updates</a>
+		<br>
+		<a href="#notification-frequency" data-role="button" data-inline="true">Notification frequency</a>
 		</ul>
 	</div>
 </div>
 
+<!--Email updates-->
+<div data-role="page" id="email-updates">
+	
+	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
+		<script>$( "#sidenav7" ).panel( "close" );</script>
+		<a href="#sidenav7" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<ul data-role="listview">
+			<li><a href="#newgoal1">New Goal</a></li>
+			<li><a href="#feed-all">Feed</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
+			<li><a href="#notifications">Notifications</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#login">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
+	
+	<script>$( "#sidenav7" ).panel( "toggle" );</script>
+
+	<div data-role="header">
+		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<h1>Settings</h1>
+	</div>
+
+	<div data-role="content">
+		<!-- stuff -->
+	</div>
+</div>
+
+<!--Notification frequency-->
+<div data-role="page" id="notification-frequency">
+	
+	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
+		<script>$( "#sidenav7" ).panel( "close" );</script>
+		<a href="#sidenav7" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<ul data-role="listview">
+			<li><a href="#newgoal1">New Goal</a></li>
+			<li><a href="#feed-all">Feed</a></li>
+			<li><a href="#mygoals">My Goals</a></li>
+			<li><a href="#notifications">Notifications</a></li>
+			<li><a href="#settings">Settings</a></li>
+			<li><a href="#login">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
+	
+	<script>$( "#sidenav7" ).panel( "toggle" );</script>
+
+	<div data-role="header">
+		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<h1>Settings</h1>
+	</div>
+
+	<div data-role="content">
+		<!-- stuff -->
+	</div>
+</div>
 
 <!--New Goal 1: Category-->
 <div data-role="page" id="newgoal1">
