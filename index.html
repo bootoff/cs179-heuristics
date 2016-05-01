@@ -18,6 +18,7 @@
 
 
 <body>
+
 <!--LOG IN-->
 <div data-role="page" id="login">
 	<center>
@@ -33,27 +34,23 @@
 </div>
 
 
-<body>
-
 <!--FEED: All-->
 <div data-role="page" id="feed-all">
 	
-	<div data-role="panel" id="sidenav1a" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav1a" ).panel( "close" );</script>
-		<a href="#sidenav1a" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+	<div data-role="panel" id="sidenav1" data-display="overlay" data-dismissible="true" style="background: rgba(116, 116, 116, 0.82);">
+		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
+			<li><a href="#sidenav1" data-role="button"  style="color:white; background: rgba(116, 116, 116, 0.82);"><img src="imgs/menu-burger.png" height="20" width="20" padding="20"></a></li>
+			<li><a href="#newgoal1" style="color:white; background: rgba(116, 116, 116, 0.82);">New Goal</a></li>
+			<li><a href="#mygoals" style="color:white; background: rgba(116, 116, 116, 0.82);">My Goals</a></li>
+			<li><a href="#notifications" style="color:white; background: rgba(116, 116, 116, 0.82);">Notifications</a></li>
+			<li><a href="#settings" style="color:white; background: rgba(116, 116, 116, 0.82);">Settings</a></li>
+			<li><a href="#login" style="color:white; background: rgba(116, 116, 116, 0.82);">Log Out</a></li>
 		</ul>
 	</div><!-- /sidebar navigation -->
-	
-	<script>$( "#sidenav1a" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav1a"><img src="imgs/menu-burger.png"height="16" width="16"></a>
+		<a href="#sidenav1"><img src="imgs/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
 		<a href="#search"><img src="imgs/search.png" height="16" width="16"></a>
 	</div>

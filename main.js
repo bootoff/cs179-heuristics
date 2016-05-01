@@ -2,10 +2,7 @@
 var username;
 var password;
 
-username = "Curren I."
-
-var un;
-var pw;
+username = "User A.";
 
 //ADDING NEW COMMENTS
 
@@ -236,7 +233,8 @@ $( document ).ready(function() {
   });
 });
 
-// Progress bar for new goal pages
+
+// PROGRESS BAR for "New Goal" pages
   $(function() {
       $("#progressbar1").progressbar({
         value: 17
@@ -267,3 +265,29 @@ $( document ).ready(function() {
     });
   });
 
+
+// FUNCTION: INTERCEPT JQUERY page handling if url contains relevant tags
+function showCategory( urlObj, options )
+{
+	var categoryName = urlObj.hash.replace( /.*category=/, "" ),
+		category = categoryData[ categoryName ],
+		pageSelector = urlObj.hash.replace( /\?.*$/, "" );
+	if ( category ) {
+		var $page = $( pageSelector ),
+			$header = $page.children( ":jqmData(role=header)" ),
+			$content = $page.children( ":jqmData(role=content)" ),
+			markup = "<p>" + category.description + "</p><ul data-role='listview' data-inset='true'>",
+			cItems = category.items,
+			numItems = cItems.length;
+		for ( var i = 0; i < numItems; i++ ) {
+			markup += "<li>" + cItems[i].name + "</li>";
+		}
+		markup += "</ul>";
+		$header.find( "h1" ).html( category.name );
+		$content.html( markup );
+		$page.page();
+		$content.find( ":jqmData(role=listview)" ).listview();
+		options.dataUrl = urlObj.href;
+		$.mobile.changePage( $page, options );
+	}
+}
