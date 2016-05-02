@@ -256,7 +256,7 @@
 	
 	<div data-role="content">
 		<fieldset>
-		<ul data-role="listview" id="goalList">
+		<ul data-role="listview" id="goalList" class="ui-body-c">
 			<li class='goal' data-index='1'><a href="#mygoals-quit">Quit smoking</a></li>
 			<li class='goal' data-index='2'><a href="#">Build wall around patio</a></li>
 			<li class='goal' data-index='3'><a href="#">Find Mom home care</a></li>
@@ -269,7 +269,7 @@
 
 
 <!--My goal: Quit Smoking-->
-<div data-role="page" id="mygoals-quit">
+<div data-role="page" id="mygoals-quit" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav4" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav4" ).panel( "close" );</script>
@@ -292,7 +292,7 @@
 	</div>
 	
 	<div data-role="content">
-		<fieldset id="subgoalList">
+		<fieldset id="subgoalList" class="ui-body-c">
 			<div class='subgoal' data-index='1' data-role="collapsible" data-collapsed="false"><h3>Medical consultation</h3>
 				<fieldset data-role="controlgroup" id='subgoal1'>
 					<label class='step'><input type="checkbox" checked="true">Set up appt. with my doctor</label>
@@ -344,7 +344,7 @@
 
 
 <!--NOTIFICATIONS-->
-<div data-role="page" id="notifications">
+<div data-role="page" id="notifications" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav5" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav5" ).panel( "close" );</script>
@@ -366,7 +366,7 @@
 	</div>
 	
 	<div data-role="content">
-		<ul data-role="listview">
+		<ul data-role="listview" class="ui-body-c">
 			<li><a href="#mygoals-quit"><img src="images/comment.png" style="width:100px;height:100px;">Roger S. commented on "Quit smoking"</a></li>
 			<li><a href="#puppy0"><img src="images/help.png" style="width:100px;height:100px;">Bobby D. requested your help on "Train my puppy"</a></li>
 			<li><a href="#mygoals-quit"><img src="images/comment.png" style="width:100px;height:100px;">Betty F. commented on "Quit smoking"</a></li>
@@ -406,7 +406,7 @@
 
 
 <!--SETTINGS-->
-<div data-role="page" id="settings">
+<div data-role="page" id="settings" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav7" ).panel( "close" );</script>
@@ -436,7 +436,7 @@
 </div>
 
 <!--Email updates-->
-<div data-role="page" id="email-updates">
+<div data-role="page" id="email-updates" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav7" ).panel( "close" );</script>
@@ -458,7 +458,7 @@
 		<h1>Settings</h1>
 	</div>
 	<div data-role="content">
-		<form action="form.php" method="post">
+		<form action="form.php" method="post" class="ui-body-c">
 			<fieldset data-role="controlgroup">
 				<legend>Receive email updates when you receive certain notifications.</legend>
 				Update your email address: 
@@ -489,7 +489,7 @@
 </div>
 
 <!--Notification frequency-->
-<div data-role="page" id="notification-frequency">
+<div data-role="page" id="notification-frequency" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav7" ).panel( "close" );</script>
@@ -517,7 +517,7 @@
 </div>
 
 <!--New Goal 1: Category-->
-<div data-role="page" id="newgoal1">
+<div data-role="page" id="newgoal1" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav8" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav8" ).panel( "close" );</script>
@@ -538,14 +538,10 @@
 		<h1>New Goal</h1>
 	</div>
 
-	<div data-role="navbar">
+	<div data-role="navbar" class="ui-body-g">
 		<ul>
-			<li><a href="#" class="ui-btn" id="sdraft">Save Draft</a></li>
-			<li><a href="#" class="ui-btn">Load Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn" id="mygoals">My Goals</a></li>
-			<!-- <li><button type="button" id="sdraft1">Save Draft</button></li>
-			<li><button type="button">Load Draft</button></li>
-			<li><button type="button">My Goals</button></li> -->
+			<li><a href="#" class="ui-btn">Save Draft</a></li>
+			<li><a href="#" class="ui-btn" data-disabled="true">Load Draft</a></li>
 		</ul>
 	</div>
 
@@ -555,13 +551,13 @@
 				<legend>What kind of goal?</legend>
 					
 					<input type="radio" name="radio-choice" id="cat_1" value="newgoal2-professional" checked="checked"/>
-					<label for="cat_1"><img src="images/professional.png" alt="briefcase" style="width:20px;height:20px;">   Professional</label>
+					<label for="cat_1">Professional<img src="images/professional.png" alt="briefcase" style="float:right;width:20px;height:20px;"></label>
 					
 					<input type="radio" name="radio-choice" id="cat_2" value="newgoal2-health"  />
-					<label for="cat_2"><img src="images/health.png" alt="heart" style="width:20px;height:20px;">   Health</label>
+					<label for="cat_2">Health<img src="images/health.png" alt="heart" style="float:right;width:20px;height:20px;"></label>
 					
 					<input type="radio" name="radio-choice" id="cat_3" value="newgoal2-interpersonal"  />
-					<label for="cat_3"><img src="images/interpersonal.png" alt="people" style="width:20px;height:20px;">   Interpersonal</label>
+					<label for="cat_3">Interpersonal<img src="images/interpersonal.png" alt="people" style="float:right;width:20px;height:20px;"></label>
 			</fieldset>
 		</form>
 		<a href="#newgoal2-professional" class="ui-btn" id="gb1">Next</a>
@@ -571,7 +567,7 @@
 	
 	
 <!--New Goal 2: Tags: Professional-->
-<div data-role="page" id="newgoal2-professional">
+<div data-role="page" id="newgoal2-professional" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav9" ).panel( "close" );</script>
@@ -592,10 +588,9 @@
 		<h1>New Goal</h1>
 	</div>
 
-	<div data-role="navbar">
+	<div data-role="navbar" class="ui-body-g">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#" class="ui-btn" id="#sdraft">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
@@ -608,14 +603,10 @@
 				<label for="ptag-1">Job Search</label>
 				<input type="radio" name="radio-choice" id="ptag-2" value="Promotion"  />
 				<label for="ptag-2">Promotion</label>
-				<!--<input type="radio" name="radio-choice" id="ptag-3" value="Maternity leave"  />
-				<label for="ptag-3">Maternity leave</label>
-				<input type="radio" name="radio-choice" id="ptag-4" value="Salary negotiation"  />
-				<label for="ptag-4">Salary negotiation</label>-->
-				<input type="radio" name="radio-choice" id="ptag-5" value="Burnout"  />
-				<label for="ptag-5">Burnout</label>
-				<input type="radio" name="radio-choice" id="ptag-6" value=""  />
-				<label for="ptag-6"><input type="text" name="text" id="ptag-6-text" value="" style="position:relative" placeholder="Other..." /></label>
+				<input type="radio" name="radio-choice" id="ptag-3" value="Burnout"  />
+				<label for="ptag-3">Burnout</label>
+				<input type="radio" name="radio-choice" id="ptag-4" value=""  />
+				<label for="ptag-4"><input type="text" name="text" id="ptag-4-text" value="" style="position:relative" placeholder="Other..." /></label>
 			</fieldset>
 		</form>
 		<a href="#newgoal3" class="ui-btn" id="gb2p">Next</a>
@@ -625,7 +616,7 @@
 </div>
 
 <!--New Goal 2: Tags: Health-->
-<div data-role="page" id="newgoal2-health">
+<div data-role="page" id="newgoal2-health" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav9" ).panel( "close" );</script>
@@ -678,7 +669,7 @@
 </div>
 
 <!--New Goal 2: Tags: Interpersonal-->
-<div data-role="page" id="newgoal2-interpersonal">
+<div data-role="page" id="newgoal2-interpersonal" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav9" ).panel( "close" );</script>
@@ -732,7 +723,7 @@
 
 
 <!--New Goal 3: Suggested Goals 1a / Professional / Job Search-->
-<div data-role="page" id="newgoal3-prof1">
+<div data-role="page" id="newgoal3-prof1" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav10a" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav10a" ).panel( "close" );</script>
@@ -784,7 +775,7 @@
 
 
 <!--New Goal 3: Suggested Goals / Professional / Promotion-->
-<div data-role="page" id="newgoal3-prof1">
+<div data-role="page" id="newgoal3-prof1" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav10" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav10" ).panel( "close" );</script>
@@ -836,7 +827,7 @@
 
 
 <!--New Goal 3: Suggested Goals / Health / Diet-->
-<div data-role="page" id="newgoal3-health1">
+<div data-role="page" id="newgoal3-health1" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav10" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav10" ).panel( "close" );</script>
@@ -889,7 +880,7 @@
 
 
 <!--New Goal 4: Deadline & Priority-->
-<div data-role="page" id="newgoal4">
+<div data-role="page" id="newgoal4" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav11" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav11" ).panel( "close" );</script>
@@ -949,7 +940,7 @@
 
 
 <!--New Goal 5: Sharing-->
-<div data-role="page" id="newgoal5">
+<div data-role="page" id="newgoal5" class="ui-body-b">
 	
 	<div data-role="panel" id="sidenav12" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav12" ).panel( "close" );</script>
