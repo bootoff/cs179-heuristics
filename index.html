@@ -1,21 +1,19 @@
 <!DOCTYPE html PUBLIC>
 <html>
+<!--jQuery Mobile Flat-UI Theme: <https://github.com/bootoff/jquery-mobile-flat-ui-theme>-->
+<!--Progress bar: <jqueryui.com/progressbar/>-->
 <head>
 	<title>Goallective</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Progress bar: <jqueryui.com/progressbar/>-->
-	<!--Android holo dark theme: <http://www.teusink.eu/2012/09/android-holo-theme-for-jquery-mobile-111.html>-->
-	<link rel="stylesheet" href="http://web-holo/AndroidHoloDarkLight.min.css" /><!--theme-->
-	<link rel="stylesheet" href="http://jquery.mobile.structure-1.2.0.min.css" /><!--theme-->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" /><!--theme-->
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css"><!--progress bar-->
+	
     <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script><!--progress bar-->
-    <script src="http://code.jquery.com/mobile/git/jquery.mobile-git.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'><!--theme-->
 </head>
 
 
@@ -23,7 +21,7 @@
 
 
 <!--LOG IN-->
-<div data-role="page" id="login" data-theme="b">
+<div data-role="page" id="login">
 	<center>
 		<h1>Goallective</h1>
 		<h2>Log In</h2>
@@ -38,24 +36,12 @@
 
 
 <!--FEED: All-->
-<div data-role="page" id="feed-all" data-theme="b">
-	
-	<div data-role="panel" id="sidenav1" data-display="overlay" data-dismissible="true" style="background: rgba(116, 116, 116, 0.82);">
-		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#sidenav1" data-role="button"  style="color:white; background: rgba(116, 116, 116, 0.82);"><img src="imgs/menu-burger.png" height="20" width="20" padding="20"></a></li>
-			<li><a href="#newgoal1" style="color:white; background: rgba(116,116,116,0.82);">New Goal</a></li>
-			<li><a href="#mygoals" style="color:white; background: rgba(116, 116, 116, 0.82);">My Goals</a></li>
-			<li><a href="#notifications" style="color:white; background: rgba(116, 116, 116, 0.82);">Notifications</a></li>
-			<li><a href="#settings" style="color:white; background: rgba(116, 116, 116, 0.82);">Settings</a></li>
-			<li><a href="#login" style="color:white; background: rgba(116, 116, 116, 0.82);">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
+<div data-role="page" id="feed-all">
 
 	<div data-role="header">
-		<a href="#sidenav1"><img src="imgs/menu-burger.png"height="16" width="16"></a>
+		<a href="#sidenav1"><img src="images/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
-		<a href="#search"><img src="imgs/search.png" height="16" width="16"></a>
+		<a href="#search"><img src="images/search.png" height="16" width="16"></a>
 	</div>
 
 	<div data-role="navbar">
@@ -68,27 +54,39 @@
 	
 	<div data-role="content">
 		<ul data-role="listview">
-			<li><a href="#puppy0"><img src="imgs/guy1.png" alt="Bobby D." style="width:100px;height:100px;"><h3>Bobby D.</h3><span style="font-weight:lighter;">Train my puppy</span></a></li>
-			<li><a href="#goal"><img src="imgs/guy2.png" alt="Roger S." style="width:100px;height:100px;"><h3>Roger S.</h3><span style="font-weight:lighter;">Teach my daughter to ride a bike</span></a></li>
-			<li><a href="#goal"><img src="imgs/girl1.png" alt="Joan H." style="width:100px;height:100px;"><h3>Joan H.</h3><span style="font-weight:lighter;">Save for retirement</span></a></li>
-			<li><a href="#goal"><img src="imgs/guy3.png" alt="Pete C." style="width:100px;height:100px;"><h3>Pete C.</h3><span style="font-weight:lighter;">Train for 5K</span></a></li>
-			<li><a href="#goal"><img src="imgs/girl2.png" alt="Anna D." style="width:100px;height:100px;"><h3>Anna D.</h3><span style="font-weight:lighter;">Renovate the bathroom</span></a></li>
-			<li><a href="#goal"><img src="imgs/girl3.png" alt="Trudy C." style="width:100px;height:100px;"><h3>Trudy C.</h3><span style="font-weight:lighter;">Start a PTA at the school</span></a></li>
-			<li><a href="#goal"><img src="imgs/girl4.png" alt="Betty F." style="width:100px;height:100px;"><h3>Betty F.</h3><span style="font-weight:lighter;">Lose the baby weight</span></a></li>
-			<li><a href="#goal"><img src="imgs/girl5.png" alt="Sally D." style="width:100px;height:100px;"><h3>Sally D.</h3><span style="font-weight:lighter;">Find a new psychiatrist</span></a></li>
-			<li><a href="#goal"><img src="imgs/guy4.png" alt="Bert C." style="width:100px;height:100px;"><h3>Bert C.</h3><span style="font-weight:lighter;">Redecorate my office</span></a></li>
-			<li><a href="#goal"><img src="imgs/guy5.png" alt="Don D." style="width:100px;height:100px;"><h3>Don D.</h3><span style="font-weight:lighter;">Find a good marriage counselor</span></a></li>
+			<li><a href="#puppy0"><img src="images/guy1.png" alt="Bobby D." style="width:100px;height:100px;"><h3>Bobby D.</h3><span style="font-weight:lighter;">Train my puppy</span></a></li>
+			<li><a href="#goal"><img src="images/guy2.png" alt="Roger S." style="width:100px;height:100px;"><h3>Roger S.</h3><span style="font-weight:lighter;">Teach my daughter to ride a bike</span></a></li>
+			<li><a href="#goal"><img src="images/girl1.png" alt="Joan H." style="width:100px;height:100px;"><h3>Joan H.</h3><span style="font-weight:lighter;">Save for retirement</span></a></li>
+			<li><a href="#goal"><img src="images/guy3.png" alt="Pete C." style="width:100px;height:100px;"><h3>Pete C.</h3><span style="font-weight:lighter;">Train for 5K</span></a></li>
+			<li><a href="#goal"><img src="images/girl2.png" alt="Anna D." style="width:100px;height:100px;"><h3>Anna D.</h3><span style="font-weight:lighter;">Renovate the bathroom</span></a></li>
+			<li><a href="#goal"><img src="images/girl3.png" alt="Trudy C." style="width:100px;height:100px;"><h3>Trudy C.</h3><span style="font-weight:lighter;">Start a PTA at the school</span></a></li>
+			<li><a href="#goal"><img src="images/girl4.png" alt="Betty F." style="width:100px;height:100px;"><h3>Betty F.</h3><span style="font-weight:lighter;">Lose the baby weight</span></a></li>
+			<li><a href="#goal"><img src="images/girl5.png" alt="Sally D." style="width:100px;height:100px;"><h3>Sally D.</h3><span style="font-weight:lighter;">Find a new psychiatrist</span></a></li>
+			<li><a href="#goal"><img src="images/guy4.png" alt="Bert C." style="width:100px;height:100px;"><h3>Bert C.</h3><span style="font-weight:lighter;">Redecorate my office</span></a></li>
+			<li><a href="#goal"><img src="images/guy5.png" alt="Don D." style="width:100px;height:100px;"><h3>Don D.</h3><span style="font-weight:lighter;">Find a good marriage counselor</span></a></li>
 		</ul>
 	</div>
+	
+	<div data-role="panel" id="sidenav1" data-display="overlay" data-dismissible="true" style="background: rgba(116, 116, 116, 0.82);">
+		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
+		<ul data-role="listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+			<li><a href="#sidenav1" data-role="button"  style="color:white; background: rgba(116, 116, 116, 0.82);"><img src="images/menu-burger.png" height="20" width="20" padding="20"></a></li>
+			<li><a href="#newgoal1" style="color:white; background: rgba(116,116,116,0.82);">New Goal</a></li>
+			<li><a href="#mygoals" style="color:white; background: rgba(116, 116, 116, 0.82);">My Goals</a></li>
+			<li><a href="#notifications" style="color:white; background: rgba(116, 116, 116, 0.82);">Notifications</a></li>
+			<li><a href="#settings" style="color:white; background: rgba(116, 116, 116, 0.82);">Settings</a></li>
+			<li><a href="#login" style="color:white; background: rgba(116, 116, 116, 0.82);">Log Out</a></li>
+		</ul>
+	</div><!-- /sidebar navigation -->
 </div>
 
 
 <!--FEED: Professional-->
-<div data-role="page" id="feed-prof" data-theme="b">
+<div data-role="page" id="feed-prof">
 	
 	<div data-role="panel" id="sidenav1b" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav1b" ).panel( "close" );</script>
-		<a href="#sidenav1b" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav1b" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -101,9 +99,9 @@
 	<script>$( "#sidenav1b" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav1b"><img src="imgs/menu-burger.png"height="16" width="16"></a>
+		<a href="#sidenav1b"><img src="images/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
-		<a href="#search"><img src="imgs/search.png" height="16" width="16"></a>
+		<a href="#search"><img src="images/search.png" height="16" width="16"></a>
 	</div>
 
 	<div data-role="navbar">
@@ -116,20 +114,20 @@
 	
 	<div data-role="content">
 		<ul data-role="listview">
-			<li><a href="#goal"><img src="imgs/girl1.png" alt="Joan H." style="width:100px;height:100px;"><h3>Joan H.</h3>Save for retirement</a></li>
-			<li><a href="#goal"><img src="imgs/girl3.png" alt="Trudy C." style="width:100px;height:100px;"><h3>Trudy C.</h3>Start a PTA at the kids' school</a></li>
-			<li><a href="#goal"><img src="imgs/guy4.png" alt="Bert C." style="width:100px;height:100px;"><h3>Bert C.</h3>Redecorate my office</a></li>
+			<li><a href="#goal"><img src="images/girl1.png" alt="Joan H." style="width:100px;height:100px;"><h3>Joan H.</h3>Save for retirement</a></li>
+			<li><a href="#goal"><img src="images/girl3.png" alt="Trudy C." style="width:100px;height:100px;"><h3>Trudy C.</h3>Start a PTA at the kids' school</a></li>
+			<li><a href="#goal"><img src="images/guy4.png" alt="Bert C." style="width:100px;height:100px;"><h3>Bert C.</h3>Redecorate my office</a></li>
 		</ul>
 	</div>
 </div>
 
 
 <!--FEED: Health-->
-<div data-role="page" id="feed-health" data-theme="b">
+<div data-role="page" id="feed-health">
 	
 	<div data-role="panel" id="sidenav1c" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav1c" ).panel( "close" );</script>
-		<a href="#sidenav1c" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav1c" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -142,9 +140,9 @@
 	<script>$( "#sidenav1c" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav1c"><img src="imgs/menu-burger.png"height="16" width="16"></a>
+		<a href="#sidenav1c"><img src="images/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
-		<a href="#search"><img src="imgs/search.png" height="16" width="16"></a>
+		<a href="#search"><img src="images/search.png" height="16" width="16"></a>
 	</div>
 
 	<div data-role="navbar">
@@ -157,20 +155,20 @@
 	
 	<div data-role="content">
 		<ul data-role="listview">
-			<li><a href="#goal"><img src="imgs/guy3.png" alt="Pete C." style="width:100px;height:100px;"><h3>Pete C.</h3>Train for 5K</a></li>
-			<li><a href="#goal"><img src="imgs/girl4.png" alt="Betty F." style="width:100px;height:100px;"><h3>Betty F.</h3>Lose the baby weight</a></li>
-			<li><a href="#goal"><img src="imgs/girl5.png" alt="Sally D." style="width:100px;height:100px;"><h3>Sally D.</h3>Find a new psychiatrist</a></li>
+			<li><a href="#goal"><img src="images/guy3.png" alt="Pete C." style="width:100px;height:100px;"><h3>Pete C.</h3>Train for 5K</a></li>
+			<li><a href="#goal"><img src="images/girl4.png" alt="Betty F." style="width:100px;height:100px;"><h3>Betty F.</h3>Lose the baby weight</a></li>
+			<li><a href="#goal"><img src="images/girl5.png" alt="Sally D." style="width:100px;height:100px;"><h3>Sally D.</h3>Find a new psychiatrist</a></li>
 		</ul>
 	</div>
 </div>
 
 
 <!--FEED: Interpersnoal-->
-<div data-role="page" id="feed-inter" data-theme="b">
+<div data-role="page" id="feed-inter">
 	
 	<div data-role="panel" id="sidenav1d" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav1d" ).panel( "close" );</script>
-		<a href="#sidenav1d" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav1d" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -183,9 +181,9 @@
 	<script>$( "#sidenav1d" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav1d"><img src="imgs/menu-burger.png"height="16" width="16"></a>
+		<a href="#sidenav1d"><img src="images/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
-		<a href="#search"><img src="imgs/search.png" height="16" width="16"></a>
+		<a href="#search"><img src="images/search.png" height="16" width="16"></a>
 	</div>
 
 	<div data-role="navbar">
@@ -198,20 +196,20 @@
 	
 	<div data-role="content">
 		<ul data-role="listview">
-			<li><a href="#puppy0"><img src="imgs/guy1.png" alt="Bobby D." style="width:100px;height:100px;"><h3>Bobby D.</h3>Train my puppy</a></li>
-			<li><a href="#goal"><img src="imgs/guy2.png" alt="Roger S." style="width:100px;height:100px;"><h3>Roger S.</h3>Teach my daughter to ride a bike</a></li>
-			<li><a href="#goal"><img src="imgs/guy5.png" alt="Don D." style="width:100px;height:100px;"><h3>Don D.</h3>Find a good marriage counselor</a></li>
+			<li><a href="#puppy0"><img src="images/guy1.png" alt="Bobby D." style="width:100px;height:100px;"><h3>Bobby D.</h3>Train my puppy</a></li>
+			<li><a href="#goal"><img src="images/guy2.png" alt="Roger S." style="width:100px;height:100px;"><h3>Roger S.</h3>Teach my daughter to ride a bike</a></li>
+			<li><a href="#goal"><img src="images/guy5.png" alt="Don D." style="width:100px;height:100px;"><h3>Don D.</h3>Find a good marriage counselor</a></li>
 		</ul>
 	</div>
 </div>
 
 
 <!--SEARCH-->
-<div data-role="page" id="search" data-theme="b">
+<div data-role="page" id="search">
 	
 	<div data-role="panel" id="sidenav2" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav2" ).panel( "close" );</script>
-		<a href="#sidenav2" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav2" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -225,7 +223,7 @@
 	<script>$( "#sidenav2" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav2"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav2"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Search</h1>
 	</div>
 
@@ -236,11 +234,11 @@
 </div>
 
 <!--MY GOALS-->
-<div data-role="page" id="mygoals" data-theme="b">
+<div data-role="page" id="mygoals">
 	
 	<div data-role="panel" id="sidenav3" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav3" ).panel( "close" );</script>
-		<a href="#sidenav3" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav3" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -253,7 +251,7 @@
 	<script>$( "#sidenav3" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav3"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav3"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>My Goals</h1>
 	</div>
 	
@@ -272,11 +270,11 @@
 
 
 <!--My goal: Quit Smoking-->
-<div data-role="page" id="mygoals-quit" data-theme="b">
+<div data-role="page" id="mygoals-quit">
 	
 	<div data-role="panel" id="sidenav4" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav4" ).panel( "close" );</script>
-		<a href="#sidenav4" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav4" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -290,7 +288,7 @@
 	<script>$( "#sidenav4" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav4"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav4"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Goal: Quit Smoking</h1>
 	</div>
 	
@@ -347,11 +345,11 @@
 
 
 <!--NOTIFICATIONS-->
-<div data-role="page" id="notifications" data-theme="b">
+<div data-role="page" id="notifications">
 	
 	<div data-role="panel" id="sidenav5" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav5" ).panel( "close" );</script>
-		<a href="#sidenav5" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav5" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -364,27 +362,27 @@
 	<script>$( "#sidenav5" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav5"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav5"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Notifications</h1>
 	</div>
 	
 	<div data-role="content">
 		<ul data-role="listview">
-			<li><a href="#mygoals-quit"><img src="imgs/comment.png" style="width:100px;height:100px;">Roger S. commented on "Quit smoking"</a></li>
-			<li><a href="#puppy0"><img src="imgs/help.png" style="width:100px;height:100px;">Bobby D. requested your help on "Train my puppy"</a></li>
-			<li><a href="#mygoals-quit"><img src="imgs/comment.png" style="width:100px;height:100px;">Betty F. commented on "Quit smoking"</a></li>
-			<li><a href="#feed-all"><img src="imgs/friends.png" style="width:100px;height:100px;">You and Anna D. are now friends. Yay!</a></li>
+			<li><a href="#mygoals-quit"><img src="images/comment.png" style="width:100px;height:100px;">Roger S. commented on "Quit smoking"</a></li>
+			<li><a href="#puppy0"><img src="images/help.png" style="width:100px;height:100px;">Bobby D. requested your help on "Train my puppy"</a></li>
+			<li><a href="#mygoals-quit"><img src="images/comment.png" style="width:100px;height:100px;">Betty F. commented on "Quit smoking"</a></li>
+			<li><a href="#feed-all"><img src="images/friends.png" style="width:100px;height:100px;">You and Anna D. are now friends. Yay!</a></li>
 		</ul>
 	</div>
 </div>
 
 
 <!--Notify Return (temp)-->
-<div data-role="page" id="notify-return" data-theme="b">
+<div data-role="page" id="notify-return">
 	
 	<div data-role="panel" id="sidenav6" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav6" ).panel( "close" );</script>
-		<a href="#sidenav6" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav6" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -398,7 +396,7 @@
 	<script>$( "#sidenav6" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav6"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav6"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Temporary Page</h1>
 	</div>
 	
@@ -409,11 +407,11 @@
 
 
 <!--SETTINGS-->
-<div data-role="page" id="settings" data-theme="b">
+<div data-role="page" id="settings">
 	
 	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav7" ).panel( "close" );</script>
-		<a href="#sidenav7" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav7" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -426,7 +424,7 @@
 	<script>$( "#sidenav7" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav7"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Settings</h1>
 	</div>
 
@@ -439,11 +437,11 @@
 </div>
 
 <!--Email updates-->
-<div data-role="page" id="email-updates" data-theme="b">
+<div data-role="page" id="email-updates">
 	
 	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav7" ).panel( "close" );</script>
-		<a href="#sidenav7" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav7" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -457,7 +455,7 @@
 	<script>$( "#sidenav7" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav7"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Settings</h1>
 	</div>
 	<div data-role="content">
@@ -492,11 +490,11 @@
 </div>
 
 <!--Notification frequency-->
-<div data-role="page" id="notification-frequency" data-theme="b">
+<div data-role="page" id="notification-frequency">
 	
 	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav7" ).panel( "close" );</script>
-		<a href="#sidenav7" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav7" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -510,7 +508,7 @@
 	<script>$( "#sidenav7" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav7"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav7"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Settings</h1>
 	</div>
 
@@ -520,11 +518,11 @@
 </div>
 
 <!--New Goal 1: Category-->
-<div data-role="page" id="newgoal1" data-theme="b">
+<div data-role="page" id="newgoal1">
 	
 	<div data-role="panel" id="sidenav8" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav8" ).panel( "close" );</script>
-		<a href="#sidenav8" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav8" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#feed-all">Feed</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -537,7 +535,7 @@
 	<script>$( "#sidenav8" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav8"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav8"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
@@ -558,13 +556,13 @@
 				<legend>What kind of goal?</legend>
 					
 					<input type="radio" name="radio-choice" id="cat_1" value="newgoal2-professional" checked="checked"/>
-					<label for="cat_1"><img src="imgs/professional.png" alt="briefcase" style="width:20px;height:20px;">   Professional</label>
+					<label for="cat_1"><img src="images/professional.png" alt="briefcase" style="width:20px;height:20px;">   Professional</label>
 					
 					<input type="radio" name="radio-choice" id="cat_2" value="newgoal2-health"  />
-					<label for="cat_2"><img src="imgs/health.png" alt="heart" style="width:20px;height:20px;">   Health</label>
+					<label for="cat_2"><img src="images/health.png" alt="heart" style="width:20px;height:20px;">   Health</label>
 					
 					<input type="radio" name="radio-choice" id="cat_3" value="newgoal2-interpersonal"  />
-					<label for="cat_3"><img src="imgs/interpersonal.png" alt="people" style="width:20px;height:20px;">   Interpersonal</label>
+					<label for="cat_3"><img src="images/interpersonal.png" alt="people" style="width:20px;height:20px;">   Interpersonal</label>
 			</fieldset>
 		</form>
 		<a href="#newgoal2-professional" class="ui-btn" id="gb1">Next</a>
@@ -574,11 +572,11 @@
 	
 	
 <!--New Goal 2: Tags: Professional-->
-<div data-role="page" id="newgoal2-professional" data-theme="b">
+<div data-role="page" id="newgoal2-professional">
 	
 	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav9" ).panel( "close" );</script>
-		<a href="#sidenav9" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav9" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#feed-all">Feed</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -591,7 +589,7 @@
 	<script>$( "#sidenav9" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav9"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav9"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
@@ -628,11 +626,11 @@
 </div>
 
 <!--New Goal 2: Tags: Health-->
-<div data-role="page" id="newgoal2-health" data-theme="b">
+<div data-role="page" id="newgoal2-health">
 	
 	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav9" ).panel( "close" );</script>
-		<a href="#sidenav9" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav9" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#feed-all">Feed</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -645,7 +643,7 @@
 	<script>$( "#sidenav9" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav9"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav9"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal (2/5)</h1>
 	</div>
 
@@ -681,11 +679,11 @@
 </div>
 
 <!--New Goal 2: Tags: Interpersonal-->
-<div data-role="page" id="newgoal2-interpersonal" data-theme="b">
+<div data-role="page" id="newgoal2-interpersonal">
 	
 	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav9" ).panel( "close" );</script>
-		<a href="#sidenav9" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav9" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#feed-all">Feed</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -698,7 +696,7 @@
 	<script>$( "#sidenav9" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav9"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav9"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal (2/5)</h1>
 	</div>
 
@@ -735,11 +733,11 @@
 
 
 <!--New Goal 3: Suggested Goals 1a / Professional / Job Search-->
-<div data-role="page" id="newgoal3-prof1" data-theme="b">
+<div data-role="page" id="newgoal3-prof1">
 	
 	<div data-role="panel" id="sidenav10a" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav10a" ).panel( "close" );</script>
-		<a href="#sidenav10a" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav10a" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#feed-all">Feed</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -752,7 +750,7 @@
 	<script>$( "#sidenav10a" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav10"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
@@ -787,11 +785,11 @@
 
 
 <!--New Goal 3: Suggested Goals / Professional / Promotion-->
-<div data-role="page" id="newgoal3-prof1" data-theme="b">
+<div data-role="page" id="newgoal3-prof1">
 	
 	<div data-role="panel" id="sidenav10" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav10" ).panel( "close" );</script>
-		<a href="#sidenav10" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav10" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#feed-all">Feed</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -804,7 +802,7 @@
 	<script>$( "#sidenav10" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav10"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
@@ -839,11 +837,11 @@
 
 
 <!--New Goal 3: Suggested Goals / Health / Diet-->
-<div data-role="page" id="newgoal3-health1" data-theme="b">
+<div data-role="page" id="newgoal3-health1">
 	
 	<div data-role="panel" id="sidenav10" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav10" ).panel( "close" );</script>
-		<a href="#sidenav10" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav10" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#feed-all">Feed</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -856,7 +854,7 @@
 	<script>$( "#sidenav10" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav10"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal (3/5)</h1>
 	</div>
 
@@ -892,11 +890,11 @@
 
 
 <!--New Goal 4: Deadline & Priority-->
-<div data-role="page" id="newgoal4" data-theme="b">
+<div data-role="page" id="newgoal4">
 	
 	<div data-role="panel" id="sidenav11" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav11" ).panel( "close" );</script>
-		<a href="#sidenav11" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav11" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#feed-all">Feed</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -909,7 +907,7 @@
 	<script>$( "#sidenav11" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav11"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav11"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
@@ -952,11 +950,11 @@
 
 
 <!--New Goal 5: Sharing-->
-<div data-role="page" id="newgoal5" data-theme="b">
+<div data-role="page" id="newgoal5">
 	
 	<div data-role="panel" id="sidenav12" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav12" ).panel( "close" );</script>
-		<a href="#sidenav12" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav12" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#feed-all">Feed</a></li>
 			<li><a href="#mygoals">My Goals</a></li>
@@ -969,7 +967,7 @@
 	<script>$( "#sidenav12" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav12"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav12"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
@@ -1002,11 +1000,11 @@
 </div>
 
 <!--(My Goal) Train My Puppy-->
-<div data-role="page" id="puppy0" data-theme="b">
+<div data-role="page" id="puppy0">
 	
 	<div data-role="panel" id="sidenav13" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav13" ).panel( "close" );</script>
-		<a href="#sidenav13" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav13" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -1020,7 +1018,7 @@
 	<script>$( "#sidenav13" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav13"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav13"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Train My Puppy</h1>
 	</div>
 	
@@ -1035,11 +1033,11 @@
 
 
 <!--(My Goal) Train My Puppy/Train 1-->
-<div data-role="page" id="puppy1" data-theme="b">
+<div data-role="page" id="puppy1">
 	
 	<div data-role="panel" id="sidenav14" data-display="overlay" data-dismissible="true">
 		<script>$( "#sidenav14" ).panel( "close" );</script>
-		<a href="#sidenav14" data-role="button" data-mini="true"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav14" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<ul data-role="listview">
 			<li><a href="#newgoal1">New Goal</a></li>
 			<li><a href="#feed-all">Feed</a></li>
@@ -1053,7 +1051,7 @@
 	<script>$( "#sidenav14" ).panel( "toggle" );</script>
 
 	<div data-role="header">
-		<a href="#sidenav14"><img src="imgs/menu-burger.png" height="16" width="16"></a>
+		<a href="#sidenav14"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Train My Puppy: Leash Train</h1>
 	</div>
 	<div data-role="content">
