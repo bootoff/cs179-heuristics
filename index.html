@@ -21,7 +21,7 @@
 
 
 <!--LOG IN-->
-<div data-role="page" id="login">
+<div data-role="page" id="login" class="ui-body-b">
 	<center>
 		<h1>Goallective</h1>
 		<h2>Log In</h2>
@@ -36,12 +36,20 @@
 
 
 <!--FEED: All-->
-<div data-role="page" id="feed-all">
+<div data-role="page" id="feed-all" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
 		<a href="#sidenav1"><img src="images/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
 		<a href="#search"><img src="images/search.png" height="16" width="16"></a>
+	</div>
+
+	<div data-role="navbar" class="ui-body-g">
+		<ul>
+			<li><a href="#feed-prof" class="ui-btn">Professional</a></li>
+			<li><a href="#feed-health" class="ui-btn">Health</a></li>
+			<li><a href="#feed-inter" class="ui-btn">Interpersonal</a></li>
+		</ul>
 	</div>
 	
 	<div data-role="panel" id="sidenav1" data-display="overlay" data-dismissible="true" style="background: rgba(255, 255, 255, 0.8);">
@@ -54,17 +62,9 @@
 			<li><a href="#login" style="color:#c1392b; background: rgba(255, 255, 255, 0.8);">Log Out</a></li>
 		</ul>
 	</div><!-- /sidebar navigation -->
-
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#feed-prof" class="ui-btn">Professional</a></li>
-			<li><a href="#feed-health" class="ui-btn">Health</a></li>
-			<li><a href="#feed-inter" class="ui-btn">Interpersonal</a></li>
-		</ul>
-	</div>
 	
 	<div data-role="content">
-		<ul data-role="listview">
+		<ul data-role="listview" class="ui-body-c">
 			<li><a href="#puppy0"><img src="images/guy1.png" alt="Bobby D." style="width:100px;height:100px;"><h3>Bobby D.</h3><span style="font-weight:lighter;">Train my puppy</span></a></li>
 			<li><a href="#goal"><img src="images/guy2.png" alt="Roger S." style="width:100px;height:100px;"><h3>Roger S.</h3><span style="font-weight:lighter;">Teach my daughter to ride a bike</span></a></li>
 			<li><a href="#goal"><img src="images/girl1.png" alt="Joan H." style="width:100px;height:100px;"><h3>Joan H.</h3><span style="font-weight:lighter;">Save for retirement</span></a></li>
@@ -162,7 +162,7 @@
 </div>
 
 
-<!--FEED: Interpersnoal-->
+<!--FEED: Interpersonal-->
 <div data-role="page" id="feed-inter">
 	
 	<div data-role="panel" id="sidenav1d" data-display="overlay" data-dismissible="true">
