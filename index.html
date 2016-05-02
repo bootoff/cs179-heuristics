@@ -259,7 +259,7 @@
 </div>
 
 
-<!--My goal: Quit Smoking-->
+<!--MY GOALS: Quit Smoking-->
 <div data-role="page" id="mygoals-quit" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
@@ -280,7 +280,7 @@
 	</div>
 	
 	<div data-role="content">
-		<fieldset id="subgoalList" class="ui-body-c">
+		<fieldset id="subgoalList">
 			<div class='subgoal' data-index='1' data-role="collapsible" data-collapsed="false"><h3>Medical consultation</h3>
 				<fieldset data-role="controlgroup" id='subgoal1'>
 					<label class='step'><input type="checkbox" checked="true">Set up appt. with my doctor</label>
@@ -335,12 +335,12 @@
 <div data-role="page" id="notify" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav5"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-notify"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Notifications</h1>
 	</div>
 	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-notifications" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-notifications" ).onclick() = function() {$( "#snav-notifications" ).panel( "toggle" )};</script>
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-notify" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-notify" ).onclick() = function() {$( "#snav-notify" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -409,33 +409,24 @@
 	</div>
 	
 	<div data-role="content">
-		<form action="form.php" method="post" class="ui-body-c">
-			<fieldset data-role="controlgroup">
-				<legend>Receive email updates when you receive certain notifications.</legend>
-				Update your email address: 
-				<br>
-				<input type="text" name="email">
-		  		<br>
-		  		When would you like to receive email notifications?
-		  		<br><br>
-		  		<input type="checkbox" id="friend-comment" />
+		<form action="form.php" method="post">
+			<legend>Update your email address:</legend>
+			<input type="text" name="email" id="update-email" placeholder="example@example.com" />
+	  		<p>When would you like to receive email notifications?</p>
+	  		<fieldset data-role="control-group">
+		  		<input type="checkbox" id="friend-comment" checked="checked" />
 		  		<label for="friend-comment"> When a friend comments on one of my goals </label>
-		  		<br><br>
 		  		<input type="checkbox" id="anyone-comment" />
 		  		<label for="anyone-comment"> When anyone comments on one of my goals </label>
-		  		<br><br>
-		  		<input type="checkbox" id="help" />
+		  		<input type="checkbox" id="help" checked="checked" />
 		  		<label for="help"> When a friend asks for help on one of their goals </label>
-		  		<br><br>
 		  		<input type="checkbox" id="new-friend" />
 		  		<label for="new-friend"> When I have a new friend </label>
-				<br><br>
 				<input type="checkbox" id="friend-new-goal" />
 				<label for="friend-new-goal"> When a friend creates a new goal </label>
-		  		<br><br>
-		  		<a href="#settings" class="ui-btn" id="gb1">Update</a>
-			</fieldset>
+	  		</fieldset>
 		</form>
+	  	<a href="#settings" class="ui-btn" id="gb1">Update</a>
 	</div>	
 </div>
 
