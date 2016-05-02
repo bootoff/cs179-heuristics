@@ -55,7 +55,7 @@ $( document ).ready(function() {
   $(document).on('click', '#gb1', function() {
     if ($("#cat_1").is(":checked")){
       cat = $("#cat_1").val();
-      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-professional" );
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-prof" );
     }
     else if ($("#cat_2").is(":checked")){
       cat = $("#cat_2").val();
@@ -63,7 +63,7 @@ $( document ).ready(function() {
     }
     else if ($("#cat_3").is(":checked")){
       cat = $("#cat_3").val();
-      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-interpersonal" );
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal2-inter" );
     }
     ngoal.category = cat;
     console.log(ngoal);
@@ -83,13 +83,7 @@ $( document ).ready(function() {
       ptag = $("#ptag-3").val();
     }
     else if ($("#ptag-4").is(":checked")){
-      ptag = $("#ptag-4").val();
-    }
-    else if ($("#ptag-5").is(":checked")){
-      ptag = $("#ptag-5").val();
-    }
-    else if ($("#ptag-6").is(":checked")){
-      ptag = $("#ptag-6-text").val();
+      ptag = $("#ptag-4-text").val();
     }
     ngoal.tag = ptag;
     console.log(ngoal);
@@ -108,13 +102,7 @@ $( document ).ready(function() {
       htag = $("#htag-3").val();
     }
     else if ($("#htag-4").is(":checked")){
-      htag = $("#htag-4").val();
-    }
-    else if ($("#htag-5").is(":checked")){
-      htag = $("#htag-5").val();
-    }
-    else if ($("#htag-6").is(":checked")){
-      htag = $("#htag-6-text").val();
+      htag = $("#htag-4-text").val();
     }
     ngoal.tag = htag;
     console.log(ngoal);
@@ -134,13 +122,7 @@ $( document ).ready(function() {
       itag = $("#itag-3").val();
     }
     else if ($("#itag-4").is(":checked")){
-      itag = $("#itag-4").val();
-    }
-    else if ($("#itag-5").is(":checked")){
-      itag = $("#itag-5").val();
-    }
-    else if ($("#itag-6").is(":checked")){
-      itag = $("#itag-6-text").val();
+      itag = $("#itag-4-text").val();
     }
     ngoal.tag = itag;
     console.log(ngoal);

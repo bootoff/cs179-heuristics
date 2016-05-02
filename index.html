@@ -9,11 +9,12 @@
     
 	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" /><!--theme-->
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css"><!--progress bar-->
+	<link rel="stylesheet" href="css/custom.css" /><!--custom css-->
 	
     <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
   	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script><!--progress bar-->
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="main.js"></script><!--custom js-->
 </head>
 
 
@@ -37,9 +38,20 @@
 
 <!--FEED: All-->
 <div data-role="page" id="feed-all" class="ui-body-b">
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-feed-all" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-feed-all" ).onclick() = function() {$( "#snav-feed-all" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+	</div>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav1"><img src="images/menu-burger.png"height="16" width="16"></a>
+		<a href="#snav-feed-all"><img src="images/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
 		<a href="#search"><img src="images/search.png" height="16" width="16"></a>
 	</div>
@@ -51,17 +63,6 @@
 			<li><a href="#feed-inter" class="ui-btn">Interpersonal</a></li>
 		</ul>
 	</div>
-	
-	<div data-role="panel" id="sidenav1" data-display="overlay" data-dismissible="true" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#newgoal1" style="color:#16a085; background: rgba(255, 255, 255, 0.8);">New Goal</a></li>
-			<li><a href="#mygoals" style="color:#2c3e50; background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
-			<li><a href="#notifications" style="color:#2c3e50; background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
-			<li><a href="#settings" style="color:#2c3e50; background: rgba(255, 255, 255, 0.8);">Settings</a></li>
-			<li><a href="#login" style="color:#c1392b; background: rgba(255, 255, 255, 0.8);">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
 	
 	<div data-role="content">
 		<ul data-role="listview" class="ui-body-c">
@@ -82,23 +83,9 @@
 
 <!--FEED: Professional-->
 <div data-role="page" id="feed-prof" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav1b" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav1b" ).panel( "close" );</script>
-		<a href="#sidenav1b" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-	
-	<script>$( "#sidenav1b" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav1b"><img src="images/menu-burger.png"height="16" width="16"></a>
+		<a href="#snav-feed-prof"><img src="images/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
 		<a href="#search"><img src="images/search.png" height="16" width="16"></a>
 	</div>
@@ -108,6 +95,18 @@
 			<li><a href="#feed-all" class="ui-btn">All</a></li>
 			<li><a href="#feed-health" class="ui-btn">Health</a></li>
 			<li><a href="#feed-inter" class="ui-btn">Interpersonal</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-feed-prof" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-feed-prof" ).onclick() = function() {$( "#snav-feed-prof" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
 		</ul>
 	</div>
 	
@@ -123,23 +122,9 @@
 
 <!--FEED: Health-->
 <div data-role="page" id="feed-health" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav1c" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav1c" ).panel( "close" );</script>
-		<a href="#sidenav1c" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-	
-	<script>$( "#sidenav1c" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav1c"><img src="images/menu-burger.png"height="16" width="16"></a>
+		<a href="#snav-feed-health"><img src="images/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
 		<a href="#search"><img src="images/search.png" height="16" width="16"></a>
 	</div>
@@ -149,6 +134,18 @@
 			<li><a href="#feed-all" class="ui-btn">All</a></li>
 			<li><a href="#feed-prof" class="ui-btn">Professional</a></li>
 			<li><a href="#feed-inter" class="ui-btn">Interpersonal</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-feed-health" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-feed-health" ).onclick() = function() {$( "#snav-feed-health" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
 		</ul>
 	</div>
 	
@@ -164,23 +161,9 @@
 
 <!--FEED: Interpersonal-->
 <div data-role="page" id="feed-inter" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav1d" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav1d" ).panel( "close" );</script>
-		<a href="#sidenav1d" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-	
-	<script>$( "#sidenav1d" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav1d"><img src="images/menu-burger.png"height="16" width="16"></a>
+		<a href="#snav-feed-inter"><img src="images/menu-burger.png"height="16" width="16"></a>
 		<h1>Feed</h1>
 		<a href="#search"><img src="images/search.png" height="16" width="16"></a>
 	</div>
@@ -190,6 +173,18 @@
 			<li><a href="#feed-all" class="ui-btn">All</a></li>
 			<li><a href="#feed-prof" class="ui-btn">Professional</a></li>
 			<li><a href="#feed-health" class="ui-btn">Health</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-feed-inter" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-feed-inter" ).onclick() = function() {$( "#snav-feed-inter" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
 		</ul>
 	</div>
 	
@@ -205,25 +200,23 @@
 
 <!--SEARCH-->
 <div data-role="page" id="search" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav2" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav2" ).panel( "close" );</script>
-		<a href="#sidenav2" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-	
-	<script>$( "#sidenav2" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav2"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-search"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Search</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-search" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-search" ).onclick() = function() {$( "#snav-search" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+		</ul>
 	</div>
 
 	<div data-role="content">
@@ -234,24 +227,22 @@
 
 <!--MY GOALS-->
 <div data-role="page" id="mygoals" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav3" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav3" ).panel( "close" );</script>
-		<a href="#sidenav3" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav3" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav3"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-mygoals"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>My Goals</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-mygoals" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-mygoals" ).onclick() = function() {$( "#snav-mygoals" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+		</ul>
 	</div>
 	
 	<div data-role="content">
@@ -270,25 +261,22 @@
 
 <!--My goal: Quit Smoking-->
 <div data-role="page" id="mygoals-quit" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav4" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav4" ).panel( "close" );</script>
-		<a href="#sidenav4" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav4" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav4"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-mygoals-quit"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Goal: Quit Smoking</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-mygoals-quit" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-mygoals-quit" ).onclick() = function() {$( "#snav-mygoals-quit" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
 	</div>
 	
 	<div data-role="content">
@@ -344,25 +332,22 @@
 
 
 <!--NOTIFICATIONS-->
-<div data-role="page" id="notifications" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav5" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav5" ).panel( "close" );</script>
-		<a href="#sidenav5" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-	
-	<script>$( "#sidenav5" ).panel( "toggle" );</script>
+<div data-role="page" id="notify" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
 		<a href="#sidenav5"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Notifications</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-notifications" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-notifications" ).onclick() = function() {$( "#snav-notifications" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
 	</div>
 	
 	<div data-role="content">
@@ -376,87 +361,53 @@
 </div>
 
 
-<!--Notify Return (temp)-->
-<div data-role="page" id="notify-return">
-	
-	<div data-role="panel" id="sidenav6" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav6" ).panel( "close" );</script>
-		<a href="#sidenav6" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav6" ).panel( "toggle" );</script>
-
-	<div data-role="header" data-position="fixed">
-		<a href="#sidenav6"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>Temporary Page</h1>
-	</div>
-	
-	<div data-role="content">
-		<a href="#notifications">Return to notifications</a>
-	</div>
-</div>
-
-
 <!--SETTINGS-->
 <div data-role="page" id="settings" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav7" ).panel( "close" );</script>
-		<a href="#sidenav7" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-	
-	<script>$( "#sidenav7" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav7"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-settings"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Settings</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-settings" ).onclick() = function() {$( "#snav-settings" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
 	</div>
 
 	<div data-role="content">
-		<a href="#email-updates" data-role="button" data-inline="true">Receive email updates</a>
+		<a href="#settings-email" data-role="button" data-inline="true">Manage email updates</a>
 		<br>
-		<a href="#notification-frequency" data-role="button" data-inline="true">Notification frequency</a>
+		<a href="#settings-notify" data-role="button" data-inline="true">Manage notification frequency</a>
 		</ul>
 	</div>
 </div>
 
-<!--Email updates-->
-<div data-role="page" id="email-updates" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav7" ).panel( "close" );</script>
-		<a href="#sidenav7" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-	
-	<script>$( "#sidenav7" ).panel( "toggle" );</script>
+<!--SETTINGS: Email updates-->
+<div data-role="page" id="settings-email" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav7"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-settings-email"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Settings</h1>
 	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings-email" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-settings-email" ).onclick() = function() {$( "#snav-settings-email" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+	</div>
+	
 	<div data-role="content">
 		<form action="form.php" method="post" class="ui-body-c">
 			<fieldset data-role="controlgroup">
@@ -488,27 +439,24 @@
 	</div>	
 </div>
 
-<!--Notification frequency-->
-<div data-role="page" id="notification-frequency" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav7" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav7" ).panel( "close" );</script>
-		<a href="#sidenav7" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-	
-	<script>$( "#sidenav7" ).panel( "toggle" );</script>
+<!--SETTINGS: Notification frequency-->
+<div data-role="page" id="settings-notify" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav7"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-settings-notify"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Settings</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings-notify" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-settings-notify" ).onclick() = function() {$( "#snav-settings-notify" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
 	</div>
 
 	<div data-role="content">
@@ -516,25 +464,11 @@
 	</div>
 </div>
 
-<!--New Goal 1: Category-->
+<!--NEW GOAL 1: Category-->
 <div data-role="page" id="newgoal1" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav8" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav8" ).panel( "close" );</script>
-		<a href="#sidenav8" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav8" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav8"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-newgoal1"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
@@ -542,6 +476,17 @@
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
 			<li><a href="#" class="ui-btn" data-disabled="true">Load Draft</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal1" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-newgoal1" ).onclick() = function() {$( "#snav-newgoal1" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
 
@@ -566,25 +511,11 @@
 </div>
 	
 	
-<!--New Goal 2: Tags: Professional-->
-<div data-role="page" id="newgoal2-professional" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav9" ).panel( "close" );</script>
-		<a href="#sidenav9" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav9" ).panel( "toggle" );</script>
+<!--NEW GOAL 2: Tags: Professional-->
+<div data-role="page" id="newgoal2-prof" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav9"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-newgoal2-prof"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
@@ -592,6 +523,18 @@
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal2-prof" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-newgoal2-prof" ).onclick() = function() {$( "#snav-newgoal2-prof" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
 
@@ -615,33 +558,30 @@
 	</div>
 </div>
 
-<!--New Goal 2: Tags: Health-->
+<!--NEW GOAL 2: Tags: Health-->
 <div data-role="page" id="newgoal2-health" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav9" ).panel( "close" );</script>
-		<a href="#sidenav9" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav9" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav9"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-newgoal2-health"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal (2/5)</h1>
 	</div>
 
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#" class="ui-btn" id="sdraft2">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal2-health" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-newgoal2-health" ).onclick() = function() {$( "#snav-newgoal2-health" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
 
@@ -655,12 +595,8 @@
 				<label for="htag-2">Exercise</label>
 				<input type="radio" name="radio-choice" id="htag-3" value="Running"  />
 				<label for="htag-3">Mental Health</label>
-				<!--<input type="radio" name="radio-choice" id="htag-4" value="Weight Loss"  />
-				<label for="htag-4">Weight Loss</label>
-				<input type="radio" name="radio-choice" id="htag-5" value="Body-Building"  />
-				<label for="htag-5">Body-building</label>-->
-				<input type="radio" name="radio-choice" id="htag-6" value=""  />
-				<label for="htag-6"><input type="text" name="text" id="htag-6-text" value="" style="position:relative" placeholder="Other..." /></label>
+				<input type="radio" name="radio-choice" id="htag-4" value=""  />
+				<label for="htag-4"><input type="text" name="text" id="htag-4-text" value="" style="position:relative" placeholder="Other..." /></label>
 			</fieldset>
 		</form>
 		<a href="#newgoal3" class="ui-btn" id="gb2h">Next</a>
@@ -668,33 +604,30 @@
 	</div>
 </div>
 
-<!--New Goal 2: Tags: Interpersonal-->
-<div data-role="page" id="newgoal2-interpersonal" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav9" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav9" ).panel( "close" );</script>
-		<a href="#sidenav9" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav9" ).panel( "toggle" );</script>
+<!--NEW GOAL 2: Tags: Interpersonal-->
+<div data-role="page" id="newgoal2-inter" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav9"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-newgoal2-inter"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal (2/5)</h1>
 	</div>
 
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#" class="ui-btn" id="sdraft">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal2-inter" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-newgoal2-inter" ).onclick() = function() {$( "#snav-newgoal2-inter" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
 
@@ -708,12 +641,8 @@
 				<label for="itag-2">Family</label>
 				<input type="radio" name="radio-choice" id="itag-3" value="Staying in touch"  />
 				<label for="itag-3">Dating/Relationships</label>
-				<!--<input type="radio" name="radio-choice" id="itag-4" value="Improving a romantic relationship"  />
-				<label for="itag-4">Improving a romantic relationship</label>
-				<input type="radio" name="radio-choice" id="itag-5" value="Divorce and breakups"  />
-				<label for="itag-5">Divorce and breakups</label>-->
-				<input type="radio" name="radio-choice" id="itag-6" value=""  />
-				<label for="itag-6"><input type="text" name="text" id="itag-6-text" value="" style="position:relative" placeholder="Other..." /></label>
+				<input type="radio" name="radio-choice" id="itag-4" value=""  />
+				<label for="itag-4"><input type="text" name="text" id="itag-4-text" value="" style="position:relative" placeholder="Other..." /></label>
 			</fieldset>
 		</form>
 		<a href="#newgoal3" class="ui-btn" id="gb2i">Next</a>
@@ -722,22 +651,9 @@
 </div>
 
 
+<!--
 <!--New Goal 3: Suggested Goals 1a / Professional / Job Search-->
 <div data-role="page" id="newgoal3-prof1" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav10a" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav10a" ).panel( "close" );</script>
-		<a href="#sidenav10a" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav10a" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
 		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
@@ -747,6 +663,19 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
 
@@ -776,20 +705,6 @@
 
 <!--New Goal 3: Suggested Goals / Professional / Promotion-->
 <div data-role="page" id="newgoal3-prof1" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav10" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav10" ).panel( "close" );</script>
-		<a href="#sidenav10" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav10" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
 		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
@@ -799,6 +714,19 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
 
@@ -828,20 +756,6 @@
 
 <!--New Goal 3: Suggested Goals / Health / Diet-->
 <div data-role="page" id="newgoal3-health1" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav10" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav10" ).panel( "close" );</script>
-		<a href="#sidenav10" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav10" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
 		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
@@ -851,8 +765,19 @@
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#" class="ui-btn" id="#sdraft3">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
 
@@ -877,35 +802,32 @@
 		<a href="#newgoal1" class="ui-btn">Back to categories</a>
 	</div>
 </div>
+-->
 
-
-<!--New Goal 4: Deadline & Priority-->
+<!--NEW GOAL 4: Deadline & Priority-->
 <div data-role="page" id="newgoal4" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav11" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav11" ).panel( "close" );</script>
-		<a href="#sidenav11" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav11" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav11"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-newgoal4"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
 	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#feed" class="ui-btn" id="#sdraft4">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal4" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-newgoal4" ).onclick() = function() {$( "#snav-newgoal4" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
 
@@ -939,25 +861,11 @@
 </div>
 
 
-<!--New Goal 5: Sharing-->
+<!--NEW GOAL 5: Sharing-->
 <div data-role="page" id="newgoal5" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav12" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav12" ).panel( "close" );</script>
-		<a href="#sidenav12" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav12" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav12"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-newgoal5"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal</h1>
 	</div>
 
@@ -965,6 +873,18 @@
 		<ul>
 			<li><a href="#" class="ui-btn" id="#sdraft5">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal5" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-newgoal5" ).onclick() = function() {$( "#snav-newgoal5" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
 
@@ -991,25 +911,22 @@
 
 <!--(My Goal) Train My Puppy-->
 <div data-role="page" id="puppy0" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav13" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav13" ).panel( "close" );</script>
-		<a href="#sidenav13" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav13" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav13"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-puppy0"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Train My Puppy</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-puppy0" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-puppy0" ).onclick() = function() {$( "#snav-puppy0" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
 	</div>
 	
 	<div data-role="content">
@@ -1024,26 +941,24 @@
 
 <!--(My Goal) Train My Puppy/Train 1-->
 <div data-role="page" id="puppy1" class="ui-body-b">
-	
-	<div data-role="panel" id="sidenav14" data-display="overlay" data-dismissible="true">
-		<script>$( "#sidenav14" ).panel( "close" );</script>
-		<a href="#sidenav14" data-role="button" data-mini="true"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<ul data-role="listview">
-			<li><a href="#newgoal1">New Goal</a></li>
-			<li><a href="#feed-all">Feed</a></li>
-			<li><a href="#mygoals">My Goals</a></li>
-			<li><a href="#notifications">Notifications</a></li>
-			<li><a href="#settings">Settings</a></li>
-			<li><a href="#login">Log Out</a></li>
-		</ul>
-	</div><!-- /sidebar navigation -->
-
-	<script>$( "#sidenav14" ).panel( "toggle" );</script>
 
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav14"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-puppy1"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Train My Puppy: Leash Train</h1>
 	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-puppy1" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-puppy1" ).onclick() = function() {$( "#snav-puppy1" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+	</div>
+	
 	<div data-role="content">
 		<!-- <div data-role="collapsible" data-collapsed="false"> -->
 			<h3>Hire weekday dog-walker</h3>
