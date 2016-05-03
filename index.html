@@ -308,130 +308,6 @@
 </div>
 
 
-<!--NOTIFICATIONS-->
-<div data-role="page" id="notify" class="ui-body-b">
-
-	<div data-role="header" data-position="fixed">
-		<a href="#snav-notify"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>Notifications</h1>
-	</div>
-	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-notify" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-notify" ).click() = function() {$( "#snav-notify" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
-			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
-			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
-			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
-			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
-		</ul>
-	</div>
-	
-	<div data-role="content">
-		<ul data-role="listview" class="ui-body-c">
-			<li><a href="#mygoals-quit"><img src="images/comment.png" style="width:100px;height:100px;">Roger S. commented on "Quit smoking"</a></li>
-			<li><a href="#puppy0"><img src="images/help.png" style="width:100px;height:100px;">Bobby D. requested your help on "Train my puppy"</a></li>
-			<li><a href="#mygoals-quit"><img src="images/comment.png" style="width:100px;height:100px;">Betty F. commented on "Quit smoking"</a></li>
-			<li><a href="#feed-all"><img src="images/friends.png" style="width:100px;height:100px;">You and Anna D. are now friends. Yay!</a></li>
-		</ul>
-	</div>
-</div>
-
-
-<!--SETTINGS-->
-<div data-role="page" id="settings" class="ui-body-b">
-
-	<div data-role="header" data-position="fixed">
-		<a href="#snav-settings"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>Settings</h1>
-	</div>
-	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-settings" ).click() = function() {$( "#snav-settings" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
-			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
-			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
-			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
-			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
-		</ul>
-	</div>
-
-	<div data-role="content">
-		<a href="#settings-email" data-role="button" data-inline="true">Manage email updates</a>
-		<br>
-		<a href="#settings-notify" data-role="button" data-inline="true">Manage notification frequency</a>
-		</ul>
-	</div>
-</div>
-
-<!--SETTINGS: Email updates-->
-<div data-role="page" id="settings-email" class="ui-body-b">
-
-	<div data-role="header" data-position="fixed">
-		<a href="#snav-settings-email"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>Settings</h1>
-	</div>
-	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings-email" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-settings-email" ).click() = function() {$( "#snav-settings-email" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
-			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
-			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
-			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
-			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
-			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
-		</ul>
-	</div>
-	
-	<div data-role="content">
-		<form action="form.php" method="post">
-			<legend>Update your email address:</legend>
-			<input type="text" name="email" id="update-email" placeholder="example@example.com" />
-	  		<p>When would you like to receive email notifications?</p>
-	  		<fieldset data-role="control-group">
-		  		<input type="checkbox" id="friend-comment" checked="checked" />
-		  		<label for="friend-comment"> When a friend comments on one of my goals </label>
-		  		<input type="checkbox" id="anyone-comment" />
-		  		<label for="anyone-comment"> When anyone comments on one of my goals </label>
-		  		<input type="checkbox" id="help" checked="checked" />
-		  		<label for="help"> When a friend asks for help on one of their goals </label>
-		  		<input type="checkbox" id="new-friend" />
-		  		<label for="new-friend"> When I have a new friend </label>
-				<input type="checkbox" id="friend-new-goal" />
-				<label for="friend-new-goal"> When a friend creates a new goal </label>
-	  		</fieldset>
-		</form>
-	  	<a href="#settings" class="ui-btn" id="gb1">Update</a>
-	</div>	
-</div>
-
-<!--SETTINGS: Notification frequency-->
-<div data-role="page" id="settings-notify" class="ui-body-b">
-
-	<div data-role="header" data-position="fixed">
-		<a href="#snav-settings-notify"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>Settings</h1>
-	</div>
-	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings-notify" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-settings-notify" ).click() = function() {$( "#snav-settings-notify" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
-			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
-			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
-			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
-			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
-			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
-		</ul>
-	</div>
-
-	<div data-role="content">
-		<!-- stuff -->
-	</div>
-</div>
-
 <!--NEW GOAL 1: Category-->
 <div data-role="page" id="newgoal1" class="ui-body-b">
 
@@ -510,11 +386,11 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup" id="prof-tag">
 				<legend>Pick a suggested goal, or enter your own:</legend>
-				<input type="radio" name="radio-choice" id="ptag-1" value="Job search" checked="checked" />
+				<input type="radio" name="radio-choice" id="ptag-1" value="Update my resume, cover letter, and portfolio" checked="checked" />
 				<label for="ptag-1">Update my resume, cover letter, and portfolio</label>
-				<input type="radio" name="radio-choice" id="ptag-2" value="Promotion"  />
+				<input type="radio" name="radio-choice" id="ptag-2" value="Change industries"  />
 				<label for="ptag-2">Change industries</label>
-				<input type="radio" name="radio-choice" id="ptag-3" value="Burnout"  />
+				<input type="radio" name="radio-choice" id="ptag-3" value="Negotiate pay increase"  />
 				<label for="ptag-3">Negotiate pay increase</label>
 				<input type="radio" name="radio-choice" id="ptag-4" value=""  />
 				<label for="ptag-4"><input type="text" name="text" id="ptag-4-text" value="" style="position:relative" placeholder="Other..." /></label>
@@ -561,11 +437,11 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup" id="health-tag">
 				<legend>Pick a suggested goal, or enter your own:</legend>
-				<input type="radio" name="radio-choice" id="htag-1" value="Diet" checked="checked" />
+				<input type="radio" name="radio-choice" id="htag-1" value="Lose the baby weight" checked="checked" />
 				<label for="htag-1">Lose the baby weight</label>
-				<input type="radio" name="radio-choice" id="htag-2" value="Exercise"  />
+				<input type="radio" name="radio-choice" id="htag-2" value="Go to the gym three times a week"  />
 				<label for="htag-2">Go to the gym three times a week</label>
-				<input type="radio" name="radio-choice" id="htag-3" value="Mental Health"  />
+				<input type="radio" name="radio-choice" id="htag-3" value="Learn mindfulness techniques"  />
 				<label for="htag-3">Learn mindfulness techniques</label>
 				<input type="radio" name="radio-choice" id="htag-4" value=""  />
 				<label for="htag-4"><input type="text" name="text" id="htag-4-text" value="" style="position:relative" placeholder="Other..." /></label>
@@ -613,11 +489,11 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup" id="interp-tag">
 				<legend>Pick a tag, or enter your own:</legend>
-				<input type="radio" name="radio-choice" id="itag-1" value="Friends" checked="checked" />
+				<input type="radio" name="radio-choice" id="itag-1" value="Set aside time for friends" checked="checked" />
 				<label for="itag-1">Set aside time for friends</label>
-				<input type="radio" name="radio-choice" id="itag-2" value="Family"  />
+				<input type="radio" name="radio-choice" id="itag-2" value="Plan a family vacation"  />
 				<label for="itag-2">Plan a family vacation</label>
-				<input type="radio" name="radio-choice" id="itag-3" value="Dating/Relationships"  />
+				<input type="radio" name="radio-choice" id="itag-3" value="Meet new people in my town"  />
 				<label for="itag-3">Meet new people in my town</label>
 				<input type="radio" name="radio-choice" id="itag-4" value=""  />
 				<label for="itag-4"><input type="text" name="text" id="itag-4-text" value="" style="position:relative" placeholder="Other..." /></label>
@@ -807,6 +683,131 @@
 			</form>
 		<!-- </div> -->
 		<a href="#puppy0" class="ui-btn">Back to "Train my puppy"</a>
+	</div>
+</div>
+
+
+<!--NOTIFICATIONS-->
+<div data-role="page" id="notify" class="ui-body-b">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#snav-notify"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>Notifications</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-notify" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-notify" ).click() = function() {$( "#snav-notify" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview" class="ui-body-c">
+			<li><a href="#mygoals-quit"><img src="images/comment.png" style="width:100px;height:100px;">Roger S. commented on "Quit smoking"</a></li>
+			<li><a href="#puppy0"><img src="images/help.png" style="width:100px;height:100px;">Bobby D. requested your help on "Train my puppy"</a></li>
+			<li><a href="#mygoals-quit"><img src="images/comment.png" style="width:100px;height:100px;">Betty F. commented on "Quit smoking"</a></li>
+			<li><a href="#feed-all"><img src="images/friends.png" style="width:100px;height:100px;">You and Anna D. are now friends. Yay!</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<!--SETTINGS-->
+<div data-role="page" id="settings" class="ui-body-b">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#snav-settings"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>Settings</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-settings" ).click() = function() {$( "#snav-settings" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+	</div>
+
+	<div data-role="content">
+		<a href="#settings-email" data-role="button" data-inline="true">Manage email updates</a>
+		<br>
+		<a href="#settings-notify" data-role="button" data-inline="true">Manage notification frequency</a>
+		</ul>
+	</div>
+</div>
+
+<!--SETTINGS: Email updates-->
+<div data-role="page" id="settings-email" class="ui-body-b">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#snav-settings-email"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>Settings</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings-email" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-settings-email" ).click() = function() {$( "#snav-settings-email" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="content">
+		<form action="form.php" method="post">
+			<legend>Update your email address:</legend>
+			<input type="text" name="email" id="update-email" placeholder="example@example.com" />
+	  		<p>When would you like to receive email notifications?</p>
+	  		<fieldset data-role="control-group">
+		  		<input type="checkbox" id="friend-comment" checked="checked" />
+		  		<label for="friend-comment"> When a friend comments on one of my goals </label>
+		  		<input type="checkbox" id="anyone-comment" />
+		  		<label for="anyone-comment"> When anyone comments on one of my goals </label>
+		  		<input type="checkbox" id="help" checked="checked" />
+		  		<label for="help"> When a friend asks for help on one of their goals </label>
+		  		<input type="checkbox" id="new-friend" />
+		  		<label for="new-friend"> When I have a new friend </label>
+				<input type="checkbox" id="friend-new-goal" />
+				<label for="friend-new-goal"> When a friend creates a new goal </label>
+	  		</fieldset>
+		</form>
+	  	<a href="#settings" class="ui-btn" id="gb1">Update</a>
+	</div>	
+</div>
+
+<!--SETTINGS: Notification frequency-->
+<div data-role="page" id="settings-notify" class="ui-body-b">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#snav-settings-notify"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>Settings</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings-notify" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-settings-notify" ).click() = function() {$( "#snav-settings-notify" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+	</div>
+
+	<div data-role="content">
+		<!-- stuff -->
 	</div>
 </div>
 
