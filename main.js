@@ -1,3 +1,5 @@
+/*Thanks to pmatseykanets for help with dynamic page creation : <http://jsfiddle.net/pmatseykanets/Ytbhb/>*/
+
 //Login
 var username;
 var password;
