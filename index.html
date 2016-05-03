@@ -629,68 +629,15 @@
 </div>
 
 
-<!--New Goal 3: Suggested Goals 1a / Professional / Job Search-->
-<div data-role="page" id="newgoal3-prof1" class="ui-body-b">
-
-	<div data-role="header" data-position="fixed">
-		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>New Goal (3/5)</h1>
-	</div>
-
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
-		</ul>
-	</div>
-	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#sidenav1" ).click() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
-			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
-			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
-			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
-			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
-			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
-		</ul>
-	</div>
-
-	<div data-role="content">
-		<form action="form.php" method="post">
-			<fieldset data-role="controlgroup" id="suggest">
-				<legend>Pick a suggested goal for Professional / Job Search, or enter your own:</legend>
-				<input type="text" name="text" id="goal-text" value="">
-				<input type="radio" name="radio-choice" id="suggest-1p" value="suggest-1" checked="checked" />
-				<label for="suggest-1p">Update my resume, cover letter, and portfolio</label>
-				<input type="radio" name="radio-choice" id="suggest-2p" value="suggest-2"  />
-				<label for="suggest-2p">Change industries</label>
-				<input type="radio" name="radio-choice" id="suggest-3p" value=""  />
-				<label for="suggest-3p"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."></label>
-			</fieldset>
-			<fieldset data-role="controlgroup" id="subgoal">
-				<legend>What is the first thing you need to do?</legend>
-				<input type="text" name="text" id="subgoal-text" value="">
-			</fieldset>
-		</form>
-		<a href="#newgoal3" class="ui-btn" id="gb2i">Next</a>
-		<a href="#newgoal1" class="ui-btn">Back</a>
-		<div id="progressbar2"></div>
-	</div>
-</div>
-
 <!--NEW GOAL 3: Deadline & Priority-->
 <div data-role="page" id="newgoal3" class="ui-body-b">
 
-<!--New Goal 3: Suggested Goals / Professional / Promotion-->
-<div data-role="page" id="newgoal3-prof2" class="ui-body-b">
-
 	<div data-role="header" data-position="fixed">
-		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>New Goal (3/5)</h1>
+		<a href="#snav-newgoal3"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>New Goal (3/4)</h1>
 	</div>
 
-	<div data-role="navbar" class="ui-body-g">
+	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
@@ -699,155 +646,6 @@
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal3" style="background: rgba(255, 255, 255, 0.8);">
 		<script>$( "#snav-newgoal3" ).click() = function() {$( "#snav-newgoal3" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
-			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
-			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
-			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
-			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
-			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
-		</ul>
-	</div>
-
-	<div data-role="content">
-		<form action="form.php" method="post">
-			<fieldset data-role="controlgroup" id="suggest">
-				<legend>Pick a suggested goal for Professional / Promotion, or enter your own:</legend>
-				<input type="text" name="text" id="goal-text" value="">
-				<input type="radio" name="radio-choice" id="suggest-1p" value="suggest-1" checked="checked" />
-				<label for="suggest-1p">Improve my sales record</label>
-				<input type="radio" name="radio-choice" id="suggest-2p" value="suggest-2"  />
-				<label for="suggest-2p">Learn to negotiate pay increase</label>
-				<input type="radio" name="radio-choice" id="suggest-3p" value=""  />
-				<label for="suggest-3p"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."/></label>
-			</fieldset>
-			<fieldset data-role="controlgroup" id="subgoal">
-				<legend>What is the first thing you need to do?</legend>
-				<input type="text" name="text" id="subgoal-text" value="">
-			</fieldset>
-		</form>
-		<a href="#newgoal4" class="ui-btn" id="gb3">Next</a>
-		<a href="#newgoal1" class="ui-btn">Back to categories</a>
-		<div id="progressbar3"></div>
-	</div>
-</div>
-
-
-<!--New Goal 3: Suggested Goals / Health / Diet-->
-<div data-role="page" id="newgoal3-h1" class="ui-body-b">
-
-	<div data-role="header" data-position="fixed">
-		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>New Goal (3/5)</h1>
-	</div>
-
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
-		</ul>
-	</div>
-	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#sidenav1" ).click() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
-			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
-			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
-			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
-			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
-			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
-		</ul>
-	</div>
-
-	<div data-role="content">
-		<form action="form.php" method="post">
-			<fieldset data-role="controlgroup" id="suggest">
-				<legend>Pick a suggested goal for Health / Diet, or enter your own:</legend>
-				<input type="text" name="text" id="goal-text" value="">
-				<input type="radio" name="radio-choice" id="suggest-1hd" value="suggest-1" checked="checked" />
-				<label for="suggest-1hd">Learn to cook</label>
-				<input type="radio" name="radio-choice" id="suggest-2hd" value="suggest-2"  />
-				<label for="suggest-2hd">Get help committing to vegetarianism</label>
-				<input type="radio" name="radio-choice" id="suggest-3hd" value=""  />
-				<label for="suggest-3hd"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."/></label>
-			</fieldset>
-			<fieldset data-role="controlgroup" id="subgoal">
-				<legend>What is the first thing you need to do?</legend>
-				<input type="text" name="text" id="subgoal-text" value="">
-			</fieldset>
-		</form>
-		<a href="#newgoal4" class="ui-btn" id="gb3">Next</a>
-		<a href="#newgoal1" class="ui-btn">Back to categories</a>
-	</div>
-</div>
-
-<!--New Goal 3: Suggested Goals / Health / Exercise-->
-<div data-role="page" id="newgoal3-h2" class="ui-body-b">
-
-	<div data-role="header" data-position="fixed">
-		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>New Goal (3/5)</h1>
-	</div>
-
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
-		</ul>
-	</div>
-	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#sidenav1" ).click() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
-		<ul data-role="listview">
-			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
-			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
-			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
-			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
-			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
-			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
-		</ul>
-	</div>
-
-	<div data-role="content">
-		<form action="form.php" method="post">
-			<fieldset data-role="controlgroup" id="suggest">
-				<legend>Pick a suggested goal for Health / Exercise, or enter your own:</legend>
-				<input type="text" name="text" id="goal-text" value="">
-				<input type="radio" name="radio-choice" id="suggest-1he" value="suggest-1" checked="checked" />
-				<label for="suggest-1he">Build muscle by lifting more</label>
-				<input type="radio" name="radio-choice" id="suggest-2he" value="suggest-2"  />
-				<label for="suggest-2he">Get better at running faster/longer</label>
-				<input type="radio" name="radio-choice" id="suggest-3he" value=""  />
-				<label for="suggest-3he"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."/></label>
-			</fieldset>
-			<fieldset data-role="controlgroup" id="subgoal">
-				<legend>What is the first thing you need to do?</legend>
-				<input type="text" name="text" id="subgoal-text" value="">
-			</fieldset>
-		</form>
-		<a href="#newgoal4" class="ui-btn" id="gb3">Next</a>
-		<a href="#newgoal1" class="ui-btn">Back to categories</a>
-	</div>
-</div>
-
-<!--NEW GOAL 4: Deadline & Priority-->
-<div data-role="page" id="newgoal4" class="ui-body-b">
-
-	<div data-role="header" data-position="fixed">
-		<a href="#snav-newgoal4"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>New Goal (4/5)</h1>
-	</div>
-
-	<div data-role="navbar">
-		<ul>
-			<li><a href="#" class="ui-btn">Save Draft</a></li>
-			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
-		</ul>
-	</div>
-	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal4" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-newgoal4" ).click() = function() {$( "#snav-newgoal4" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -892,8 +690,8 @@
 <div data-role="page" id="newgoal4" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#snav-newgoal5"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>New Goal (5/5)</h1>
+		<a href="#snav-newgoal4"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>New Goal (4/4)</h1>
 	</div>
 
 	<div data-role="navbar" class="ui-body-g">
@@ -931,7 +729,7 @@
 		</form>
 		<label><input type="checkbox" id="fdbk-box" />I'm open to feedback</label>
 		<a href="#mygoals" class="ui-btn" id="gb5">Let's go!</a>
-		<a href="#newgoal4" class="ui-btn">Back</a>
+		<a href="#newgoal3" class="ui-btn">Back</a>
 		<div id="progressbar4"></div>
 	</div>
 </div>
