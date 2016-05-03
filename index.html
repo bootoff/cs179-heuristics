@@ -40,7 +40,7 @@
 <div data-role="page" id="feed-all" class="ui-body-b">
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-feed-all" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-feed-all" ).onclick() = function() {$( "#snav-feed-all" ).panel( "toggle" )};</script>
+		<script>$( "#snav-feed-all" ).click() = function() {$( "#snav-feed-all" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
@@ -99,7 +99,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-feed-prof" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-feed-prof" ).onclick() = function() {$( "#snav-feed-prof" ).panel( "toggle" )};</script>
+		<script>$( "#snav-feed-prof" ).click() = function() {$( "#snav-feed-prof" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
@@ -138,7 +138,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-feed-health" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-feed-health" ).onclick() = function() {$( "#snav-feed-health" ).panel( "toggle" )};</script>
+		<script>$( "#snav-feed-health" ).click() = function() {$( "#snav-feed-health" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
@@ -177,7 +177,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-feed-inter" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-feed-inter" ).onclick() = function() {$( "#snav-feed-inter" ).panel( "toggle" )};</script>
+		<script>$( "#snav-feed-inter" ).click() = function() {$( "#snav-feed-inter" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
@@ -207,7 +207,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-search" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-search" ).onclick() = function() {$( "#snav-search" ).panel( "toggle" )};</script>
+		<script>$( "#snav-search" ).click() = function() {$( "#snav-search" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -234,7 +234,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-mygoals" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-mygoals" ).onclick() = function() {$( "#snav-mygoals" ).panel( "toggle" )};</script>
+		<script>$( "#snav-mygoals" ).click() = function() {$( "#snav-mygoals" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -248,9 +248,7 @@
 	<div data-role="content">
 		<fieldset>
 		<ul data-role="listview" id="goalList" class="ui-body-c">
-			<li class='goal' data-index='1'><a href="#mygoals-quit">Quit smoking</a></li>
-			<li class='goal' data-index='2'><a href="#">Build wall around patio</a></li>
-			<li class='goal' data-index='3'><a href="#">Find Mom home care</a></li>
+			<!--LEAVE EMPTY for dynamic insertion-->
 		</ul>
 		</fieldset>
 		<br>
@@ -268,7 +266,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-mygoals-quit" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-mygoals-quit" ).onclick() = function() {$( "#snav-mygoals-quit" ).panel( "toggle" )};</script>
+		<script>$( "#snav-mygoals-quit" ).click() = function() {$( "#snav-mygoals-quit" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -340,7 +338,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-notify" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-notify" ).onclick() = function() {$( "#snav-notify" ).panel( "toggle" )};</script>
+		<script>$( "#snav-notify" ).click() = function() {$( "#snav-notify" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -370,7 +368,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-settings" ).onclick() = function() {$( "#snav-settings" ).panel( "toggle" )};</script>
+		<script>$( "#snav-settings" ).click() = function() {$( "#snav-settings" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -397,7 +395,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings-email" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-settings-email" ).onclick() = function() {$( "#snav-settings-email" ).panel( "toggle" )};</script>
+		<script>$( "#snav-settings-email" ).click() = function() {$( "#snav-settings-email" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -439,7 +437,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-settings-notify" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-settings-notify" ).onclick() = function() {$( "#snav-settings-notify" ).panel( "toggle" )};</script>
+		<script>$( "#snav-settings-notify" ).click() = function() {$( "#snav-settings-notify" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -471,7 +469,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal1" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-newgoal1" ).onclick() = function() {$( "#snav-newgoal1" ).panel( "toggle" )};</script>
+		<script>$( "#snav-newgoal1" ).click() = function() {$( "#snav-newgoal1" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
 			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
@@ -518,7 +516,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal2-prof" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-newgoal2-prof" ).onclick() = function() {$( "#snav-newgoal2-prof" ).panel( "toggle" )};</script>
+		<script>$( "#snav-newgoal2-prof" ).click() = function() {$( "#snav-newgoal2-prof" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -565,7 +563,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal2-health" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-newgoal2-health" ).onclick() = function() {$( "#snav-newgoal2-health" ).panel( "toggle" )};</script>
+		<script>$( "#snav-newgoal2-health" ).click() = function() {$( "#snav-newgoal2-health" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -611,7 +609,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal2-inter" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-newgoal2-inter" ).onclick() = function() {$( "#snav-newgoal2-inter" ).panel( "toggle" )};</script>
+		<script>$( "#snav-newgoal2-inter" ).click() = function() {$( "#snav-newgoal2-inter" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -659,7 +657,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
+		<script>$( "#sidenav1" ).click() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -710,7 +708,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
+		<script>$( "#sidenav1" ).click() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -761,7 +759,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#sidenav1" ).onclick() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
+		<script>$( "#sidenav1" ).click() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -811,7 +809,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal4" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-newgoal4" ).onclick() = function() {$( "#snav-newgoal4" ).panel( "toggle" )};</script>
+		<script>$( "#snav-newgoal4" ).click() = function() {$( "#snav-newgoal4" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -868,7 +866,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal5" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-newgoal5" ).onclick() = function() {$( "#snav-newgoal5" ).panel( "toggle" )};</script>
+		<script>$( "#snav-newgoal5" ).click() = function() {$( "#snav-newgoal5" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -909,7 +907,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-puppy0" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-puppy0" ).onclick() = function() {$( "#snav-puppy0" ).panel( "toggle" )};</script>
+		<script>$( "#snav-puppy0" ).click() = function() {$( "#snav-puppy0" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -939,7 +937,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-puppy1" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-puppy1" ).onclick() = function() {$( "#snav-puppy1" ).panel( "toggle" )};</script>
+		<script>$( "#snav-puppy1" ).click() = function() {$( "#snav-puppy1" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -985,7 +983,7 @@
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-test" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-test" ).onclick() = function() {$( "#snav-test" ).panel( "toggle" )};</script>
+		<script>$( "#snav-test" ).click() = function() {$( "#snav-test" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -1002,6 +1000,73 @@
 		</ul>
 	</div>
 </div>
+
+<script>
+    var testObj = {
+        "goalList": [
+        	{
+                "goal": "Quit Smoking",
+                "subgoalList": [
+                    {
+	                    "subgoal": "Medical consultation"
+                    },
+                    {
+                    	"subgoal": "Get materials"
+                    },
+                    {
+	                    "subgoal": "Find good support group"
+                    }
+                ]
+        	},
+        	{
+                "goal": "Build wall around patio",
+                "subgoalList": "Get materials"
+            },
+            {
+                "goal": "Find Mom home care",
+                "subgoalList": "Talk to Dr. Leakey"
+        	}
+        ],
+    };
+    
+    // var to index current goal
+    var currentGoal = 0;
+    
+    $('#mygoals').on('pagebeforeshow', function() {
+        // create HTML for next level (subgoals)
+        $.each(testObj.goalList, function(i, goal) {
+            $('#goalList').append('<li data-index=' + i + '><a href="#mygoals-goal">' + goal.goal + '</a></li>')
+        });
+        $('#goalList').listview('refresh');
+		
+		// enable clickthrough to next level (subgoals)
+        $('#goalList li').click(function() {
+            currentGoal = $(this).index();
+        });
+    });
+	
+	// var to index current subgoal
+	var currentSubgoal = 0;
+	
+    $('#mygoals-goal').on('pagebeforeshow', function() {
+        $(this).find('[data-role=header] .ui-goal').text(testObj.goalList[currentGoal].goal);
+        
+        // create HTML for next level (tasks)
+        var createHTML;
+        $.each(testObj.goalList[currentGoal].subgoalList, function(i, subgoal) {
+            createHTML += '<li data-index=' + i + '><a href="#mygoals-subgoal">' + subgoal.subgoal + '</a></li>';
+        });
+        $('#subgoalList').listview('refresh');
+		
+		// enable clickthrough to next level (tasks)
+        $('#subgoalList li').click(function() {
+            currentGoal = $(this).index();
+        });
+        
+        // print html
+        $('#subgoalList').html(createHTML);
+    });
+</script>
 
 </body>
 </html>
