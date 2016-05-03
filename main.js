@@ -221,33 +221,33 @@ $( document ).ready(function() {
 // PROGRESS BAR for "New Goal" pages
   $(function() {
       $("#progressbar1").progressbar({
-        value: 17
+        value: 20
       });
     });
 
   $(function() {
     $("#progressbar2").progressbar({
-      value: 34
+      value: 40
     });
   });
 
   $(function() {
     $("#progressbar3").progressbar({
-      value: 51
+      value: 60
     });
   });
 
   $(function() {
     $("#progressbar4").progressbar({
-      value: 68
+      value: 80
     });
   });
-
+/*
   $(function() {
     $("#progressbar5").progressbar({
       value: 85
     });
-  });
+  });*/
 
 
 // TEST PAGE: Create HTML markup based on JSON
