@@ -246,23 +246,20 @@
 	</div>
 	
 	<div data-role="content">
-		<fieldset>
 		<ul data-role="listview" id="goalList" class="ui-body-c">
 			<!--LEAVE EMPTY for dynamic insertion-->
 		</ul>
-		</fieldset>
-		<br>
 		<a href="#newgoal1" class="ui-btn">New Goal</a></li>
 	</div>
 </div>
 
 
-<!--MY GOALS: Quit Smoking-->
-<div data-role="page" id="mygoals-quit" class="ui-body-b">
+<!--MY GOALS: 1. Subgoals-->
+<div data-role="page" id="mygoals-subgoal" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#snav-mygoals-quit"><img src="images/menu-burger.png" height="16" width="16"></a>
-		<h1>Goal: Quit Smoking</h1>
+		<a href="#snav-mygoals-subgoal"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1 id="mygoals-subgoal-header">Sample Text</h1>
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-mygoals-quit" style="background: rgba(255, 255, 255, 0.8);">
@@ -278,53 +275,28 @@
 	</div>
 	
 	<div data-role="content">
-		<fieldset id="subgoalList">
-			<div class='subgoal' data-index='1' data-role="collapsible" data-collapsed="false"><h3>Medical consultation</h3>
-				<fieldset data-role="controlgroup" id='subgoal1'>
-					<label class='step'><input type="checkbox" checked="true">Set up appt. with my doctor</label>
-					<label class='step'><input type="checkbox">Go to lab for stress tests</label>
-					<label class='step'><input type="checkbox">Lung screening</label>
-				<form id="">
-					<input type="text" class="newsubgoal2" value="Add a new step!">
-					<button type="button" class="subgoal2button">Add</button>
-				</form>
-				</fieldset>
-				<fieldset>
-					<ul id="comments" data-role="listview">
-						<li><strong>Comments</strong></li>
-						<li>Roger S: I'll never quit! ;)</li>
-						<li>Betty F: Don't listen to Roger. You're doing the right thing. :)</li>
-						<li><form id="">
-							<input type="text" class="subgoal-comment" value="Write a reply...">
-							<button type="button" class="replybutton">Reply</button>
-						</form></li>
-					</ul>
-				</fieldset>
-			</div>
-			<div class='subgoal' data-index='2' data-role="collapsible"><h3>Get materials</h3>
-				<fieldset data-role="controlgroup" id='subgoal2'>
-					<label class='step'><input type="checkbox" checked="true">Patches</label>
-					<label class='step'><input type="checkbox">E cig?</label>
-				</fieldset>
-				<form id="">
-					<input type="text" class="newsubgoal2" value="Add a new step!">
-					<button type="button" class="subgoal2button">Add</button>
-				</form>
-			</div>
-			<div class='subgoal' data-index='3' data-role="collapsible"><h3>Find good support group</h3>
-				<fieldset data-role="controlgroup" id='subgoal3'>
-				</fieldset>
-				<form id="">
-					<input type="text" class="newsubgoal2" value="Add a new step!">
-					<button type="button" class="subgoal2button">Add</button>
-				</form>
-			</div>
-			<form id="">
-				<input type="text" class="newsubgoal1" value="Add a new subgoal!">
-				<button type="button" class="subgoal1button">Add</button>
-			</form>
-		</fieldset>
+		<ul data-role="listview" id="subgoalList" class="ui-body-c">
+			<!--LEAVE EMPTY for dynamic insertion-->
+		</ul>
 		<a href="#mygoals" class="ui-btn">Back to My Goals</a>
+	</div>
+</div>
+
+
+<!--MY GOALS: 2. Tasks-->
+<div data-role="page" id="mygoals-task" class="ui-body-b">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#snav-mygoals-task"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1 id="mygoals-task-header">Sample Text</h1>
+	</div>
+	
+	<div data-role="content">
+		<h3 id="title-subgoal"></h3>
+		<ul data-role="listview" id="taskList" class="ui-body-c">
+			<!--LEAVE EMPTY for dynamic insertion-->
+		</ul>
+		<a href="#mygoals-subgoal" class="ui-btn">Back to goal</a>
 	</div>
 </div>
 
@@ -1002,69 +974,113 @@
 </div>
 
 <script>
+// DYNAMIC INSERTION
     var testObj = {
         "goalList": [
         	{
                 "goal": "Quit Smoking",
                 "subgoalList": [
                     {
-	                    "subgoal": "Medical consultation"
+	                    "subgoal": "Medical consultation",
+	                    "taskList": [
+		                    {
+			                    "task": "Set up doctor's appointment",
+			                    "task": "Run stress tests",
+			                    "task": "Lung screening"
+		                    }
+	                    ]
                     },
                     {
-                    	"subgoal": "Get materials"
+                    	"subgoal": "Get materials",
+	                    "taskList": [
+		                    {
+			                    "task": "Nicotine patches",
+			                    "task": "Electronic cigarette?"
+		                    }
+	                    ]
                     },
                     {
-	                    "subgoal": "Find good support group"
+	                    "subgoal": "Find good support group",
+	                    "taskList": [
+	                    ]
                     }
                 ]
         	},
         	{
                 "goal": "Build wall around patio",
-                "subgoalList": "Get materials"
+                "subgoalList": [
+                	{
+	                	"subgoal": "Get materials"
+	                }
+	            ]
             },
             {
                 "goal": "Find Mom home care",
-                "subgoalList": "Talk to Dr. Leakey"
+                "subgoalList": [
+                	{
+	                	"subgoal": "Talk to Dr. Leakey"
+	                }
+	            ]
         	}
         ],
     };
     
-    // var to index current goal
-    var currentGoal = 0;
+    // #mygoals: print user's goals
+    var currGoal = 0;
+    var createHTML;
     
     $('#mygoals').on('pagebeforeshow', function() {
-        // create HTML for next level (subgoals)
+        // populate listview with goals
+	    createHTML = "";
         $.each(testObj.goalList, function(i, goal) {
-            $('#goalList').append('<li data-index=' + i + '><a href="#mygoals-goal">' + goal.goal + '</a></li>')
+	        createHTML += '<li data-index=' + i + '><a href="#mygoals-subgoal">' + goal.goal + '</a></li>';
         });
+        // overwrite placeholder HTML and refresh
+        $('#goalList').html(createHTML)
         $('#goalList').listview('refresh');
 		
 		// enable clickthrough to next level (subgoals)
         $('#goalList li').click(function() {
-            currentGoal = $(this).index();
+            currGoal = $(this).index();
         });
     });
 	
-	// var to index current subgoal
-	var currentSubgoal = 0;
+	// #mygoals-task: print this goal's subgoals
+	var currSubgoal = 0;
 	
-    $('#mygoals-goal').on('pagebeforeshow', function() {
-        $(this).find('[data-role=header] .ui-goal').text(testObj.goalList[currentGoal].goal);
+    $('#mygoals-subgoal').on('pagebeforeshow', function() {
+        $(this).find('[data-role=header] .ui-goal').text(testObj.goalList[currGoal].goal);
         
-        // create HTML for next level (tasks)
-        var createHTML;
-        $.each(testObj.goalList[currentGoal].subgoalList, function(i, subgoal) {
-            createHTML += '<li data-index=' + i + '><a href="#mygoals-subgoal">' + subgoal.subgoal + '</a></li>';
+        // populate listview with subgoals
+	    createHTML = "";
+        $.each(testObj.goalList[currGoal].subgoalList, function(i, subgoal) {
+            createHTML += '<li data-index=' + i + '><a href="#mygoals-task">' + subgoal.subgoal + '</a></li>';
         });
+        // overwrite placeholder HTML and refresh
+        $('#mygoals-subgoal-header').html('Goal: ' + testObj.goalList[currGoal].goal);
+        $('#subgoalList').html(createHTML);
         $('#subgoalList').listview('refresh');
 		
 		// enable clickthrough to next level (tasks)
         $('#subgoalList li').click(function() {
-            currentGoal = $(this).index();
+            currSubgoal = $(this).index();
         });
+    });
+	
+	// #mygoals-task: print this subgoal's tasks
+    $('#mygoals-task').on('pagebeforeshow', function() {
+        $(this).find('[data-role=header] .ui-goal').text(testObj.goalList[currGoal].subgoalList[currSubgoal].subgoal);
         
-        // print html
-        $('#subgoalList').html(createHTML);
+        // populate listview with tasks
+	    createHTML = "";
+        $.each(testObj.goalList[currGoal].subgoalList[currSubgoal].taskList, function(i, task) {
+            createHTML += '<li data-index=' + i + '>' + task.task + '</li>';
+        });
+        // overwrite placeholder HTML and refresh
+        $('#mygoals-task-header').html('Goal: ' + testObj.goalList[currGoal].goal);
+        $('#title-subgoal').html('Subgoal: ' + testObj.goalList[currGoal].subgoalList[currSubgoal].subgoal);
+        $('#taskList').html(createHTML);
+        $('#taskList').listview('refresh');
     });
 </script>
 
