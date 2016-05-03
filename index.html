@@ -974,5 +974,34 @@
 		<a href="#puppy0" class="ui-btn">Back to "Train my puppy"</a>
 	</div>
 </div>
+
+
+<!--TEST-->
+<div data-role="page" id="test-page" class="ui-body-b">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#snav-test"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>Test</h1>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-test" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-test" ).onclick() = function() {$( "#snav-test" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview" id="test-list">
+			<!--KEEP EMPTY for dynamic insertion-->
+		</ul>
+	</div>
+</div>
+
 </body>
 </html>

@@ -248,8 +248,33 @@ $( document ).ready(function() {
   });
 
 
+// TEST PAGE: Create HTML markup based on JSON
+var testObj = {
+	"goals": [
+		{
+			"goalName":	"Quit Smoking"
+		},
+		{
+			"goalName":	"Build wall around patio"
+		},
+		{
+			"goalName":	"Find Mom home care"
+		}
+	]
+};
+var curr=0;
+$("#test-list").on("pageinit", function() {
+	$.each(testObj.goals, function(i,goalName) {
+		$("#test-list").append("<li><a href='#'>" + goalName.goalName + "</a></li>")
+	});
+	$("#test-list").listview("refresh");
+	$("#test-list li").click(function() {
+		curr=$(this).index();
+	})
+});
+
 // FUNCTION: INTERCEPT JQUERY page handling if url contains relevant tags
-function showCategory( urlObj, options )
+/*function showCategory( urlObj, options )
 {
 	var categoryName = urlObj.hash.replace( /.*category=/, "" ),
 		category = categoryData[ categoryName ],
@@ -272,4 +297,4 @@ function showCategory( urlObj, options )
 		options.dataUrl = urlObj.href;
 		$.mobile.changePage( $page, options );
 	}
-}
+}*/
