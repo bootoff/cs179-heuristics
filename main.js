@@ -77,9 +77,11 @@ $( document ).ready(function() {
   $(document).on('click', '#gb2p', function() {
     if ($("#ptag-1").is(":checked")){
       ptag = $("#ptag-1").val();
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal3-prof1" );
     }
     else if ($("#ptag-2").is(":checked")){
       ptag = $("#ptag-2").val();
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal3-prof2" );
     }
     else if ($("#ptag-3").is(":checked")){
       ptag = $("#ptag-3").val();
@@ -95,7 +97,9 @@ $( document ).ready(function() {
   var htag;
   $(document).on('click', '#gb2h', function() {
     if ($("#htag-1").is(":checked")){
+      console.log("Success");
       htag = $("#htag-1").val();
+      $(":mobile-pagecontainer").pagecontainer( "change", "#newgoal3-health1" );
     }
     else if ($("#htag-2").is(":checked")){
       htag = $("#htag-2").val();
