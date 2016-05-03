@@ -437,7 +437,11 @@
 
 	<div data-role="header" data-position="fixed">
 		<a href="#snav-newgoal1"><img src="images/menu-burger.png" height="16" width="16"></a>
+<<<<<<< HEAD
 		<h1>New Goal (1/4)</h1>
+=======
+		<h1>New Goal (1/5)</h1>
+>>>>>>> f4dfa14e46e850dcecc7db0efc52a8c726a848a4
 	</div>
 
 	<div data-role="navbar" class="ui-body-g">
@@ -562,11 +566,19 @@
 			<fieldset data-role="controlgroup" id="health-tag">
 				<legend>Pick a suggested goal, or enter your own:</legend>
 				<input type="radio" name="radio-choice" id="htag-1" value="Diet" checked="checked" />
+<<<<<<< HEAD
+				<label for="htag-1">Learn to cook</label>
+				<input type="radio" name="radio-choice" id="htag-2" value="Vegan"  />
+				<label for="htag-2">Start jogging twice a week</label>
+				<input type="radio" name="radio-choice" id="htag-3" value="Running"  />
+				<label for="htag-3">Learn mindfulness techniques</label>
+=======
 				<label for="htag-1">Diet</label>
 				<input type="radio" name="radio-choice" id="htag-2" value="Exercise"  />
 				<label for="htag-2">Exercise</label>
 				<input type="radio" name="radio-choice" id="htag-3" value="Mental Health"  />
 				<label for="htag-3">Mental Health</label>
+>>>>>>> f4dfa14e46e850dcecc7db0efc52a8c726a848a4
 				<input type="radio" name="radio-choice" id="htag-4" value=""  />
 				<label for="htag-4"><input type="text" name="text" id="htag-4-text" value="" style="position:relative" placeholder="Other..." /></label>
 			</fieldset>
@@ -613,6 +625,17 @@
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup" id="interp-tag">
 				<legend>Pick a tag, or enter your own:</legend>
+<<<<<<< HEAD
+				<input type="radio" name="radio-choice" id="itag-1" value="Dating" checked="checked" />
+				<label for="itag-1">Set aside more time for friends</label>
+				<input type="radio" name="radio-choice" id="itag-2" value="Making new friends"  />
+				<label for="itag-2">Plan family vacation</label>
+				<input type="radio" name="radio-choice" id="itag-3" value="Staying in touch"  />
+				<label for="itag-3">Meet new people</label>
+				<input type="radio" name="radio-choice" id="itag-4" value=""  />
+				<label for="itag-4"><input type="text" name="text" id="itag-4-text" value="" style="position:relative" placeholder="Other..." /></label>
+			</fieldset>
+=======
 				<input type="radio" name="radio-choice" id="itag-1" value="Friends" checked="checked" />
 				<label for="itag-1">Friends</label>
 				<input type="radio" name="radio-choice" id="itag-2" value="Family"  />
@@ -668,6 +691,7 @@
 				<input type="radio" name="radio-choice" id="suggest-3p" value=""  />
 				<label for="suggest-3p"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."></label>
 			</fieldset>
+>>>>>>> f4dfa14e46e850dcecc7db0efc52a8c726a848a4
 			<fieldset data-role="controlgroup" id="subgoal">
 				<legend>What is the first thing you need to do?</legend>
 				<input type="text" name="text" id="subgoal-text" value="">
@@ -679,8 +703,17 @@
 	</div>
 </div>
 
+<<<<<<< HEAD
 <!--NEW GOAL 3: Deadline & Priority-->
 <div data-role="page" id="newgoal3" class="ui-body-b">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#snav-newgoal3"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>New Goal</h1>
+	</div>
+
+	<div data-role="navbar" class="ui-body-g">
+=======
 
 <!--New Goal 3: Suggested Goals / Professional / Promotion-->
 <div data-role="page" id="newgoal3-prof2" class="ui-body-b">
@@ -690,15 +723,15 @@
 		<h1>New Goal (3/5)</h1>
 	</div>
 
-	<div data-role="navbar" class="ui-body-g">
+	<div data-role="navbar">
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal3" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-newgoal3" ).click() = function() {$( "#snav-newgoal3" ).panel( "toggle" )};</script>
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#sidenav1" ).click() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -840,14 +873,15 @@
 	</div>
 
 	<div data-role="navbar">
+>>>>>>> f4dfa14e46e850dcecc7db0efc52a8c726a848a4
 		<ul>
 			<li><a href="#" class="ui-btn">Save Draft</a></li>
 			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
 		</ul>
 	</div>
 	
-	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal4" style="background: rgba(255, 255, 255, 0.8);">
-		<script>$( "#snav-newgoal4" ).click() = function() {$( "#snav-newgoal4" ).panel( "toggle" )};</script>
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal3" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#snav-newgoal3" ).click() = function() {$( "#snav-newgoal3" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
@@ -892,8 +926,13 @@
 <div data-role="page" id="newgoal4" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
+<<<<<<< HEAD
+		<a href="#snav-newgoal4"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>New Goal (4/4)</h1>
+=======
 		<a href="#snav-newgoal5"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>New Goal (5/5)</h1>
+>>>>>>> f4dfa14e46e850dcecc7db0efc52a8c726a848a4
 	</div>
 
 	<div data-role="navbar" class="ui-body-g">
