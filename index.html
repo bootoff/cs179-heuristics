@@ -231,6 +231,7 @@
 	<div data-role="header" data-position="fixed">
 		<a href="#snav-mygoals"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>My Goals</h1>
+		<!--<a href="#newgoal1"><img src="images/plus.png" height="19" width="19"></a>-->
 	</div>
 	
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-mygoals" style="background: rgba(255, 255, 255, 0.8);">
@@ -246,10 +247,12 @@
 	</div>
 	
 	<div data-role="content">
-		<ul data-role="listview" id="goalList" class="ui-body-c">
-			<!--LEAVE EMPTY for dynamic insertion-->
-		</ul>
-		<a href="#newgoal1" class="ui-btn">New Goal</a></li>
+		<fieldset data-role="control-group">
+			<ul data-role="listview" id="goalList" class="ui-body-c">
+				<!--LEAVE EMPTY for dynamic insertion-->
+			</ul>
+		</fieldset><br>
+		<a href="#newgoal1" data-role="button">New Goal</a>
 	</div>
 </div>
 
@@ -275,9 +278,11 @@
 	</div>
 	
 	<div data-role="content">
-		<ul data-role="listview" id="subgoalList" class="ui-body-c">
-			<!--LEAVE EMPTY for dynamic insertion-->
-		</ul>
+		<fieldset data-role="control-group">
+			<ul data-role="listview" id="subgoalList" class="ui-body-c">
+				<!--LEAVE EMPTY for dynamic insertion-->
+			</ul>
+		</fieldset><br>
 		<a href="#mygoals" class="ui-btn">Back to My Goals</a>
 	</div>
 </div>
@@ -293,9 +298,11 @@
 	
 	<div data-role="content">
 		<h3 id="title-subgoal"></h3>
-		<ul data-role="listview" id="taskList" class="ui-body-c">
-			<!--LEAVE EMPTY for dynamic insertion-->
-		</ul>
+		<fieldset data-role="control-group">
+			<ul data-role="listview" id="taskList" class="ui-body-c">
+				<!--LEAVE EMPTY for dynamic insertion-->
+			</ul>
+		</fieldset><br>
 		<a href="#mygoals-subgoal" class="ui-btn">Back to goal</a>
 	</div>
 </div>
