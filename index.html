@@ -651,12 +651,12 @@
 			<fieldset data-role="controlgroup" id="suggest">
 				<legend>Pick a suggested goal for Professional / Job Search, or enter your own:</legend>
 				<input type="text" name="text" id="goal-text" value="">
-				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
-				<label for="suggest-1">Update my resume, cover letter, and portfolio</label>
-				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
-				<label for="suggest-2">Change industries</label>
-				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
-				<label for="suggest-3"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."></label>
+				<input type="radio" name="radio-choice" id="suggest-1p" value="suggest-1" checked="checked" />
+				<label for="suggest-1p">Update my resume, cover letter, and portfolio</label>
+				<input type="radio" name="radio-choice" id="suggest-2p" value="suggest-2"  />
+				<label for="suggest-2p">Change industries</label>
+				<input type="radio" name="radio-choice" id="suggest-3p" value=""  />
+				<label for="suggest-3p"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."></label>
 			</fieldset>
 			<fieldset data-role="controlgroup" id="subgoal">
 				<legend>What is the first thing you need to do?</legend>
@@ -702,12 +702,12 @@
 			<fieldset data-role="controlgroup" id="suggest">
 				<legend>Pick a suggested goal for Professional / Promotion, or enter your own:</legend>
 				<input type="text" name="text" id="goal-text" value="">
-				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
-				<label for="suggest-1">Improve my sales record</label>
-				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
-				<label for="suggest-2">Learn to negotiate pay increase</label>
-				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
-				<label for="suggest-3"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."></label>
+				<input type="radio" name="radio-choice" id="suggest-1p" value="suggest-1" checked="checked" />
+				<label for="suggest-1p">Improve my sales record</label>
+				<input type="radio" name="radio-choice" id="suggest-2p" value="suggest-2"  />
+				<label for="suggest-2p">Learn to negotiate pay increase</label>
+				<input type="radio" name="radio-choice" id="suggest-3p" value=""  />
+				<label for="suggest-3p"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."/></label>
 			</fieldset>
 			<fieldset data-role="controlgroup" id="subgoal">
 				<legend>What is the first thing you need to do?</legend>
@@ -722,7 +722,7 @@
 
 
 <!--New Goal 3: Suggested Goals / Health / Diet-->
-<div data-role="page" id="newgoal3-health1" class="ui-body-b">
+<div data-role="page" id="newgoal3-h1" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
 		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
@@ -751,14 +751,14 @@
 	<div data-role="content">
 		<form action="form.php" method="post">
 			<fieldset data-role="controlgroup" id="suggest">
-				<legend>Pick a suggested goal, or enter your own:</legend>
+				<legend>Pick a suggested goal for Health / Diet, or enter your own:</legend>
 				<input type="text" name="text" id="goal-text" value="">
-				<input type="radio" name="radio-choice" id="suggest-1" value="suggest-1" checked="checked" />
-				<label for="suggest-1">Learn to cook</label>
-				<input type="radio" name="radio-choice" id="suggest-2" value="suggest-2"  />
-				<label for="suggest-2">Get help committing to veganism</label>
-				<input type="radio" name="radio-choice" id="suggest-3" value=""  />
-				<label for="suggest-3"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."></label>
+				<input type="radio" name="radio-choice" id="suggest-1h" value="suggest-1" checked="checked" />
+				<label for="suggest-1h">Learn to cook</label>
+				<input type="radio" name="radio-choice" id="suggest-2h" value="suggest-2"  />
+				<label for="suggest-2h">Get help committing to vegetarianism</label>
+				<input type="radio" name="radio-choice" id="suggest-3h" value=""  />
+				<label for="suggest-3h"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."/></label>
 			</fieldset>
 			<fieldset data-role="controlgroup" id="subgoal">
 				<legend>What is the first thing you need to do?</legend>
@@ -769,7 +769,55 @@
 		<a href="#newgoal1" class="ui-btn">Back to categories</a>
 	</div>
 </div>
--->
+
+<!--New Goal 3: Suggested Goals / Health / Exercise-->
+<div data-role="page" id="newgoal3-h2" class="ui-body-b">
+
+	<div data-role="header" data-position="fixed">
+		<a href="#sidenav10"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<h1>New Goal (3/5)</h1>
+	</div>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#" class="ui-btn">Save Draft</a></li>
+			<li><a href="#mygoals" class="ui-btn">My Goals</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="sidenav1" style="background: rgba(255, 255, 255, 0.8);">
+		<script>$( "#sidenav1" ).click() = function() {$( "#sidenav1" ).panel( "toggle" )};</script>
+		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
+			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
+		</ul>
+	</div>
+
+	<div data-role="content">
+		<form action="form.php" method="post">
+			<fieldset data-role="controlgroup" id="suggest">
+				<legend>Pick a suggested goal for Health / Exercise, or enter your own:</legend>
+				<input type="text" name="text" id="goal-text" value="">
+				<input type="radio" name="radio-choice" id="suggest-1h" value="suggest-1" checked="checked" />
+				<label for="suggest-1h">Start lifting more frequently</label>
+				<input type="radio" name="radio-choice" id="suggest-2h" value="suggest-2"  />
+				<label for="suggest-2h">Start running every morning</label>
+				<input type="radio" name="radio-choice" id="suggest-3h" value=""  />
+				<label for="suggest-3h"><input type="text" name="text" id="suggest-3-text" value="" style="position:relative" placeholder="Other..."/></label>
+			</fieldset>
+			<fieldset data-role="controlgroup" id="subgoal">
+				<legend>What is the first thing you need to do?</legend>
+				<input type="text" name="text" id="subgoal-text" value="">
+			</fieldset>
+		</form>
+		<a href="#newgoal4" class="ui-btn" id="gb3">Next</a>
+		<a href="#newgoal1" class="ui-btn">Back to categories</a>
+	</div>
+</div>
 
 <!--NEW GOAL 4: Deadline & Priority-->
 <div data-role="page" id="newgoal4" class="ui-body-b">
