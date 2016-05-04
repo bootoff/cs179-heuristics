@@ -292,6 +292,15 @@
 				<button type="button" class="ui-btn-g ui-btn subgoal2button">Add</button>
 			</form>
 		</fieldset>
+		<fieldset>
+			<ul id="comments" data-role="listview" data-inset="true">
+				<li data-role="list-divider">Comments</li>
+				<li><form id="">
+					<input type="text" class="subgoal-comment" value="Write a reply...">
+					<button type="button" class="ui-btn-g ui-btn replybutton">Reply</button>
+				</form></li>
+			</ul>
+		</fieldset><br>
 		<a href="#mygoals" class="ui-btn-d ui-btn">Back to My Goals</a>
 	</div>
 </div>
@@ -324,6 +333,15 @@
 				<!--LEAVE EMPTY for dynamic insertion-->
 			</ul>
 		</fieldset><br>
+		<fieldset>
+			<ul id="comments" data-role="listview" data-inset="true">
+				<li data-role="list-divider">Comments</li>
+				<li><form id="">
+					<input type="text" class="subgoal-comment" value="Write a reply...">
+					<button type="button" class="ui-btn-g ui-btn replybutton">Reply</button>
+				</form></li>
+			</ul>
+		</fieldset>
 		<a href="#mygoals-subgoal" class="ui-btn-d ui-btn">Back to goal</a>
 	</div>
 </div>
@@ -881,6 +899,17 @@
 			                    "task": "Lung screening",
 			                    "checked": ""
 		                    }
+	                    ],
+	                    "commentList": [
+		                    {
+			                    "username": "Roger S.",
+			                    "text": "I'll never quit!"
+		                    },
+		                    {
+			                    
+			                    "username": "Betty F.",
+			                    "text": "Don't listen to him -- you're doing the right thing!"
+		                    }
 	                    ]
                     },
                     {
@@ -930,11 +959,11 @@
     
     // #mygoals: print user's goals
     var currGoal = 0;
-    var createHTML;
+	var createHTML = "";
     
     $('#mygoals').on('pagebeforeshow', function() {
-        // populate listview with goals
 	    createHTML = "";
+        // populate listview with goals
         $.each(testObj.goalList, function(i, goal) {
 	        createHTML += '<li data-index=' + i + '><a href="#mygoals-subgoal">' + goal.goal + '</a></li>';
         });
@@ -974,39 +1003,23 @@
     $('#mygoals-task').on('pagebeforeshow', function() {
         $(this).find('[data-role=header] .ui-goal').text(testObj.goalList[currGoal].subgoalList[currSubgoal].subgoal);
         
-        // populate listview with tasks
+        // populate task listview
 	    createHTML = "";
         $.each(testObj.goalList[currGoal].subgoalList[currSubgoal].taskList, function(i, task) {
-            createHTML += '<li><label data-index=' + i + '><input type="checkbox"' + task.checked + '/>' + task.task + '</label></li>';
+            createHTML += '<li data-index=' + i + '><input type="checkbox"' + task.checked + '/>' + task.task + '</li>';
         });
-        // overwrite placeholder HTML and refresh
-        $('#mygoals-task-header').html('My goal: ' + testObj.goalList[currGoal].goal);
+        // populate comment listview
+        //$.each(testObj.goalList[currGoal].subgoalList[currSubgoal].commentList, function(i, comment) {
+        //    createHTML += '<li data-index=' + i + '>' + comment.username + ' ' + comment.text + '</li>';
+        //});
+        // overwrite placeholder HTML and refresh lists
+        $('#mygoals-task-header').html('Goal: ' + testObj.goalList[currGoal].goal);
         $('#title-subgoal').html('Subgoal: ' + testObj.goalList[currGoal].subgoalList[currSubgoal].subgoal);
         $('#taskList').html(createHTML);
         $('#taskList').listview('refresh');
+        
     });
 </script>
 
 </body>
 </html>
-
-		<!--<fieldset data-role="controlgroup" id='subgoal1'>
-			<label class='step'><input type="checkbox" checked="true">Set up appt. with my doctor</label>
-			<label class='step'><input type="checkbox">Go to lab for stress tests</label>
-			<label class='step'><input type="checkbox">Lung screening</label>
-		<form id="">
-			<input type="text" class="newsubgoal2" value="Add a new step!">
-			<button type="button" class="ui-btn-g ui-btn subgoal2button">Add</button>
-		</form>
-		</fieldset>
-		<fieldset>
-			<ul id="comments" data-role="listview" data-inset="true">
-				<li data-role="list-divider">Comments</li>
-				<li>Roger S: I'll never quit!</li>
-				<li>Betty F: Don't listen to Roger. You're doing the right thing. :)</li>
-				<li><form id="">
-					<input type="text" class="subgoal-comment" value="Write a reply...">
-					<button type="button" class="ui-btn-g ui-btn replybutton">Reply</button>
-				</form></li>
-			</ul>
-		</fieldset>-->
