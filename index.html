@@ -43,6 +43,7 @@
 		<script>$( "#snav-feed-all" ).click() = function() {$( "#snav-feed-all" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
+			<li><a href="#feed-all" class="panel-link" style="color:#ffffff;background: rgba(23, 161, 134, 0.8);">Feed</a></li>
 			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
 			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
 			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
@@ -239,6 +240,7 @@
 		<ul data-role="listview">
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
+			<li><a href="#mygoals" class="panel-link" style="color:#ffffff;background: rgba(23, 161, 134, 0.8);">My Goals</a></li>
 			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
 			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
 			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
@@ -284,11 +286,11 @@
 				<!--LEAVE EMPTY for dynamic insertion-->
 			</ul>
 		</fieldset><br>
-		<fieldset>
-		<form id="">
-			<input type="text" class="newsubgoal2" value="Add a new step!">
-			<button type="button" class="ui-btn-g ui-btn subgoal2button">Add</button>
-		</form>
+		<fieldset data-role="control-group">
+			<form id="">
+				<input type="text" class="newsubgoal2" value="Add a new step!">
+				<button type="button" class="ui-btn-g ui-btn subgoal2button">Add</button>
+			</form>
 		</fieldset>
 		<a href="#mygoals" class="ui-btn-d ui-btn">Back to My Goals</a>
 	</div>
@@ -317,32 +319,11 @@
 
 	<div data-role="content">
 		<center><h3 id="title-subgoal">Sample Title</h3></center>
-		<!--<fieldset data-role="control-group">
+		<fieldset data-role="control-group">
 			<ul data-role="listview" id="taskList">
-				//LEAVE EMPTY for dynamic insertion
+				<!--LEAVE EMPTY for dynamic insertion-->
 			</ul>
-		</fieldset><br>-->
-		<fieldset data-role="controlgroup" id='subgoal1'>
-			<label class='step'><input type="checkbox" checked="true">Set up appt. with my doctor</label>
-			<label class='step'><input type="checkbox">Go to lab for stress tests</label>
-			<label class='step'><input type="checkbox">Lung screening</label>
-		<form id="">
-			<input type="text" class="newsubgoal2" value="Add a new step!">
-			<button type="button" class="ui-btn-g ui-btn subgoal2button">Add</button>
-		</form>
-		</fieldset>
-		<fieldset>
-			<ul id="comments" data-role="listview" data-inset="true">
-				<li data-role="list-divider">Comments</li>
-				<li>Roger S: I'll never quit!</li>
-				<li>Betty F: Don't listen to Roger. You're doing the right thing. :)</li>
-				<li><form id="">
-					<input type="text" class="subgoal-comment" value="Write a reply...">
-					<button type="button" class="ui-btn-g ui-btn replybutton">Reply</button>
-				</form></li>
-			</ul>
-		</fieldset>
-
+		</fieldset><br>
 		<a href="#mygoals-subgoal" class="ui-btn-d ui-btn">Back to goal</a>
 	</div>
 </div>
@@ -366,6 +347,7 @@
 	<div data-role="panel" data-display="overlay" data-dismissible="true" class="sidenav" id="snav-newgoal1" style="background: rgba(255, 255, 255, 0.8);">
 		<script>$( "#snav-newgoal1" ).click() = function() {$( "#snav-newgoal1" ).panel( "toggle" )};</script>
 		<ul data-role="listview">
+			<li><a href="#newgoal1" class="panel-link" style="color:#ffffff;background: rgba(23, 161, 134, 0.8);">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
 			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
 			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
@@ -737,6 +719,7 @@
 			<li><a href="#newgoal1" class="panel-link" style="color:#16a085;background: rgba(255, 255, 255, 0.8)">New Goal</a></li>
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
 			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
+			<li><a href="#notify" class="panel-link" style="color:#ffffff;background: rgba(23, 161, 134, 0.8);">Notifications</a></li>
 			<li><a href="#settings" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Settings</a></li>
 			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
@@ -768,6 +751,7 @@
 			<li><a href="#feed-all" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Feed</a></li>
 			<li><a href="#mygoals" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">My Goals</a></li>
 			<li><a href="#notify" class="panel-link" style="color:#2c3e50;background: rgba(255, 255, 255, 0.8);">Notifications</a></li>
+			<li><a href="#settings" class="panel-link" style="color:#ffffff;background: rgba(23, 161, 134, 0.8);">Settings</a></li>
 			<li><a href="#login" class="panel-link" style="color:#c1392b;background: rgba(255, 255, 255, 0.8)">Log Out</a></li>
 		</ul>
 	</div>
@@ -852,7 +836,7 @@
 <div data-role="page" id="test-page" class="ui-body-b">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#snav-test"><img src="images/menu-burger.png" height="16" width="16"></a>
+		<a href="#snav-test" id="menu-test"><img src="images/menu-burger.png" height="16" width="16"></a>
 		<h1>Test</h1>
 	</div>
 	
@@ -887,8 +871,15 @@
 	                    "taskList": [
 		                    {
 			                    "task": "Set up doctor's appointment",
+			                    "checked": "checked"
+			                },
+			                {
 			                    "task": "Run stress tests",
-			                    "task": "Lung screening"
+			                    "checked": ""
+			                },
+			                {
+			                    "task": "Lung screening",
+			                    "checked": ""
 		                    }
 	                    ]
                     },
@@ -897,7 +888,11 @@
 	                    "taskList": [
 		                    {
 			                    "task": "Nicotine patches",
-			                    "task": "Electronic cigarette?"
+			                    "checked": ""
+			                },
+			                {
+			                    "task": "Electronic cigarette?",
+			                    "checked": ""
 		                    }
 	                    ]
                     },
@@ -912,7 +907,13 @@
                 "goal": "Build wall around patio",
                 "subgoalList": [
                 	{
-	                	"subgoal": "Get materials"
+	                	"subgoal": "Get materials",
+	                    "taskList": [
+		                    {
+			                    "task": "Cement",
+			                    "checked": ""
+			                }
+	                    ]
 	                }
 	            ]
             },
@@ -959,7 +960,7 @@
             createHTML += '<li data-index=' + i + '><a href="#mygoals-task">' + subgoal.subgoal + '</a></li>';
         });
         // overwrite placeholder HTML and refresh
-        $('#mygoals-subgoal-header').html('Goal: ' + testObj.goalList[currGoal].goal);
+        $('#mygoals-subgoal-header').html('My goal: ' + testObj.goalList[currGoal].goal);
         $('#subgoalList').html(createHTML);
         $('#subgoalList').listview('refresh');
 		
@@ -976,10 +977,10 @@
         // populate listview with tasks
 	    createHTML = "";
         $.each(testObj.goalList[currGoal].subgoalList[currSubgoal].taskList, function(i, task) {
-            createHTML += '<li data-index=' + i + '>' + task.task + '</li>';
+            createHTML += '<li><label data-index=' + i + '><input type="checkbox"' + task.checked + '/>' + task.task + '</label></li>';
         });
         // overwrite placeholder HTML and refresh
-        $('#mygoals-task-header').html('Goal: ' + testObj.goalList[currGoal].goal);
+        $('#mygoals-task-header').html('My goal: ' + testObj.goalList[currGoal].goal);
         $('#title-subgoal').html('Subgoal: ' + testObj.goalList[currGoal].subgoalList[currSubgoal].subgoal);
         $('#taskList').html(createHTML);
         $('#taskList').listview('refresh');
@@ -988,3 +989,24 @@
 
 </body>
 </html>
+
+		<!--<fieldset data-role="controlgroup" id='subgoal1'>
+			<label class='step'><input type="checkbox" checked="true">Set up appt. with my doctor</label>
+			<label class='step'><input type="checkbox">Go to lab for stress tests</label>
+			<label class='step'><input type="checkbox">Lung screening</label>
+		<form id="">
+			<input type="text" class="newsubgoal2" value="Add a new step!">
+			<button type="button" class="ui-btn-g ui-btn subgoal2button">Add</button>
+		</form>
+		</fieldset>
+		<fieldset>
+			<ul id="comments" data-role="listview" data-inset="true">
+				<li data-role="list-divider">Comments</li>
+				<li>Roger S: I'll never quit!</li>
+				<li>Betty F: Don't listen to Roger. You're doing the right thing. :)</li>
+				<li><form id="">
+					<input type="text" class="subgoal-comment" value="Write a reply...">
+					<button type="button" class="ui-btn-g ui-btn replybutton">Reply</button>
+				</form></li>
+			</ul>
+		</fieldset>-->
